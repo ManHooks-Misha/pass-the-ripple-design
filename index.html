@@ -177,7 +177,8 @@
         if (!fixedHeader || !zoomContent) return;
 
         var zoomFactor = getZoomFactor();
-        zoomFactor = Math.max(0.25, Math.min(4, zoomFactor));
+        // Cap at 5 so 400% and 500% zoom both get correct counter-scale (same visual header size)
+        zoomFactor = Math.max(0.25, Math.min(5, zoomFactor));
 
         fixedHeader.style.width = (zoomFactor * 100) + '%';
         fixedHeader.style.transform = 'scale(' + (1 / zoomFactor) + ')';

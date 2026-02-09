@@ -67,13 +67,13 @@ const MagicalHeader = () => {
           {/* Mobile Menu Button - Left Side */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="xl:hidden p-2 hover:bg-muted rounded-lg transition-colors flex-shrink-0" style={{ "color": "#9F00C7" }}
+            className="min-[280px]:hidden p-2 hover:bg-muted rounded-lg transition-colors flex-shrink-0" style={{ "color": "#9F00C7" }}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
 
           {/* Desktop Logo - Left/Center */}
-          <Link to="/" className="hidden xl:flex items-center head-logo hover:scale-105 transition-transform flex-shrink-0">
+          <Link to="/" className="hidden min-[280px]:flex items-center head-logo hover:scale-105 transition-transform flex-shrink-0">
             <img
               src={logo}
               alt={`${companyName} Logo`}
@@ -83,7 +83,7 @@ const MagicalHeader = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-1 2xl:gap-2 header-nav flex-nowrap">
+          <nav className="hidden min-[280px]:flex items-center gap-1 2xl:gap-2 header-nav flex-nowrap">
             <Link to="/" className={getNavLinkClass("/")}>
               Home
             </Link>
@@ -108,7 +108,7 @@ const MagicalHeader = () => {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden xl:flex items-center gap-2 flex-shrink-0 ml-auto">
+          <div className="hidden min-[280px]:flex items-center gap-2 flex-shrink-0 ml-auto">
             {!user ? (
               <>
                 <Link to="/login" className="header-btn-action">
@@ -132,7 +132,7 @@ const MagicalHeader = () => {
           </div>
 
           {/* Mobile Logo - Right Side */}
-          <Link to="/" className="xl:hidden flex items-center head-logo hover:scale-105 transition-transform flex-shrink-0 ml-auto">
+          <Link to="/" className="min-[280px]:hidden flex items-center head-logo hover:scale-105 transition-transform flex-shrink-0 ml-auto">
             <img
               src={logo}
               alt={`${companyName} Logo`}
@@ -145,7 +145,7 @@ const MagicalHeader = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="xl:hidden absolute top-20 left-0 right-0 bg-[#EBE2E3] border-b border-gray-300 shadow-lg max-h-[calc(100vh-5rem)] overflow-y-auto">
+        <div className="min-[280px]:hidden absolute top-20 left-0 right-0 bg-[#EBE2E3] border-b border-gray-300 shadow-lg max-h-[calc(100vh-5rem)] overflow-y-auto">
           <nav className="container mx-auto px-4 py-6 flex flex-col gap-2">
             <Link
               to="/"

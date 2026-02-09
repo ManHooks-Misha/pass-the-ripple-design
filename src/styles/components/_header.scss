@@ -5,6 +5,11 @@
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
 
+// Header container: 960px max-width only for header (all viewports: 576px and above + below 576px; covers 125%–500% zoom)
+#mainHeader .container {
+  max-width: 960px;
+}
+
 // Navigation Spacing
 .header-nav {
   margin-left: 0;
