@@ -53,14 +53,15 @@
       height: 100%;
     }
 
-    /* Fixed header: never scales with browser zoom; stays at top */
+    /* Fixed header: never scales with browser zoom; stays at top; scale from center */
     #fixedHeader {
       position: fixed;
       top: 0;
-      left: 0;
-      right: 0;
+      left: 50%;
+      right: auto;
+      width: 100%;
       z-index: 9999;
-      transform-origin: top left;
+      transform-origin: top center;
     }
 
     /* Viewport-sized scroll area – iski scrollbar hamesha viewport ke niche dikhegi (vertical scroll kiye bina) */
@@ -180,8 +181,27 @@
         // Cap at 5 so 400% and 500% zoom both get correct counter-scale (same visual header size)
         zoomFactor = Math.max(0.25, Math.min(5, zoomFactor));
 
-        fixedHeader.style.width = (zoomFactor * 100) + '%';
-        fixedHeader.style.transform = 'scale(' + (1 / zoomFactor) + ')';
+        // Header scale: zoom out <80% → lock at 80% visual; 80%–120% → scale with zoom; zoom in >120% → lock at 120% visual (same as zoom out).
+        var headerScale;
+        if (zoomFactor < 0.8) {
+          headerScale = Math.min(3, 0.8 / zoomFactor);
+        } else if (zoomFactor > 1.2) {
+          headerScale = 1.2 / zoomFactor;
+        } else {
+          headerScale = 1;
+        }
+
+        if (headerScale < 1) {
+          fixedHeader.style.width = (100 / headerScale) + '%';
+          fixedHeader.style.left = '50%';
+          fixedHeader.style.right = 'auto';
+          fixedHeader.style.transform = 'translateX(-50%) scale(' + headerScale + ')';
+        } else {
+          fixedHeader.style.width = '100%';
+          fixedHeader.style.left = '0';
+          fixedHeader.style.right = '0';
+          fixedHeader.style.transform = 'scale(' + headerScale + ')';
+        }
 
         var headerHeight = 0;
         var firstHeader = fixedHeader.querySelector('header');
