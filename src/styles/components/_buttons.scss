@@ -1,0 +1,66 @@
+// ==========================================================================
+// Button Components
+// ==========================================================================
+
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+// Button with ripple effect
+.btn-ripple1 {
+  position: relative;
+
+  p {
+    position: absolute;
+    font-size: $font-size-base;
+    top: 0.6875rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (max-width: 1280px) {
+      font-size: 1.0625rem;
+      top: 0.6875rem;
+    }
+
+    @media (min-width: 769px) and (max-width: 1200px) {
+      font-size: $font-size-base;
+    }
+
+    @include respond-to-max('md') {
+      top: $spacing-sm;
+      font-size: $font-size-sm;
+      width: 90%;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.75rem;
+    }
+  }
+
+  img {
+    height: 3.3125rem;
+
+    @media (max-width: 1280px) {
+      height: 3.3125rem;
+    }
+
+    @media (min-width: 769px) and (max-width: 1200px) {
+      height: 3.125rem;
+    }
+
+    @include respond-to-max('md') {
+      height: 2.625rem;
+      width: 100%;
+    }
+
+    @media (max-width: 480px) {
+      height: 2.375rem;
+    }
+  }
+}
+
+.btn-ripple-wrap {
+  @include respond-to-max('md') {
+    @include flex-column;
+    gap: $spacing-lg;
+  }
+}

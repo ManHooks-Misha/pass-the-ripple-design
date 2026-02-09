@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pass The Ripple - Kindness Ripple Tracker</title>
+  <meta name="description" content="Kids track acts of kindness and watch ripples grow across the world." />
+  <meta name="author" content="Pass The Ripple" />
+
+  <link rel="canonical" href="https://kindnessripple.pms.mishainfotech.com/" />
+
+  <!-- Meta tags will be dynamically updated by server or Seo component -->
+  <meta property="og:title" content="Pass The Ripple — Spread Kindness, One Ripple at a Time" />
+  <meta property="og:description"
+    content="Join thousands of young heroes creating magical ripples of kindness around the world. Every act of kindness starts a beautiful chain reaction!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kindnessripple.pms.mishainfotech.com/" />
+  <meta property="og:site_name" content="Pass The Ripple" />
+  <meta property="og:image"
+    content="https://kindness.pms.mishainfotech.com/storage/company/3lso7xCMmjEaFmaxgVmH5tDyrzvrbGIdgsbQi9S4.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@PassTheRipple" />
+  <meta name="twitter:title" content="Pass The Ripple — Spread Kindness, One Ripple at a Time" />
+  <meta name="twitter:description"
+    content="Join thousands of young heroes creating magical ripples of kindness around the world. Every act of kindness starts a beautiful chain reaction!" />
+  <meta name="twitter:image"
+    content="https://kindness.pms.mishainfotech.com/storage/company/3lso7xCMmjEaFmaxgVmH5tDyrzvrbGIdgsbQi9S4.png" />
+  <meta name="twitter:image:alt" content="Pass The Ripple - Spread Kindness" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <!-- CKEditor 5 - Using super build which includes all features -->
+  <script src="https://cdn.ckeditor.com/ckeditor5/41.3.1/super-build/ckeditor.js"></script>
+
+  <!-- Google Fonts - Fuzzy Bubbles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Lilita+One&display=swap"
+    rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* ============================================================
+       Fixed (non-responsive) app canvas: 960px centered
+       ============================================================ */
+    #zoomRoot {
+        /* width: 960px;
+      max-width: 960px; */
+      margin: 0 auto;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Header: Fixed to viewport (does NOT scroll with content). Keep full-width background and high z-index. */
+    #zoomRoot header {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      z-index: 1000 !important;
+      margin: 0 !important;
+      background-color: rgb(235, 226, 227) !important;
+      overflow: visible !important;
+    }
+
+    /* Full-width background for header using pseudo-element - width set by JavaScript */
+    #zoomRoot header::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw; /* Will be overridden by JavaScript with !important */
+      height: 100%;
+      background-color: rgb(235, 226, 227);
+      z-index: -1;
+      top: 0;
+    }
+
+    /* Footer: Full-width background using pseudo-element, but NOT fixed (normal flow) */
+    #zoomRoot footer {
+      position: relative !important;
+      overflow: visible !important;
+      background-color: rgb(235, 226, 227) !important;
+    }
+
+    /* Full-width background for footer - width set by JavaScript */
+    #zoomRoot footer::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw; /* Will be overridden by JavaScript with !important */
+      height: 100%;
+      background-color: rgb(235, 226, 227);
+      z-index: -1;
+      top: 0;
+    }
+
+    /* Keep header/footer content containers at 960px and centered */
+    #zoomRoot header .container,
+    #zoomRoot header .container-fluid,
+    #zoomRoot footer .container,
+    #zoomRoot footer .container-fluid {
+      /* max-width: 960px !important; */
+      margin-left: auto !important;
+      margin-right: auto !important;
+      width: 100% !important;
+    }
+
+
+
+    /* ============================================================
+       Force "mobile header" mode (hamburger) without relying on
+       viewport-width breakpoints (since zoom doesn't change them)
+       Note: Page content stays at 960px and continues scaling,
+       only header becomes responsive
+       ============================================================ */
+    body.force-mobile #zoomRoot {
+      /* Keep fixed width for content, only header becomes responsive */
+      width: 960px !important;
+      max-width: 960px !important;
+    }
+    
+    /* Header height at 200% zoom (mobile mode) */
+    body.force-mobile #zoomRoot header {
+      /* height: 3rem !important;
+      min-height: 3rem !important; */
+    }
+
+    /* body.force-mobile #zoomRoot header .h-20 {
+      height: 3rem !important;
+    } */
+
+    /* Adjust logo size in mobile mode */
+    body.force-mobile #zoomRoot header a.hidden.lg\:flex img {
+      height: 5rem !important;
+      width: auto !important;
+    }
+
+    /* Hide desktop navigation and CTA containers */
+    body.force-mobile #zoomRoot header .hidden.lg\:flex {
+      display: none !important;
+    }
+
+    /* Show mobile elements */
+    body.force-mobile #zoomRoot header .lg\:hidden {
+      display: flex !important;
+    }
+
+    /* Show mobile menu - block display */
+    body.force-mobile #zoomRoot header div.lg\:hidden {
+      display: block !important;
+    }
+
+    /* Show hamburger button - override lg:hidden (left corner) */
+    body.force-mobile #zoomRoot header button.lg\:hidden {
+      display: inline-flex !important;
+      margin-right: auto !important;
+    }
+
+    /* Mobile menu adjustments at 200% zoom */
+    /* Target mobile menu - div with lg:hidden class */
+    body.force-mobile #zoomRoot header > div.lg\:hidden,
+    body.force-mobile #zoomRoot header div.lg\:hidden {
+      top: 3rem !important;
+      max-height: calc(100vh - 3rem) !important;
+    }
+
+    /* Override top-20 (5rem) class at 200% zoom */
+    body.force-mobile #zoomRoot header div[class*="top-20"],
+    body.force-mobile #zoomRoot header div[style*="top: 5rem"],
+    body.force-mobile #zoomRoot header div[style*="top:80px"] {
+      top: 3rem !important;
+    }
+
+    /* Reduce menu text size at 200% zoom so all items are visible */
+    body.force-mobile #zoomRoot header div.lg\:hidden nav a:not(.header-btn-action-mobile),
+    body.force-mobile #zoomRoot header nav a.text-base:not(.header-btn-action-mobile) {
+      font-size: 0.75rem !important;
+      padding-top: 0.5rem !important;
+      padding-bottom: 0.5rem !important;
+    }
+
+    /* Reduce menu container padding at 200% zoom */
+    body.force-mobile #zoomRoot header div.lg\:hidden nav {
+      padding-top: 0.75rem !important;
+      padding-bottom: 2rem !important;
+      gap: 0.25rem !important;
+    }
+
+    /* --------------------------------------------------
+       Prevent responsive switch to mobile header due to
+       browser zoom on desktop machines.
+       - On real mobile devices (touch-enabled), leave
+         normal responsive behavior intact.
+       - When body.prevent-zoom-mobile is set we force
+         desktop header styles regardless of CSS pixel width
+       -------------------------------------------------- */
+    body.prevent-zoom-mobile #zoomRoot header .xl\:hidden { display: none !important; }
+    body.prevent-zoom-mobile #zoomRoot header nav.hidden.xl\:flex { display: flex !important; }
+    body.prevent-zoom-mobile #zoomRoot header a.hidden.xl\:flex { display: flex !important; }
+    body.prevent-zoom-mobile #zoomRoot header div[class*="absolute"] { display: none !important; }
+
+    /* --------------------------------------------------
+       Force zero-top-margin rules to avoid gaps between
+       fixed header and first content, and between content
+       and footer — these are applied by toggling
+       `body.no-gap` so they only run when we control spacing.
+       -------------------------------------------------- */
+    body.no-gap #zoomRoot > * { margin-top: 0 !important; }
+    body.no-gap .wavybanner-section,
+    body.no-gap .wavy-banner-container,
+    body.no-gap .hero,
+    body.no-gap .banner,
+    body.no-gap .page-hero { margin-top: 0 !important; }
+    body.no-gap #zoomRoot footer { margin-top: 0 !important; }
+
+    /* --------------------------------------------------
+       Sticky footer when content is shorter than the viewport.
+       When `body.footer-sticky` is set we pin the footer to the
+       bottom of the viewport and JS will manage body padding.
+       -------------------------------------------------- */
+    body.footer-sticky #zoomRoot footer {
+      position: fixed !important;
+      bottom: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      z-index: 900 !important;
+    }
+    /* JS will set a precise padding-bottom on the <body> to avoid overlap */
+    body.footer-sticky { /* marker class */ }
+@media (min-width: 820px) and (max-width: 1023px) {
+    .head-logo img {
+        height: clamp(3rem, 5vw, 5rem)!important;
+    }
+}
+@media (min-width: 768px) and (max-width: 830px) {
+    .head-logo img {
+        height: clamp(2.5rem, 6vw, 4.5rem);
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .head-logo img {
+        height: 4rem!important;
+        padding-left: 2rem;
+    }
+}
+/* ------------------------------------------------------------------
+   JS-simulated media-query classes for keyboard/app zoom (same rules)
+   These classes are toggled by applyScale() so keyboard zoom behaves
+   like actual viewport-based media queries.
+   ------------------------------------------------------------------ */
+body.zoom-w-820-1023 .head-logo img {
+  height: clamp(3rem, 5vw, 5rem) !important;
+}
+body.zoom-w-768-830 .head-logo img {
+  height: clamp(2.5rem, 6vw, 4.5rem) !important;
+}
+
+/* Zoom-scale classes: use combined effective zoom (app * browser) */
+body.zoom-scale-200 .head-logo img {
+  /* When effective zoom >= 200% shrink logo a bit */
+  height: clamp(2.2rem, 4vw, 3rem) !important;
+}
+body.zoom-scale-250 .head-logo img {
+  /* When effective zoom >= 250% shrink even more */
+  height: clamp(1.8rem, 3.5vw, 3rem) !important;
+}
+  </style>
+</head>
+
+<body>
+  <div id="zoomBadge" style="position: fixed; top: 10px; right: 10px; background: rgba(255,255,255,0.8); padding: 5px 10px; border-radius: 5px; font-size: 14px; z-index: 10000;"></div>
+  <div id="zoomRoot">
+    <div id="root"></div>
+  </div>
+  <script src="/env.js"></script>
+  <script type="module" src="/src/main.tsx"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+ <script>
+    (function () {
+      /**
+       * ✅ Goal:
+       * - Fixed 960px layout (non-responsive)
+       * - Ctrl +/-/0 scales the page (NOT browser zoom)
+       * - Header remains fixed/sticky to top
+       * - When zoom reaches 200%: show hamburger (mobile header)
+       */
+      const zoomRoot = document.getElementById("zoomRoot");
+      const badge = document.getElementById("zoomBadge");
+ 
+      const FIXED_WIDTH = 960;
+      const MIN = 0.6;
+      const MAX = 4.0; // Allow zoom up to 400%
+      const MOBILE_THRESHOLD = 2.0; // Enable mobile header at 200%
+      const STEP = 0.1;
+ 
+      let scale = 1;
+      let lastDPR = window.devicePixelRatio || 1;
+
+      function checkBrowserZoomChange() {
+        const dpr = window.devicePixelRatio || 1;
+        if (Math.abs(dpr - lastDPR) > 0.01) {
+          lastDPR = dpr;
+          // Recompute layout and badge based on new browser zoom
+          applyScale();
+        }
+      }
+
+      function supportsZoom() {
+        return typeof document.body.style.zoom !== "undefined";
+      }
+ 
+      function clamp(v) {
+        return Math.max(MIN, Math.min(MAX, v));
+      }
+ 
+      function setBadge() {
+        if (!badge) return;
+        const browser = window.devicePixelRatio || 1;
+        const combined = Math.round(scale * browser * 100);
+        const modeText = (scale * browser) >= MOBILE_THRESHOLD ? " (Mobile Header)" : "";
+        badge.textContent = `Zoom: ${combined}% (App ${Math.round(scale*100)}%, Browser ${Math.round(browser*100)}%)${modeText}`;
+      }
+ 
+      function positionHeaderForFixedCanvas() {
+        // Header should be sticky (vertically fixed, horizontally scrolls with content)
+        const headers = document.querySelectorAll("#zoomRoot header");
+        const actualViewportWidth = window.innerWidth;
+
+        // Reset any body padding-bottom; we only use padding-bottom when footer is sticky.
+        document.body.style.paddingBottom = '';
+
+        // Position headers - fix to viewport so header stays in place (no horizontal scroll)
+        headers.forEach((header) => {
+          header.style.top = "0";
+          header.style.left = "0";
+          header.style.right = "0";
+          header.style.position = "fixed";
+          header.style.zIndex = "2000"; // Higher z-index to stay above everything
+          header.style.margin = "0";
+          header.style.backgroundColor = "rgb(235, 226, 227)";
+          header.style.overflow = "visible";
+
+          // Negate only the app zoom effect on the header so it remains consistent
+          // with the browser zoom level (standard behavior).
+          if (supportsZoom()) {
+            // In Chrome/Edge, we use zoom to negate only the app scale. 
+            // We set width to scale * 100% so it stays full-viewport visually.
+            header.style.zoom = (1 / scale);
+            header.style.width = (scale * 100) + "%";
+            header.style.left = "0";
+            header.style.transform = "none";
+          } else {
+            // Firefox fallback
+            header.style.zoom = "1";
+            header.style.transformOrigin = "top left";
+            header.style.transform = `scale(${1 / scale})`;
+            header.style.width = (scale * 100) + "vw";
+            header.style.left = "0";
+          }
+
+          // Ensure page content is not hidden under the fixed header
+          const rect = header.getBoundingClientRect();
+          const headerH = Math.max(rect.height || 0, 64); // fallback to 64px if unknown
+
+          // Important: #zoomRoot may be scaled via zoom/transform which would
+          // scale any padding set on it (creating an exaggerated visual gap).
+          // Set padding on the unscaled <body> instead so the visual spacing
+          // matches the fixed header height exactly.
+          if (zoomRoot) {
+            zoomRoot.style.paddingTop = ""; // clear any scaled padding
+          }
+          document.body.style.paddingTop = headerH + "px";
+
+          // Ensure we remove any top margins from the first child/banner so
+          // header sits flush. We prefer a CSS class (`no-gap`) but also
+          // set inline zero margin as a backup.
+          document.body.classList.add('no-gap');
+        });
+
+        // Robust spacing recalculation to catch late style/layout changes
+        // that can happen after zoom or keyboard-driven layout shifts.
+        // We'll run `ensureSpacing()` now, then retry a few times (RAF + timeouts)
+        // to eliminate tiny fractional-pixel gaps caused by zoom/rounding.
+        (function () {
+          if (window._zoomSpacingTimer) {
+            clearTimeout(window._zoomSpacingTimer);
+            window._zoomSpacingTimer = null;
+          }
+
+          function ensureSpacing() {
+            try {
+              const footerEl = document.querySelector('#zoomRoot footer') || document.querySelector('footer');
+              const footerRect = footerEl ? footerEl.getBoundingClientRect() : { height: 0 };
+              const footerH = Math.ceil(Math.max(footerRect.height || 0, 0));
+
+              // Do not set body padding-bottom unconditionally (it causes visible gaps).
+              // Padding-bottom will be applied only when footer is sticky to avoid overlap.
+
+              // recompute header height and minHeight for the zoomRoot
+              const headersNow = document.querySelectorAll('#zoomRoot header');
+              const rectHeaderNow = headersNow.length ? headersNow[0].getBoundingClientRect() : { height: 0 };
+              const headerHNow = Math.ceil(Math.max(rectHeaderNow.height || 0, 0));
+
+              // ensure body padding top matches (use ceil and 1px safety offset)
+              document.body.style.paddingTop = (headerHNow) + "px";
+
+              const viewportHeightNow = window.innerHeight;
+              const visualNeededNow = Math.max(0, viewportHeightNow - headerHNow - footerH);
+              const unscaledMinHeightNow = visualNeededNow / (scale || 1);
+
+              // Round up and add 1px safety buffer to prevent tiny gaps on zoom out
+              const computedMin = Math.max(0, Math.ceil(unscaledMinHeightNow) + 1);
+              if (zoomRoot) zoomRoot.style.minHeight = computedMin + "px";
+
+              // FINAL ALIGN: if there is any white space below the footer (sub-pixel
+              // rounding or layout timing), increase zoomRoot.minHeight slightly to
+              // remove it. We cap adjustments to avoid large jumps.
+              try {
+                const footerRect2 = footerEl ? footerEl.getBoundingClientRect() : null;
+                if (footerRect2 && footerRect2.bottom < window.innerHeight - 0.5) {
+                  const blankBelow = Math.max(0, Math.ceil(window.innerHeight - footerRect2.bottom));
+                  const addUnscaled = Math.min(60, Math.ceil(blankBelow / (scale || 1)));
+                  const cur = parseInt((zoomRoot.style.minHeight || '0').replace('px',''), 10) || 0;
+                  zoomRoot.style.minHeight = (cur + addUnscaled) + 'px';
+                }
+              } catch (e) { /* ignore */ }
+              // clear inline margin-top on first child (backup to .no-gap CSS)
+              const firstNow = zoomRoot ? zoomRoot.querySelector(':scope > *') : null;
+              if (firstNow) firstNow.style.marginTop = '0px';
+
+              // make sure known banner selectors are cleared too and footer margin removed
+              const bannerSelectors = ['.wavybanner-section', '.wavy-banner-container', '.hero', '.banner', '.page-hero'];
+              bannerSelectors.forEach(sel => {
+                const el = zoomRoot ? zoomRoot.querySelector(sel) : null;
+                if (el) el.style.marginTop = '0px';
+              });
+              if (footerEl) {
+                footerEl.style.marginTop = '0px';
+              }
+
+              // Sticky footer logic: if footer bottom is above viewport bottom,
+              // pin the footer to the viewport bottom and ensure body has
+              // padding-bottom equal to footer height so content doesn't overlap.
+              const footerBottom = footerEl ? Math.round(footerEl.getBoundingClientRect().bottom) : 0;
+              const shouldStickFooter = footerBottom < (window.innerHeight - 1);
+              if (shouldStickFooter) {
+                document.body.classList.add('footer-sticky');
+                // apply padding-bottom only when footer is fixed to avoid overlap
+                document.body.style.paddingBottom = footerH + 'px';
+                if (footerEl && footerEl.getAttribute('data-zoom-gap-bottom')) {
+                  footerEl.style.marginTop = '';
+                  footerEl.removeAttribute('data-zoom-gap-bottom');
+                }
+              } else {
+                document.body.classList.remove('footer-sticky');
+                // clear any previously applied padding-bottom
+                document.body.style.paddingBottom = '';
+              }
+
+            } catch (e) {
+              // swallow errors - spacing corrections are best-effort
+            }
+          }
+
+          ensureSpacing();
+          requestAnimationFrame(ensureSpacing);
+          // Additional precise measurement and small clamped corrections to remove
+          // residual sub-pixel gaps. Instead of changing body padding aggressively,
+          // we apply small negative margins to the first content element and footer
+          // when necessary (clamped to MAX_ADJUST) and re-run corrections after images load.
+          function preciseCorrections() {
+            try {
+              const MAX_ADJUST = 12; // allow slightly larger adjustment for stubborn browsers
+
+              const headersNow = document.querySelectorAll('#zoomRoot header');
+              const rectHeaderNow = headersNow.length ? headersNow[0].getBoundingClientRect() : { height: 0, bottom: 0 };
+              const headerHNow = Math.ceil(Math.max(rectHeaderNow.height || 0, 0));
+
+              // Ensure body paddingTop equals header height (baseline)
+              if (parseInt(getComputedStyle(document.body).paddingTop || '0', 10) !== headerHNow) {
+                document.body.style.paddingTop = headerHNow + 'px';
+              }
+
+              const firstNow = zoomRoot ? zoomRoot.querySelector(':scope > *') : null;
+              if (firstNow) {
+                const firstRect = firstNow.getBoundingClientRect();
+                const gap = Math.round(firstRect.top - rectHeaderNow.bottom);
+                if (gap > 0) {
+                  const adjust = Math.min(MAX_ADJUST, gap);
+                  firstNow.style.marginTop = `-${adjust}px`;
+                  firstNow.setAttribute('data-zoom-gap-top', String(adjust));
+                } else {
+                  // remove previous adjustment if present
+                  const prev = parseInt(firstNow.getAttribute('data-zoom-gap-top') || '0', 10);
+                  if (prev) {
+                    firstNow.style.marginTop = '';
+                    firstNow.removeAttribute('data-zoom-gap-top');
+                  }
+                }
+              }
+
+              const footerEl = document.querySelector('#zoomRoot footer') || document.querySelector('footer');
+              const isSticky = document.body.classList.contains('footer-sticky');
+              if (footerEl) {
+                const footerRect = footerEl.getBoundingClientRect();
+                // find the element that precedes the footer visually
+                let prev = footerEl.previousElementSibling;
+                if (!prev) prev = zoomRoot;
+                const contentBottom = prev ? Math.round(prev.getBoundingClientRect().bottom) : 0;
+                const gapF = Math.round(footerRect.top - contentBottom);
+
+                if (!isSticky) {
+                  if (gapF > 0) {
+                    const adjustF = Math.min(MAX_ADJUST, gapF);
+                    footerEl.style.marginTop = `-${adjustF}px`;
+                    footerEl.setAttribute('data-zoom-gap-bottom', String(adjustF));
+                  } else {
+                    const prevF = parseInt(footerEl.getAttribute('data-zoom-gap-bottom') || '0', 10);
+                    if (prevF) {
+                      footerEl.style.marginTop = '';
+                      footerEl.removeAttribute('data-zoom-gap-bottom');
+                    }
+                  }
+                } else {
+                  // If footer is sticky, ensure no negative margin remains
+                  const prevF = parseInt(footerEl.getAttribute('data-zoom-gap-bottom') || '0', 10);
+                  if (prevF) {
+                    footerEl.style.marginTop = '';
+                    footerEl.removeAttribute('data-zoom-gap-bottom');
+                  }
+                }
+              }
+
+            } catch (e) {
+              /* ignore */
+            }
+          }
+
+          // Schedule precise corrections several times to handle async layout shifts
+          preciseCorrections();
+          requestAnimationFrame(preciseCorrections);
+          setTimeout(preciseCorrections, 50);
+          setTimeout(preciseCorrections, 120);
+          setTimeout(preciseCorrections, 250);
+
+          // Ensure we re-run corrections when images inside zoomRoot load (they can shift layout)
+          try {
+            if (zoomRoot) {
+              const imgs = zoomRoot.querySelectorAll('img');
+              imgs.forEach(img => {
+                if (!img.dataset.zoomListener) {
+                  img.dataset.zoomListener = '1';
+                  img.addEventListener('load', function () { preciseCorrections(); ensureSpacing(); }, { once: true });
+                }
+              });
+            }
+          } catch (e) { /* ignore */ }
+
+          window._zoomSpacingTimer = setTimeout(ensureSpacing, 80);
+          setTimeout(ensureSpacing, 160);
+          setTimeout(ensureSpacing, 320);
+        })();
+
+        // Update header and footer backgrounds to always be full viewport width (not affected by zoom)
+        // Since ::before is inside zoomRoot which has zoom applied, we need to compensate
+        // If zoom is 0.6 (60%), and we want 1920px visually, we need 1920/0.6 = 3200px in CSS
+        const backgroundWidth = actualViewportWidth / scale;
+        
+        let styleId = 'header-footer-bg-style';
+        let styleEl = document.getElementById(styleId);
+        if (!styleEl) {
+          styleEl = document.createElement('style');
+          styleEl.id = styleId;
+          document.head.appendChild(styleEl);
+        }
+        styleEl.textContent = `
+          #zoomRoot header::before,
+          #zoomRoot footer::before {
+            width: ${backgroundWidth}px !important;
+            min-width: ${backgroundWidth}px !important;
+            max-width: ${backgroundWidth}px !important;
+          }
+        `;
+
+        // Also ensure footer sits immediately after content visually when zooming.
+        // Compute footer height (in actual CSS pixels) and set padding on the unscaled body
+        // to avoid scaled padding creating gaps. Then ensure #zoomRoot has a min-height
+        // (unscaled) such that after scaling its visual height reaches the space
+        // between header and footer: visualNeeded = viewportHeight - headerH - footerH
+        const footerEl = document.querySelector('#zoomRoot footer') || document.querySelector('footer');
+        const footerRect = footerEl ? footerEl.getBoundingClientRect() : { height: 0 };
+        const footerH = Math.max(footerRect.height || 0, 0);
+
+        // Clear any scaled padding on zoomRoot. Body padding-bottom is set only
+        // when footer is sticky (to avoid overlap) — do not set it here.
+        if (zoomRoot) {
+          zoomRoot.style.paddingBottom = "";
+        }
+
+        // Make sure the scaled zoomRoot fills the space between header and footer so
+        // there is no visual gap. Convert visualNeeded to unscaled CSS height.
+        const viewportHeight = window.innerHeight;
+        const rectHeader = headers.length ? headers[0].getBoundingClientRect() : { height: 0 };
+        const headerH = Math.max(rectHeader.height || 0, 0);
+        const visualNeeded = Math.max(0, viewportHeight - headerH - footerH);
+        const unscaledMinHeight = visualNeeded / scale; // inverse scale
+        if (zoomRoot) {
+          zoomRoot.style.minHeight = (unscaledMinHeight) + "px";
+
+          // Remove top margin on the first child so header and banner sit flush.
+          // Many banner components use margin-top to push away from the header; when
+          // we force body padding-top for a fixed header, remove that margin to avoid gaps.
+          const first = zoomRoot.querySelector(':scope > *');
+          if (first) {
+            // If the computed margin-top is positive, clear it so content sits under the header padding
+            try {
+              const cs = window.getComputedStyle(first);
+              const mt = parseFloat(cs.marginTop) || 0;
+              if (mt > 0) first.style.marginTop = '0px';
+            } catch (e) {
+              first.style.marginTop = '0px';
+            }
+
+            // Also target common banner classes if present
+            const bannerSelectors = ['.wavybanner-section', '.wavy-banner-container', '.hero', '.banner', '.page-hero'];
+            bannerSelectors.forEach(sel => {
+              const el = zoomRoot.querySelector(sel);
+              if (el) el.style.marginTop = '0px';
+            });
+          }
+        }
+      }
+ 
+      function applyScale() {
+        if (!zoomRoot) return;
+
+        // Enable mobile header mode when combined effective zoom >= MOBILE_THRESHOLD (includes browser zoom)
+        const browser = window.devicePixelRatio || 1;
+        const effective = scale * browser;
+        if (effective >= MOBILE_THRESHOLD) {
+          document.body.classList.add("force-mobile");
+        } else {
+          document.body.classList.remove("force-mobile");
+        }
+
+        // Prevent CSS media-query-based responsive switch to mobile
+        // on desktop machines when combined zoom < MOBILE_THRESHOLD.
+        // Detect likely desktop (no touch + large physical screen) and
+        // set `prevent-zoom-mobile` to force desktop header styles.
+        const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints || 0) > 0;
+        const isLikelyDesktop = !isTouch && (window.screen && window.screen.width >= 1024);
+        if (isLikelyDesktop && effective < MOBILE_THRESHOLD) {
+          document.body.classList.add('prevent-zoom-mobile');
+        } else {
+          document.body.classList.remove('prevent-zoom-mobile');
+        }
+
+        scale = clamp(scale);
+
+        // Toggle classes for specific effective zoom thresholds so keyboard/app zoom
+        // triggers the same logo sizing behavior as manual media queries.
+        try {
+          const eff = (scale || 1) * (window.devicePixelRatio || 1);
+          const toggle = (name, cond) => cond ? document.body.classList.add(name) : document.body.classList.remove(name);
+          toggle('zoom-scale-200', eff >= 2.0 && eff < 2.5);
+          toggle('zoom-scale-250', eff >= 2.5);
+        } catch (e) { /* ignore */ }
+
+        // Create or update style element to ensure zoom is applied with !important
+        let zoomStyleId = 'zoom-root-style';
+        let zoomStyleEl = document.getElementById(zoomStyleId);
+        if (!zoomStyleEl) {
+          zoomStyleEl = document.createElement('style');
+          zoomStyleEl.id = zoomStyleId;
+          document.head.appendChild(zoomStyleEl);
+        }
+
+        if (supportsZoom()) {
+          // Best behavior in Chrome/Edge - keep scaling even in mobile mode
+          // Use style element to ensure zoom applies with !important
+          zoomStyleEl.textContent = `
+            #zoomRoot {
+              zoom: ${scale} !important;
+              transform: none !important;
+              width: ${FIXED_WIDTH}px !important;
+              max-width: ${FIXED_WIDTH}px !important;
+              margin: 0 auto !important;
+              position: relative !important;
+            }
+          `;
+        } else {
+          // Firefox fallback - keep scaling even in mobile mode
+          zoomStyleEl.textContent = `
+            #zoomRoot {
+              zoom: 1 !important;
+              transform-origin: top center !important;
+              transform: scale(${scale}) !important;
+              width: ${FIXED_WIDTH}px !important;
+              max-width: ${FIXED_WIDTH}px !important;
+              margin: 0 auto !important;
+              position: relative !important;
+            }
+          `;
+        }
+ 
+        positionHeaderForFixedCanvas();
+        setBadge();
+
+        // Expose API for other scripts to sync with app zoom
+        window.__applyScale = applyScale;
+        window.__setAppScale = function (s) { scale = clamp(s); applyScale(); };
+        window.__getZoomState = function () { return { scale: scale, browser: window.devicePixelRatio || 1 }; };
+
+        // Enable horizontal scroll only when zoomed content exceeds viewport width
+        const viewportWidth = document.documentElement.clientWidth || window.innerWidth;
+        const scaledWidth = FIXED_WIDTH * scale;
+
+        // Simulate media-query breakpoints for keyboard/app-controlled zoom by
+        // computing the *effective viewport width* in CSS pixels when the content is scaled.
+        // When content is scaled by `scale`, it is visually equivalent to a viewport of
+        // `clientWidth / scale` CSS pixels. Use that to decide which breakpoint classes apply.
+        const vpWidth = document.documentElement.clientWidth || window.innerWidth;
+        const effectiveViewportWidth = Math.round(vpWidth / (scale || 1));
+        const _toggleZoomWidthClass = (name, cond) => {
+          if (cond) document.body.classList.add(name); else document.body.classList.remove(name);
+        };
+        _toggleZoomWidthClass('zoom-w-820-1023', effectiveViewportWidth >= 820 && effectiveViewportWidth <= 1023);
+        _toggleZoomWidthClass('zoom-w-768-830', effectiveViewportWidth >= 768 && effectiveViewportWidth <= 830);
+        // expose for debug overlay when enabled
+        if (document.body.classList.contains('zoom-debug')) {
+          _updateZoomDebug && _updateZoomDebug({ effectiveViewportWidth });
+        }
+       
+        if (scaledWidth > viewportWidth) {
+          // Content is wider than viewport - enable horizontal scroll
+          document.body.style.overflowX = "auto";
+          document.documentElement.style.overflowX = "auto";
+        } else {
+          // Content fits in viewport - disable horizontal scroll
+          document.body.style.overflowX = "hidden";
+          document.documentElement.style.overflowX = "hidden";
+        }
+      }
+
+      function reset() {
+        scale = 1;
+        applyScale();
+      }
+ 
+      // Initial
+      applyScale();
+
+      window.addEventListener("resize", function () {
+        checkBrowserZoomChange();
+        applyScale();
+      });
+
+      // Poll devicePixelRatio occasionally to catch pinch/zoom or browser zoom changes that don't trigger resize
+      setInterval(checkBrowserZoomChange, 300);
+ 
+      document.addEventListener("keydown", function (e) {
+        if (!e.ctrlKey) return;
+
+        const key = e.key;
+        if (key === "+" || key === "=" || key === "-" || key === "0") {
+          e.preventDefault();
+        }
+
+        if (key === "+" || key === "=") {
+          scale += STEP;
+          // Check if we've crossed the 200% threshold
+          if (scale >= MOBILE_THRESHOLD && (scale - STEP) < MOBILE_THRESHOLD) {
+            document.body.classList.add("force-mobile");
+          }
+          applyScale();
+        } else if (key === "-") {
+          scale -= STEP;
+          // Check if we've crossed below the 200% threshold
+          if (scale < MOBILE_THRESHOLD && (scale + STEP) >= MOBILE_THRESHOLD) {
+            document.body.classList.remove("force-mobile");
+          }
+          applyScale();
+        } else if (key === "0") {
+          reset();
+        }
+      }, { passive: false });
+
+      document.addEventListener("wheel", function (e) {
+        if (!e.ctrlKey) return;
+        e.preventDefault();
+
+        const oldScale = scale;
+        if (e.deltaY < 0) {
+          scale += STEP;
+        } else {
+          scale -= STEP;
+        }
+
+        // Check threshold crossing for mobile header
+        if (oldScale < MOBILE_THRESHOLD && scale >= MOBILE_THRESHOLD) {
+          document.body.classList.add("force-mobile");
+        } else if (oldScale >= MOBILE_THRESHOLD && scale < MOBILE_THRESHOLD) {
+          document.body.classList.remove("force-mobile");
+        }
+
+        applyScale();
+      }, { passive: false });
+ 
+      // React app mounts header after load; keep positioning correct
+      const rootEl = document.getElementById("root");
+      if (rootEl) {
+        const observer = new MutationObserver(function () {
+          applyScale();
+        });
+        observer.observe(rootEl, { childList: true, subtree: true });
+      }
+    })();
+  </script>
+
+</body>
+
+</html>

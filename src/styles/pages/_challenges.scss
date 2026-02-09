@@ -1,0 +1,3411 @@
+// ==========================================================================
+// Kindness Challenges Page Styles
+// ==========================================================================
+
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+// Main Page Container
+  
+ .active-challenge-img {
+        object-fit: contain;
+        // height: 600px !important;
+    }
+    .info-box-content p{
+      color:#000!important;
+    }
+.info-box-content ol li{
+   color:#000!important;
+}
+.section-active-challenge{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.collection-title{
+    margin: 1rem 0 0.5rem!important;
+}
+img.lazy-image.chest-img.loaded {
+    margin-left: -100px;
+}
+    .active-challenge-card-wrapper.width-cust {
+        width: 87%;
+    }
+    .cta-section.after-login {
+        padding-top: 1rem;
+    }
+.challenge-info-panel-inner{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.challenge-info-panel-inner{
+  margin-top: 1rem;
+}
+.btn-shuffle p {
+    margin-top: 2rem !important;
+    padding: 0.5rem 0!important;
+    width: 20%!important;
+}
+.challenge-info-panel-inner p {
+  margin: 0.7rem!important;
+  line-height: 2rem!important;
+}
+.card-idd {
+    padding-top: 14px;
+}
+.collection-wrapp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.collection-wrapp .collection-item {
+  width: 32%;
+}
+.challenges-page-container {
+  min-height: 100vh;
+  font-family: $font-teachers;
+  font-size: 0.9rem;
+  padding-bottom: $spacing-lg;
+  position: relative;
+  overflow: hidden;
+  
+  // Apply base font size to all text elements unless specifically overridden
+  p, span, div, li, a, button, label, input, textarea, select {
+    font-size: 0.9rem;
+  }
+}
+.completed-card-img{
+  position: relative;
+}
+.card-datee {
+    position: absolute;
+    bottom: 25px;
+}
+.card-idd {
+    position: absolute;
+    bottom: 65px;
+}
+.completed-card-subbody {
+        display: flex;
+   
+        align-items: center;
+        justify-content: center;
+    }
+        .btn-collection .btn-bg-img {
+        background-size: 72% 72%;
+        margin: 0;
+        width: 100%;
+    }
+    .btn-shuffle p {
+    margin-top: 2rem!important;
+    padding: clamp(1rem, 1.5vw, 1rem);
+}
+.btn-bg-img.btn-startt{
+padding: 1rem 2rem;
+        font-size: 1.4rem;
+        margin: 0;
+}
+  .collection-img
+ {
+    height: 640px;
+    object-fit: contain;
+}
+// ==========================================================================
+// SECTION 1: HERO TITLE
+// ==========================================================================
+
+.challenges-hero {
+  margin: 1.5rem 0;
+  padding: 1.5rem 0 0;
+  // padding: $spacing-lg 0;
+}
+
+.challenges-hero-title {
+  margin-bottom: $spacing-md;
+}
+
+.title-img {
+  width: 100%;
+  max-width: 46rem;
+  height: auto;
+}
+
+.challenges-hero-subtitle {
+  font-family: "ITC Eras Std", "Teachers", sans-serif;
+  font-size: 1.1rem !important;
+  color: #000000;
+  margin: 0 auto 0;
+  line-height: 21px;
+  font-weight: 600;
+}
+
+.challenges-hero-description {
+  font-family: $font-teachers;
+  font-size: clamp(12px, 2vw, 18px);
+  font-weight: $font-weight-normal;
+  color: #000;
+  // color: $color-text-primary;
+  margin: 0rem auto 1.5rem;
+  line-height: $line-height-normal;
+}
+
+// ==========================================================================
+// SECTION 2: MAIN CONTENT (MAP + INFO BOXES)
+// ==========================================================================
+
+.main-content-section {
+  margin-bottom: $spacing-2xl;
+}
+
+// Left: Map Container
+.map-container {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.map-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.map-container .lazy-image-wrapper{
+  width: 100%;
+  height: 100%;
+}
+
+/* Right: Info Boxes Container */
+.info-boxes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.info-box-item {
+  position: relative;
+  border-radius: $radius-lg;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-box-bg {
+  display: none;
+}
+
+.box-bg-img {
+  display: none;
+}
+
+.min-w-0.shrink-0.grow-0.pl-4.basis-full .btn-bg-img {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 11px 55px;
+  margin: 17px;
+  text-align: center;
+  font-size: 1.2rem !important;
+}
+
+.info-box-content {
+  background-size: 99% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* width:  29rem;
+  height: 4rem; */
+  color: #000;
+  border: none;
+  padding: 1rem 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &.img1 {
+    background-size: 100% 100%;
+    margin-bottom: 19px;
+  }
+
+  &.img2 {
+    background-size: 100% 100%;
+        margin-bottom: 17px;
+  }
+
+  &.img3 {
+    background-size: 99% 100%;
+  }
+
+  h3 {
+    font-family: $font-teachers;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $color-black;
+    margin-bottom: 5px;
+  }
+
+
+
+  p {
+    font-family: $font-teachers;
+    font-size: 0.78rem;
+    color: $color-text-primary;
+    line-height: 1.3;
+    margin-bottom: 5px;
+  }
+
+  ol {
+    list-style: decimal;
+    padding-left: 20px;
+    margin: 10px 0 0 0;
+
+    li {
+      font-family: $font-teachers;
+      font-size: clamp(11px, 1.5vw, 16px);
+      color: $color-text-primary;
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+  }
+}
+
+/* ========================================
+   SECTION 3: CHARACTER MESSAGES
+   ======================================== */
+.character-messages-section {
+  margin-bottom: 47px;
+  padding: 0 0px;
+}
+
+.character-msg {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========================================
+   SECTION 4: HOW BADGES WORK
+   ======================================== */
+.badges-section {
+  margin-bottom: 63px;
+  padding: 0 0px;
+}
+
+.sign-wrapper.challenge-sign .sign-img p {
+  bottom: 16%;
+  font-size: 1rem;
+  left: 80px;
+  position: absolute;
+}
+
+.sign-wrapper.challenge-sign .sign-img {
+  position: relative;
+}
+
+.mapp {
+    grid-template-columns: 1.04fr 0.96fr;
+}
+
+p.challenges-hero-description {
+    font-size: 0.95rem !important;
+    color: #000000;
+    margin: 0 auto 0;
+    line-height: 24px;
+}
+.section-title-center {
+  font-family: $font-teachers;
+  font-size: 1.36rem;
+  font-weight: bold;
+  color: $color-black;
+  margin-bottom: 30px;
+}
+
+.sign-wrapper.challenge-sign .btn-ripple-hero p {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.6rem 2rem;
+  text-align: center;
+  margin: 0rem;
+}
+
+.sign-wrapper.challenge-sign .btn-ripple-wrap {
+    margin: auto;
+    margin-left: 30px;
+    margin-top: 16px;
+}
+
+.sign-wrapper.challenge-sign .btn-ripple-hero {
+  padding: 0rem;
+}
+
+.badges-content {
+  margin: 0 auto;
+}
+
+.badges-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========================================
+   SECTION 5: ACTIVE CHALLENGES SLIDER
+   ======================================== */
+.active-challenges-slider {
+  margin-bottom: 60px;
+  padding: 0 0px;
+}
+
+.active-challenges-slider .section-title-center {
+    font-family: "ITC Eras Std", "Teachers", sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.slider-wrapper {
+  position: relative;
+  margin: 0 auto;
+}
+
+.challenges-carousel {
+  width: 76%;
+  margin: 0 auto;
+}
+
+.carousel-slide-item {
+  // padding: 10px;
+}
+
+.active-challenge-card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+    align-items: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px;
+    // height: 600px;
+    // margin-left: 9px;
+}
+
+.challenges-carousel button.carousel-control-next {
+    right: -3.5rem;
+    top: 47%;
+}
+
+.challenges-carousel button.carousel-control-prev {
+    left: -3.1em;
+    top: 46%;
+}
+
+.active-challenge-display {
+  width: 100%;
+}
+
+ .info-box-content.img2 p {
+    font-family: "ITC Eras Std", "Teachers", sans-serif;
+    font-size: 0.78rem;
+    color: #364153;
+    line-height: 1.3;
+    margin-bottom: 12px !important;
+  }
+
+.active-challenge-img {
+  width: 100%;
+  height: auto;
+  border-radius: $radius-lg;
+  margin-left: 10px;
+}
+
+.challenge-info-panel {
+  text-align: center;
+  width: 100%;
+
+  p {
+    margin: 2rem;
+    font-size: clamp(1rem, 2vw, 1.8rem);
+    line-height: 2rem;
+  }
+}
+
+.ready-text {
+  color: $color-black;
+}
+
+.challenge-subtext {
+  font-family: $font-teachers;
+  font-size: clamp(13px, 1.8vw, 18px);
+  color: $color-text-primary;
+  margin-bottom: 25px;
+}
+
+.btn-challenge-join {
+  display: inline-block;
+  font-family: $font-teachers;
+  padding: 14px 40px;
+  color: $color-black;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: clamp(1rem, 1.8vw, 1.8rem);
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 1;
+  border: 0;
+  background-color: transparent;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: transparent;
+  opacity: 0.8;
+}
+
+.carousel-control-prev {
+  left: -60px;
+}
+
+.carousel-control-next {
+  right: -60px;
+}
+
+.carousel-control-prev img,
+.carousel-control-next img {
+  width: 40px;
+  height: auto;
+}
+
+section.cta-section.challenges p.first {
+  margin-bottom: 35px !important;
+  margin-top: 0px;
+  background-size: 76% 100%;
+}
+
+section.cta-section.challenges {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  padding: 0 0rem;
+  position: relative;
+}
+
+
+.challenge-info-panel {
+  text-align: center;
+  width: 100%;
+  margin-left: 15px;
+}
+
+.badges-content img.lazy-image.badges-img.loaded {
+  width: 92% !important;
+  margin: 0 auto;
+}
+
+// .btn-ripple-hero{
+//   padding: 0px;
+// }
+.btn-ripple-wrap {
+  margin: auto;
+}
+.btn-ripple-hero {
+  padding: 2rem;
+}
+
+.sign-wrapper {
+    padding: 1.3125rem 2.5rem 2.375rem 4.375rem;
+}
+
+.btn-ripple-hero p {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* width:  29rem;
+  height: 4rem; */
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 1rem 5rem;
+  text-align: center;
+  margin: 0rem;
+}
+
+.btn-ripple-hero p.first {
+  background-size: 80% 100%;
+}
+
+/* ========================================
+   SECTION 6: EXPLORE COMPLETED CHALLENGES
+   ======================================== */
+.completed-challenges-section {
+  margin-bottom: 60px;
+  padding: 0 0px;
+}
+
+.completed-challenges-section .section-title-center {
+    font-family: "ITC Eras Std", "Teachers", sans-serif;
+    font-size: 1.46rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 30px;
+    line-height: 2;
+}
+
+.completed-card {
+  background-color: transparent;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.completed-card-body {
+  margin: auto;
+  width: 88%;
+  text-align: center;
+  position: relative;
+}
+
+.active-challenge-display {
+  width: 100%;
+  width: 350px;
+}
+
+.completed-card-body h2 {
+  font-size: 1.03rem;
+  font-weight: 600;
+  margin-top: -8.5rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  line-height: 1.2;
+}
+
+p.card-idd {
+  position: absolute;
+  bottom: 43px;
+}
+
+p.card-datee {
+  position: absolute;
+  bottom: 19px;
+}
+
+.completed-card-subbody {
+  height: 5rem;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  // gap: 0.5rem;
+}
+
+.completed-card-subbody p {
+  font-size: 1rem;
+  padding: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+
+.sign-wrapper.challenge-sign .sign-img {
+  width: 100%;
+}
+
+.sign-wrapper.challenge-sign .cta-section {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  padding: 0 0rem;
+  position: relative;
+}
+
+.completed-card:hover {
+  transform: translateY(-5px);
+}
+
+.completed-card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.sign-wrapper.challenge-sign {
+  padding: 1.3125rem 1.5rem 2.375rem 2rem;
+}
+
+/* ========================================
+   SECTION 7: SIGN UP AND START CHALLENGE
+   ======================================== */
+.signup-challenge-section {
+  margin-bottom: 60px;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+.signup-action-box {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.signup-title {
+  font-family: "Teachers", sans-serif;
+  font-size: clamp(20px, 3.5vw, 36px);
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.signup-subtitle {
+  font-family: "Teachers", sans-serif;
+  font-size: clamp(14px, 2vw, 20px);
+  color: #364153;
+  margin-bottom: 35px;
+}
+
+.signup-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.btn-signup-cta {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.btn-signup-cta:hover {
+  transform: translateY(-3px);
+}
+
+.btn-signup-cta img {
+  height: 60px;
+  width: auto;
+}
+
+.btn-signup-cta span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Teachers", sans-serif;
+  font-size: clamp(11px, 1.5vw, 18px);
+  font-weight: 500;
+  color: #000000;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Desktop Default Styles */
+.btn-challenge-action {
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+}
+
+.btn-challenge-action p {
+  padding: clamp(1rem, 2.5vw, 2.2rem);
+  font-size: clamp(1rem, 1.8vw, 1.6rem);
+}
+
+.remaining-time {
+  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+  font-weight: 600;
+}
+
+.time-display {
+  margin: auto !important;
+  margin-bottom: 2rem;
+  font-size: clamp(1rem, 1.5vw, 1.4rem);
+}
+
+.collection-title,
+.section-subtitle {
+      font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.collection-display {
+  text-align: center;
+}
+
+.my-collections-section {
+  margin: 3rem 0;
+}
+
+.btn-collection p {
+ padding: clamp(1rem, 1.5vw, 2rem);
+    font-size: clamp(1.2rem, 2.5vw, 1rem);
+  margin-top: 1rem;
+}
+
+// .btn-collection .btn-bg-img {
+//   background-size: 95% 100%;
+// }
+
+.treasure-chest-section {
+  margin-top: 2rem;
+}
+
+.section-subtitle {
+  text-align: left;
+}
+
+.btn-chest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-chest p {
+  padding: clamp(1rem, 2.5vw, 0.3rem) clamp(2rem, 6vw, 3rem);
+  font-size: clamp(1.1rem, 2vw, 1.2rem);
+}
+
+.btn-challenge-join p,
+.btn-challenge-save p {
+  padding: clamp(1rem, 2.5vw, 2rem) clamp(2rem, 5vw, 5rem);
+  font-size: clamp(1rem, 2vw, 1.8rem);
+}
+
+.btn-shuffle p {
+  margin-top: 2rem;
+  padding: clamp(1rem, 2.5vw, 2rem);
+  width: clamp(60%, 30vw, 30%);
+  margin: auto;
+  text-align: center;
+  font-size: clamp(1rem, 1.8vw, 1.6rem);
+}
+
+.cta-section.after-login {
+  text-align: center;
+  width: clamp(25%, 60vw, 55%);
+  margin: auto;
+}
+
+.cta-subtitle {
+    margin-top: -24%;
+    font-size: clamp(1rem, 1.8vw, 1.6rem);
+    color: #000000;
+    font-weight: 500;
+    z-index: 9;
+    position: relative;
+}
+.cta-button-wrapper p {
+    padding: clamp(0rem, 1.5vw, 1.5rem);
+}
+img.lazy-image.no-challenge-img.loaded {
+    height: 700px;
+    object-fit: contain;
+}
+.no-community-img{
+  height: 700px;
+    object-fit: contain;
+}
+.cta-button-wrapper {
+  width: clamp(70%, 50vw, 50%);
+  margin: auto;
+  height: 7rem;
+  margin-top: 1rem;
+  z-index: 6;
+  position: relative;
+}
+
+.cta-button-wrapper p {
+  padding: clamp(1rem, 2.5vw, 2rem);
+  font-size: clamp(1.1rem, 2vw, 1.7rem);
+}
+
+.no-community-challenges-display,
+.no-challenge-display {
+  position: relative;
+}
+
+.btn-join-challenge {
+  position: absolute;
+  left: 40%;
+  top: 40%;
+}
+
+.btn-join-ex-challenge {
+  position: absolute;
+  left: 44%;
+  top: 58%;
+}
+
+.btn-join-challenge p,
+.btn-join-ex-challenge p {
+  padding: 0.9rem 2rem;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 500;
+}
+
+a.btn-challenge-join.btn-bg-img {
+  background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.41rem !important;
+    font-family: "Teachers", sans-serif;
+    color: #000000;
+    font-weight: 500;
+    padding: 13px 62px;
+    white-space: nowrap;
+}
+/* ========================================
+   LARGE DESKTOP (1920px and above)
+   ======================================== */
+// @media (min-width: 1920px) {
+//   .challenges-page-container {
+//     margin: 0 auto;
+//   }
+        
+//    .card-idd {
+//         bottom: 65px!important;
+//     }
+//         .card-datee {
+//         bottom: 25px!important;
+//     }
+//   .active-challenge-img.challange-1{
+// height: 700px!important;
+// object-fit: contain;
+//   }
+//   .collection-img
+//  {
+//     height: 700px!important;
+//     object-fit: contain;
+// }
+// .collection-title, .section-subtitle {
+//     font-size: 1.5rem;
+// }
+
+// .btn-challenge-join p, .btn-challenge-save p {
+
+//     font-size: 1.3rem !important;
+// }
+// .btn-shuffle p {
+//     margin-top: 3rem!important;
+//     padding: clamp(0rem, 0.5vw, 0.5rem);
+//     width: clamp(19%, 21vw, 26%);
+ 
+//     font-size: clamp(1rem, 1.8vw, 1.5rem);
+// }
+// .btn-bg-img.btn-startt {
+//     background-size: 99% 80%;
+//             margin: 0;
+// }
+// .btn-collection p {
+//     font-size: clamp(1.2rem, 1.5vw, 0rem);
+// }
+// .sign-wrapper {
+//     padding: 1.8125rem 2.5rem 3.375rem 4.375rem;
+// }
+//   .section-title-center {
+//     font-size: 32px;
+//     margin-bottom: 40px;
+//   }
+
+//   .challenges-hero-subtitle {
+//     font-size: 21px;
+//   }
+
+//   .challenges-hero-description {
+//     font-size: 20px;
+//   }
+
+//   .info-box-content h3 {
+//     font-size: 26px;
+//   }
+
+//   .info-box-content p {
+//     font-size: 18px;
+//   }
+
+//   .info-box-content ol li {
+//     font-size: 17px;
+//   }
+
+
+//   .completed-card-body h2 {
+//     font-size: 24px;
+//     margin-top: -14rem;
+//     height: 6.5rem;
+//     padding: 0 1rem;
+//   }
+
+//   .completed-card-subbody {
+//            height: 7.4rem;
+//         gap: 0.8rem;
+//   }
+
+//   .completed-card-subbody p {
+//     font-size: 1.3rem;
+//     line-height: 1.3;
+//   }
+
+//   .btn-ripple-hero p {
+//     padding: 1.2rem 5.5rem;
+//     font-size: 1.3rem;
+//   }
+
+//   .sign-img p {
+//     bottom: 11%;
+//   }
+// }
+
+/* ========================================
+   LAPTOP LARGE (1440px - 1919px)
+   ======================================== */
+// @media (max-width: 1919px) and (min-width: 1440px) {
+//   .challenges-page-container {
+//     padding: 40px 60px;
+//   }
+
+//   .active-challenge-card-wrapper {
+//     padding: 15px;
+//     gap: 15px;
+//   }
+// .active-challenge-card-wrapper .challenge-info-panel p {
+//     margin: 1rem;
+//     font-size: clamp(1rem, 2vw, 1rem);
+//     line-height: 2rem;
+//     padding: clamp(1rem, 0.5vw, 2rem) clamp(1rem, 5vw, 2rem);
+// }
+
+//   .info-box-content h3 {
+//     font-size: 22px;
+//   }
+
+//   .info-box-content p {
+//     font-size: 17px;
+//   }
+
+//   .info-box-content ol li {
+//     font-size: 15px;
+//   }
+
+//       .btn-chest p {
+//         padding: 1rem 3rem;
+//         font-size: 1.3rem;
+//     }
+
+//   .btn-shuffle p {
+//     width: 35%;
+//     font-size: 1.4rem;
+//   }
+
+//   .shuffle-cards-btn {
+//     margin: auto;
+//     text-align: center;
+//     margin-top: 2%;
+//   }
+
+// .completed-card-body h2 {
+//         font-size: 22px;
+//         margin-top: -12rem;
+//         height: 5rem;
+//         padding: 0 1rem;
+//     }
+
+//   .completed-card-subbody {
+//     height: 6.5rem;
+//     gap: 0.4rem;
+//   }
+
+//   .completed-card-subbody p {
+//     font-size: 1.25rem;
+//     line-height: 1.3;
+//   }
+
+//     .challenges .btn-ripple-hero p {
+//         padding: 0.8rem 4.2rem;
+//         font-size: 1.25rem;
+//         margin: 0rem;
+//     }
+
+//    .challenges .btn-ripple-hero {
+//     padding: 1rem;
+// }
+
+//   .sign-img p {
+//     bottom: 12%;
+//     font-size: 1.4rem;
+//   }
+// }
+// @media (min-width: 1280px) and (max-width: 1365px) {
+//     .active-challenge-card-wrapper .challenge-info-panel p {
+//         padding: 0.5rem 2rem !important;
+//     }
+//     .active-challenge-card-wrapper .challenge-info-panel p {
+//     margin: 1rem;
+//     font-size: clamp(1rem, 2vw, 1rem)!important;
+//     }
+//     .btn-join-challenge p, .btn-join-ex-challenge p {
+//     padding: 0.9rem 2rem;
+//     font-size: clamp(1rem, 2vw, 1rem);
+//     font-weight: 500;
+// }
+// img.lazy-image.no-community-img.loaded {
+//     height: 500px;
+// }
+//  img.lazy-image.no-challenge-img.loaded {
+//     height: 500px;
+//     object-fit: contain;
+// }
+// .active-challenge-img {
+//         object-fit: contain;
+//         height: 400px!important;
+//     }
+//         .badges-img {
+//         width: 100%;
+//         max-width: 100%;
+//         height: 490px!important;
+//         object-fit: contain;
+//     }
+//     .info-boxes-container {
+//     gap: 0px!important;
+//     }
+//     .info-box-content.img1 {
+//     background-size: 98% 90%;
+// }
+// .info-box-content.img2 {
+//     background-size: 98% 90%;
+// }
+// .info-box-content.img3 {
+//     background-size: 98% 90%;
+// }
+//     .map-img {
+//         height: 98%!important;
+
+//     }
+//     .info-box-content {
+ 
+//     padding: 1.9rem 1.3rem!important;
+//     }
+//     .section-title-center{
+//       margin-bottom: 25px;
+//     }
+// }
+
+/* ========================================
+   LAPTOP MEDIUM (1280px - 1439px)
+   ======================================== */
+// @media (max-width: 1439px) and (min-width: 1280px) {
+//   .challenges-page-container {
+//     padding: 40px 50px;
+  
+//   }
+//   .btn-bg-img.btn-startt {
+//     padding: 0.5rem 2rem;
+//   }
+// .collection-img {
+//             height: 450px;
+//     object-fit: contain;
+// }
+// .btn-collection p {
+//     padding: clamp(1rem, 1.5vw, 2rem)!important;
+//     font-size: clamp(0.8rem, 2.5vw, 0.8rem)!important;
+//     margin-top: 1rem;
+// }
+// .btn-collection .btn-bg-img {
+//     background-size: 72% 82%;
+// }
+//   .badges-img {
+//     width: 100%;
+//     max-width: 100%;
+//     height: 700px;
+//     object-fit: contain;
+// }
+//   img.lazy-image.no-challenge-img.loaded {
+//     height: 500px;
+//     object-fit: contain;
+// }
+// img.lazy-image.no-community-img.loaded {
+//     height: 500px;
+//     object-fit: contain;
+// }
+// .collection-title {
+//     font-size: 1rem;
+// }
+// .collection-wrapp .collection-item {
+//     width: 27%;
+// }
+// .card-datee {
+//     bottom: 15px;
+// }
+// .card-idd {
+//     bottom: 44px;
+// }
+//   .section-title-center {
+//     font-size: 35px;
+//   }
+
+//   .active-challenge-card-wrapper {
+//     padding: 25px;
+//     gap: 30px;
+//   }
+
+//   .info-box-content h3 {
+//     font-size: 20px;
+//   }
+
+//   .info-box-content p {
+//     font-size: 16px;
+//   }
+
+//   .info-box-content ol li {
+//     font-size: 14px;
+//   }
+
+ 
+
+//   .btn-challenge-join p,
+//   .btn-challenge-save p {
+//     padding: 1.8rem 4.5rem;
+//     font-size: 1.6rem;
+//   }
+
+//   .btn-shuffle p {
+//     width: 30%;
+//     font-size: 1.4rem;
+//   }
+
+//     .cta-section.after-login {
+//         width: 67%;
+//     }
+
+//   .cta-button-wrapper {
+//     width: 55%;
+//   }
+
+//     .completed-card-body h2 {
+//         font-size: 20px !important;
+//         margin-top: -10.2rem;
+//         height: 3.8rem;
+//         padding: 0 1rem;
+//         line-height: 1.4;
+//     }
+
+//     .bg-gray {
+//     background-color: #dbdad9;
+//     padding: 6px 40px;
+//     text-align: center;
+//     border: 2px solid #262626;
+// }
+
+//   .completed-card-subbody {
+//     height: 6rem;
+//     gap: 0.4rem;
+//   }
+
+//   .completed-card-subbody p {
+//     font-size: 1.2rem;
+//     line-height: 1.3;
+//   }
+
+//   .btn-ripple-hero p {
+//     padding: 1rem 2.5rem;
+//     font-size: 1.2rem;
+//     margin: 0rem;
+//   }
+
+//   .sign-img p {
+//     bottom: 8%;
+//   }
+// }
+
+// @media (max-width: 1339px) and (min-width: 1280px) {
+//     .completed-card-body h2 {
+//         font-size: 20px !important;
+//         margin-top: -10.3rem;
+//         height: 3.8rem;
+//         padding: 0 1rem;
+//         line-height: 1.4;
+//     }
+// }
+
+
+/* ========================================
+   LAPTOP (1024px - 1279px)
+   ======================================== */
+// @media (max-width: 1279px) and (min-width: 1024px) {
+//   .challenges-page-container {
+//     padding: 35px 40px;
+//   }
+//  .collection-wrapp .collection-item {
+//     width: 48%;
+// }
+// .card-datee {
+//     position: absolute;
+//     bottom: 23px;
+// }
+// .card-idd {
+//     position: absolute;
+//     bottom: 44px;
+// }
+//   .section-title-center {
+//     font-size: 24px;
+//   }
+
+//   .challenges-hero-subtitle {
+//     font-size: 17px;
+//   }
+
+//   .challenges-hero-description {
+//     font-size: 15px;
+//   }
+
+//   .info-box-content h3 {
+//     font-size: 18px;
+//   }
+
+//   .info-box-content p {
+//     font-size: 14px;
+//   }
+
+//   .info-box-content ol li {
+//     line-height: 1.3;
+//   }
+
+//   .info-box-content ol li {
+//     font-size: 14px;
+//   }
+
+//   .active-challenge-card-wrapper {
+//     padding: 20px;
+//     gap: 25px;
+//   }
+
+//   .challenge-info-panel p {
+//     font-size: 1.3rem;
+//     margin: 1.5rem;
+//   }
+
+//   .btn-chest p {
+//     padding: 1.5rem 2rem;
+//     font-size: 1rem;
+//   }
+
+//   .btn-challenge-join p,
+//   .btn-challenge-save p {
+//     padding: 1rem 1rem;
+//     font-size: 1.5rem;
+//   }
+// img.lazy-image.no-challenge-img.loaded {
+//     height: auto;
+// }
+// .no-community-img {
+//     height: auto;
+//     object-fit: contain;
+// }
+//   .btn-collection p {
+//     padding: 1.5rem;
+//     font-size: 1rem;
+//   }
+
+//   .btn-shuffle p {
+//     width: 45%;
+//     font-size: 1.3rem;
+//     padding: 1.5rem;
+//   }
+
+//   .cta-section.after-login {
+//     width: 75%;
+//   }
+
+//   .cta-subtitle {
+//     font-size: 1.4rem;
+//   }
+
+//   .cta-button-wrapper {
+//     width: 60%;
+//   }
+
+//   .cta-button-wrapper p {
+//     font-size: 1.5rem;
+//   }
+
+//   .completed-card-body h2 {
+//                    font-size: 14px;
+//         margin-top: -8rem;
+//         height: 3.2rem;;
+//         padding: 0 1rem;
+//   }
+  
+
+//   .completed-card-subbody {
+//     height: 5.3rem;
+//     // display: flex;
+//     // flex-direction: column;
+//     // justify-content: center;
+//     // gap: 0.3rem;
+//   }
+
+//   .completed-card-subbody p {
+//     font-size: 12px;
+//     padding: 0;
+//     margin: 0;
+//   }
+
+//   .carousel-control-prev {
+//     left: -50px;
+//   }
+
+//   .carousel-control-next {
+//     right: -50px;
+//   }
+
+//   .btn-ripple-hero p {
+//     padding: 1rem 0.6rem;
+//         font-size: 1rem;
+//   }
+// .sign-wrapper {
+//     padding: 1.3125rem 2.5rem 1.375rem 4.375rem;
+// }
+//   .sign-img p {
+//     bottom: 3%;
+//   }
+// }
+
+/* ========================================
+   TABLET LANDSCAPE / IPAD PRO (768px - 1023px)
+   ======================================== */
+// @media (max-width: 1023px) and (min-width: 768px) {
+//   .btn-bg-img.btn-startt {
+//     padding: 0.3rem 2rem;
+//     font-size: 1.4rem;
+//     margin-top: -10px;
+// }
+//   .active-challenge-card-wrapper {
+//     display: flex;
+//   }
+//   .collection-wrapp .collection-item {
+//     width: 48%;
+// }
+//   .challenges-page-container {
+//     padding: 30px 30px;
+//   }
+// .active-challenge-card-wrapper .challenge-info-panel p {
+//     margin: 0.5rem!important;
+// }
+// .active-challenge-img {
+//     width: 100%;
+//     height: 500px;
+//     object-fit: contain;
+// }
+//   .challenges-hero {
+//     margin: 30px 0;
+//   }
+// .card-datee {
+//     position: absolute;
+//     bottom: 18px;
+// }
+// .card-idd {
+//     position: absolute;
+//     bottom: 35px;
+// }
+//   .section-title-center {
+//     font-size: 22px;
+//     margin-bottom: 30px;
+//   }
+
+//   .challenges-hero-subtitle {
+//     font-size: 16px;
+//   }
+
+//   .challenges-hero-description {
+//     font-size: 14px;
+//     margin-top: 1.5rem;
+//   }
+
+//   .main-content-section {
+//     margin-bottom: 35px;
+//   }
+
+//   .map-container {
+//     display: flex;
+//     align-items: stretch;
+//   }
+
+//   .map-img {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//   }
+
+//   .info-boxes-container {
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//   }
+
+//   .info-box-item {
+//     flex: 1;
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   .info-box-content {
+//     padding: 1rem 1.2rem;
+//     flex: 1;
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   // .info-box-content h3 {
+//   //   font-size: 17px;
+//   // }
+
+//   // .info-box-content p {
+//   //   font-size: 15px;
+//   // }
+
+//   // .info-box-content ol li {
+//   //   font-size: 13px;
+//   // }
+
+//   .active-challenge-card-wrapper {
+//     grid-template-columns: 1fr;
+//     gap: 20px;
+//     padding: 20px;
+//   }
+
+//   .challenge-info-panel p {
+//     font-size: 1.2rem;
+//     margin: 1.2rem;
+//     line-height: 1.8rem;
+//   }
+
+//   .remaining-time {
+//     font-size: 1.6rem;
+//   }
+
+//   .time-display {
+//     font-size: 1.2rem;
+//   }
+
+//   .btn-challenge-action p {
+//     padding: 1.5rem;
+//     font-size: 1.3rem;
+//   }
+
+//   .collection-title,
+//   .section-subtitle {
+//     font-size: 1.1rem;
+//   }
+// .collection-img {
+//     height: auto;
+// }
+// .btn-collection .btn-bg-img {
+//     background-size: 95% 70%;
+// }
+//   .btn-collection p {
+//     padding: 1.5rem;
+//     font-size: 1.2rem;
+//   }
+
+//   .btn-chest p {
+//             padding: 1rem 2rem;
+//         font-size: 1.2rem;
+//   }
+// img.lazy-image.no-challenge-img.loaded {
+//     height: auto;
+// }
+// .no-community-img {
+//     height: auto;
+// }
+//   .btn-challenge-join p,
+//   .btn-challenge-save p {
+//     padding: 1.5rem 3.5rem;
+//     font-size: 1.4rem;
+//   }
+
+//   .btn-shuffle p {
+//     width: 50%;
+//     font-size: 1.2rem;
+//     padding: 1.5rem;
+//   }
+
+//   .cta-section.after-login {
+//     width: 80%;
+//   }
+
+//   .cta-subtitle {
+//     margin-top: -22%;
+//     font-size: 1.3rem;
+//   }
+
+//   .cta-button-wrapper {
+//     width: 65%;
+//   }
+
+//   .cta-button-wrapper p {
+//     padding: 1.5rem;
+//     font-size: 1.4rem;
+//   }
+
+//   .completed-challenges-section {
+//     margin-bottom: 0px;
+//   }
+
+//   .completed-card-body h2 {
+//     font-size: 11px;
+//     margin-top: -6.7rem;
+//     height: 3.6rem;
+//     padding: 0 0.5rem;
+//   }
+
+//   .completed-card-subbody {
+//     height: 3.5rem;
+//     // display: flex;
+//     // flex-direction: column;
+//     // justify-content: center;
+//     // gap: 0.2rem;
+//   }
+
+//   .completed-card-subbody p {
+//     font-size: 0.7rem;
+//     padding: 0;
+//     margin: 0;
+//     line-height: 1.2;
+//   }
+
+//   .carousel-control-prev,
+//   .carousel-control-next {
+//     display: none;
+//   }
+
+//   .btn-join-challenge {
+//     left: 34%;
+//     top: 38%;
+//   }
+
+//   .btn-join-ex-challenge {
+//     left: 40%;
+//     top: 56%;
+//   }
+
+//   .btn-join-challenge p,
+//   .btn-join-ex-challenge p {
+//            padding: 0.8rem 2rem;
+//     font-size: 1.4rem;
+//   }
+
+//   .signup-buttons {
+//     gap: 15px;
+//   }
+
+//   .btn-signup-cta img {
+//     height: 55px;
+//   }
+
+//   .btn-signup-cta span {
+//     font-size: 15px;
+//   }
+
+//       .sign-img p {
+//         bottom: -2%;
+//         font-size: 1rem;
+//     }
+
+//   .shuffle-cards-btn {
+//     margin: auto;
+//     text-align: center;
+//   }
+
+//   .btn-ripple-hero p {
+//     padding: 0.4rem 0.4rem;
+//     font-size: 0.9rem;
+//   }
+//   .sign-wrapper
+//  {
+//     padding: 2.3125rem 1.5rem 0.375rem 1.5rem;
+// }
+// }
+
+// @media (max-width: 950px) and (min-width: 900px) {
+//   .card-idd {
+//         bottom: 42px;
+//     }
+//     .card-datee {
+//         bottom: 1.4rem;
+//     }
+//     .btn-shuffle p {
+//     width: 80% !important;
+// }
+//     .sign-img p {
+//         font-size: 1rem!important;
+//     }
+//     .btn-ripple-hero p {
+//         padding: 0.4rem 1.5rem!important;
+//         font-size: 1rem!important;
+//     }
+// }
+// /* ========================================
+//    TABLET PORTRAIT / IPAD (600px - 767px)
+//    ======================================== */
+// @media (max-width: 767px) and (min-width: 600px) {
+//   .challenges-page-container {
+//     padding: 25px 20px;
+//   }
+//   .sign-wrapper.challenge-sign {
+//     padding: 0rem 1.5rem;
+// }
+// .btn-shuffle p {
+//     width: 80% !important;
+// }
+//   .challenges-hero {
+//     margin: 25px 0;
+//   }
+
+//   .section-title-center {
+//     font-size: 20px;
+//     margin-bottom: 25px;
+//   }
+
+//   .challenges-hero-subtitle {
+//     font-size: 15px;
+//   }
+
+//   .challenges-hero-description {
+//     font-size: 13px;
+//     margin-top: 1.2rem;
+//   }
+
+//   .info-box-content {
+//     padding: 0.9rem 1rem;
+//   }
+
+//   // .info-box-content h3 {
+//   //   font-size: 16px;
+//   //   margin-bottom: 10px;
+//   // }
+
+//   // .info-box-content p {
+//   //   font-size: 14px;
+//   // }
+
+//   // .info-box-content ol li {
+//   //   font-size: 12px;
+//   // }
+
+//   .active-challenge-card-wrapper {
+//     grid-template-columns: 1fr;
+//     gap: 18px;
+//     padding: 18px;
+//   }
+
+//   .challenge-info-panel p {
+//     font-size: 1.1rem;
+//     margin: 1rem;
+//     line-height: 1.6rem;
+//   }
+
+//   .remaining-time {
+//     font-size: 1.4rem;
+//   }
+
+//   .time-display {
+//     font-size: 1.1rem;
+//   }
+
+//   .btn-challenge-action p {
+//     padding: 1.3rem;
+//     font-size: 1.2rem;
+//   }
+
+//   .collection-title,
+//   .section-subtitle {
+//     font-size: 1.5rem;
+//     margin: 0.8rem;
+//   }
+
+//   .btn-collection p {
+//     padding: 1.3rem;
+//     font-size: 1.4rem;
+//   }
+
+//   .btn-chest p {
+//     padding: 1.3rem 3rem;
+//     font-size: 1.3rem;
+//   }
+
+//   .btn-challenge-join p,
+//   .btn-challenge-save p {
+//     padding: 1.3rem 3rem;
+//     font-size: 1.3rem;
+//   }
+
+//   .btn-shuffle p {
+//     width: 60%;
+//     font-size: 1.1rem;
+//     padding: 1.3rem;
+//   }
+
+//   .cta-section.after-login {
+//     width: 85%;
+//   }
+
+//   .cta-subtitle {
+//     margin-top: -30%;
+//     font-size: 1.2rem;
+//   }
+
+//   .cta-button-wrapper {
+//     width: 70%;
+//     height: 8rem;
+//   }
+
+//   .cta-button-wrapper p {
+//     padding: 1.3rem;
+//     font-size: 1.3rem;
+//   }
+
+//   .completed-card-body h2 {
+//     font-size: 17px;
+//     margin-top: -9rem;
+//     height: 5.5rem;
+//     padding: 0 0.8rem;
+//   }
+
+//   .completed-card-subbody {
+//     height: 5rem;
+//     // display: flex;
+//     // flex-direction: column;
+//     // justify-content: center;
+//     // gap: 0.3rem;
+//   }
+
+//   .completed-card-subbody p {
+//     font-size: 0.95rem;
+//     padding: 0;
+//     margin: 0;
+//   }
+
+//   .carousel-control-prev,
+//   .carousel-control-next {
+//     display: none;
+//   }
+
+//   .btn-join-challenge {
+//     left: 35%;
+//     top: 36%;
+//   }
+
+//   .btn-join-ex-challenge {
+//     left: 37%;
+//     top: 54%;
+//   }
+
+//   .btn-join-challenge p,
+//   .btn-join-ex-challenge p {
+//     padding: 1.3rem;
+//     font-size: 1.3rem;
+//   }
+
+//   .signup-buttons {
+//     gap: 12px;
+//   }
+
+//   .btn-signup-cta img {
+//     height: 50px;
+//   }
+
+//   .btn-signup-cta span {
+//     font-size: 14px;
+//   }
+
+//   .btn-ripple-hero p {
+//     padding: 0.85rem 3rem;
+//     font-size: 0.95rem;
+//   }
+
+//   .sign-img p {
+//     bottom: 11%;
+//   }
+// }
+
+// /* ========================================
+//    MOBILE LARGE (480px - 599px)
+//    ======================================== */
+// @media (max-width: 599px) and (min-width: 480px) {
+//   .challenges-page-container {
+//     padding: 20px 15px;
+//   }
+// .btn-shuffle p {
+//     width: 80% !important;
+// }
+//   .challenges-hero {
+//     margin: 20px 0;
+//   }
+
+//   .section-title-center {
+//     font-size: 18px;
+//     margin-bottom: 20px;
+//   }
+
+//   .challenges-hero-subtitle {
+//     font-size: 14px;
+//   }
+
+//   .challenges-hero-description {
+//     font-size: 12px;
+//     margin-top: 1rem;
+//   }
+
+//   .info-box-content {
+//     padding: 0.8rem 0.9rem;
+//   }
+
+//   // .info-box-content h3 {
+//   //   font-size: 15px;
+//   //   margin-bottom: 8px;
+//   // }
+
+//   // .info-box-content p {
+//   //   font-size: 13px;
+//   // }
+
+//   // .info-box-content ol li {
+//   //   font-size: 11px;
+//   // }
+
+//   .active-challenge-card-wrapper {
+//     grid-template-columns: 1fr;
+//     gap: 15px;
+//     padding: 15px;
+//   }
+
+//   .challenge-info-panel p {
+//     font-size: 1rem;
+//     margin: 0.8rem;
+//     line-height: 1.4rem;
+//   }
+
+//   .remaining-time {
+//     font-size: 1.2rem;
+//   }
+
+//   .time-display {
+//     font-size: 1rem;
+//   }
+
+//   .btn-challenge-action p {
+//     padding: 1.1rem;
+//     font-size: 1.1rem;
+//   }
+
+//   .collection-title,
+//   .section-subtitle {
+//     font-size: 1.3rem;
+//     margin: 0.7rem;
+//   }
+
+//   .btn-collection p {
+//     padding: 1.1rem;
+//     font-size: 1.2rem;
+//   }
+
+//   .btn-chest {
+//     flex-direction: column;
+//   }
+
+//   .btn-chest p {
+//     padding: 1.1rem 2.5rem;
+//     font-size: 1.2rem;
+//   }
+
+//   .btn-challenge-join p,
+//   .btn-challenge-save p {
+//     padding: 1.1rem 2.5rem;
+//     font-size: 1.2rem;
+//   }
+
+//   .btn-shuffle p {
+//     width: 70%;
+//     font-size: 1rem;
+//     padding: 1.1rem;
+//   }
+
+//   .cta-section.after-login {
+//     width: 90%;
+//   }
+
+//   .cta-subtitle {
+//     margin-top: -35%;
+//     font-size: 1.1rem;
+//   }
+
+//   .cta-button-wrapper {
+//     width: 80%;
+//     height: 7rem;
+//   }
+
+//   .cta-button-wrapper p {
+//     padding: 1.1rem;
+//     font-size: 1.2rem;
+//   }
+
+//   .completed-card-body h2 {
+//     font-size: 15px;
+//     margin-top: -8rem;
+//     height: 5rem;
+//     padding: 0 0.7rem;
+//   }
+
+//   .completed-card-subbody {
+//     height: 4.5rem;
+//     // display: flex;
+//     // flex-direction: column;
+//     // justify-content: center;
+//     // gap: 0.3rem;
+//   }
+
+//   .completed-card-subbody p {
+//     font-size: 0.9rem;
+//     padding: 0;
+//     margin: 0;
+//   }
+
+//   .carousel-control-prev,
+//   .carousel-control-next {
+//     display: none;
+//   }
+
+//   .btn-join-challenge {
+//     left: 30%;
+//     top: 35%;
+//   }
+
+//   .btn-join-ex-challenge {
+//     left: 33%;
+//     top: 52%;
+//   }
+
+//   .btn-join-challenge p,
+//   .btn-join-ex-challenge p {
+//     padding: 1.1rem;
+//     font-size: 1.2rem;
+//   }
+
+//   .signup-buttons {
+//     gap: 10px;
+//   }
+
+//   .btn-signup-cta img {
+//     height: 48px;
+//   }
+
+//   .btn-signup-cta span {
+//     font-size: 13px;
+//   }
+
+//   .treasure-chest-display {
+//     flex-direction: column-reverse;
+//   }
+
+//   .btn-ripple-hero p {
+//     padding: 0.8rem 2.5rem;
+//     font-size: 0.9rem;
+//   }
+
+//   .sign-img p {
+//     bottom: 12%;
+//   }
+// }
+
+// /* ========================================
+//    MOBILE MEDIUM (375px - 479px)
+//    ======================================== */
+// @media (max-width: 479px) and (min-width: 375px) {
+//   .challenges-page-container {
+//     padding: 15px 12px;
+//   }
+// .card-idd {
+//     position: absolute;
+//     bottom: 40px!important;
+// }
+// .btn-shuffle p {
+//     width: 80% !important;
+// }
+// .sign-wrapper {
+//     padding: 0;
+// }
+// .card-datee
+//  {
+//     position: absolute;
+//     bottom: 15px!important;
+// }
+//   .challenges-hero {
+//     margin: 15px 0;
+//     margin-top: 5rem;
+//     padding: 15px 0;
+//   }
+
+//   .section-title-center {
+//     font-size: 16px;
+//     margin-bottom: 18px;
+//   }
+
+//   .challenges-hero-subtitle {
+//     font-size: 13px;
+//   }
+
+//   .challenges-hero-description {
+//     font-size: 11px;
+//     margin-top: 0.8rem;
+//   }
+
+//   .info-box-content {
+//     padding: 0.7rem 0.8rem;
+//   }
+
+//   // .info-box-content h3 {
+//   //   font-size: 14px;
+//   //   margin-bottom: 7px;
+//   // }
+
+//   // .info-box-content p {
+//   //   font-size: 12px;
+//   // }
+
+//   // .info-box-content ol li {
+//   //   font-size: 10px;
+//   // }
+
+//   .active-challenge-card-wrapper {
+//     grid-template-columns: 1fr;
+//     gap: 12px;
+//     padding: 12px;
+//   }
+
+//   .challenge-info-panel p {
+//     font-size: 0.9rem;
+//     margin: 0.6rem;
+//     line-height: 1.3rem;
+//   }
+
+//   .remaining-time {
+//     font-size: 1.1rem;
+//   }
+
+//   .time-display {
+//     font-size: 0.9rem;
+//   }
+
+//   .btn-challenge-action p {
+//     padding: 1rem;
+//     font-size: 1rem;
+//   }
+
+//   .collection-title,
+//   .section-subtitle {
+//     font-size: 1.2rem;
+//     margin: 0.6rem;
+//   }
+
+//   .btn-collection p {
+//     padding: 1rem;
+//     font-size: 1.1rem;
+//   }
+
+//   .btn-chest {
+//     flex-direction: column;
+//   }
+
+//   .btn-chest p {
+//     padding: 1rem 2rem;
+//     font-size: 1.1rem;
+//   }
+
+//   .btn-challenge-join p,
+//   .btn-challenge-save p {
+//     padding: 1rem 2rem;
+//     font-size: 1.1rem;
+//   }
+
+//   .btn-shuffle p {
+//     width: 80%;
+//     font-size: 0.95rem;
+//     padding: 1rem;
+//   }
+
+//   .cta-section.after-login {
+//     width: 95%;
+//   }
+
+//   .cta-subtitle {
+//     margin-top: -23%;
+//     font-size: 1rem;
+//   }
+
+//   .cta-button-wrapper {
+//     width: 85%;
+//     height: 6rem;
+//     margin-top: 0rem;
+//   }
+
+//   .cta-button-wrapper p {
+//     padding: 1rem;
+//     font-size: 1.1rem;
+//   }
+
+//   .completed-card-body h2 {
+//     font-size: 14px;
+//     margin-top: -12rem;
+//     height: 7rem;
+//     padding: 0 0.7rem;
+//   }
+
+//   .completed-card-subbody {
+//     height: 4.6rem;
+//     // display: flex;
+//     // flex-direction: column;
+//     // justify-content: center;
+//     // gap: 0.5rem;
+//   }
+
+//   .completed-card-subbody p {
+//     font-size: 0.85rem;
+//     padding: 0;
+//     margin: 0;
+//   }
+
+//   .carousel-control-prev,
+//   .carousel-control-next {
+//     display: none;
+//   }
+
+//   .btn-join-challenge {
+//     left: 31%;
+//     top: 41%;
+//   }
+
+//   .btn-join-ex-challenge {
+//     left: 36%;
+//     top: 55%;
+//   }
+
+//   .btn-join-challenge p,
+//   .btn-join-ex-challenge p {
+//     padding: 0.8rem;
+//     font-size: 0.8rem;
+//   }
+
+//   .signup-buttons {
+//     gap: 8px;
+//   }
+
+//   .btn-signup-cta img {
+//     height: 45px;
+//   }
+
+//   .btn-signup-cta span {
+//     font-size: 12px;
+//   }
+
+//   .treasure-chest-display {
+//     flex-direction: column-reverse;
+//     gap: 1rem;
+//   }
+
+//   .sign-img p {
+//         bottom: 30%!important;
+//         left: 50%;
+//     margin-top: unset;
+//     }
+//     .btn-ripple-hero {
+//     padding: 0;
+// }
+// .sign-wrapper.challenge-sign {
+//         padding: 0rem 1.5rem 2.5rem;
+//     }
+//   .shuffle-cards-btn {
+//     margin: auto;
+//     margin-top: auto;
+//     text-align: center;
+//     margin-top: 1rem;
+//   }
+
+//       .challenges-hero-description {
+//         margin-bottom: 0px;
+//     }
+
+//   .btn-ripple-hero p {
+//     padding: 0.75rem 1rem;
+//     font-size: 0.85rem;
+//   }
+// }
+// @media (max-width: 420px) and (min-width: 412px) {
+//     .card-idd {
+//         position: absolute;
+//         bottom: 45px !important;
+//     }
+//          .challenges-hero-description {
+//         margin-bottom: 0px;
+//     }
+//         .card-datee {
+//         position: absolute;
+//         bottom: 17px !important;
+//     }
+// }
+// /* ========================================
+//    MOBILE SMALL (320px - 374px)
+//    ======================================== */
+// @media (max-width: 374px) {
+//   .challenges-page-container {
+//     padding: 12px 10px;
+//   }
+//      .challenges-hero-description {
+//         margin-bottom: 0px;
+//     }
+//   .challenges-hero {
+//     margin: 12px 0;
+//     padding: 12px 0;
+//     margin-top: 5rem;
+//   }
+
+//   .title-img {
+//     max-width: 100%;
+//   }
+
+//   .section-title-center {
+//     font-size: 15px;
+//     margin-bottom: 15px;
+//   }
+
+//   .challenges-hero-subtitle {
+//     font-size: 12px;
+//   }
+
+//   .challenges-hero-description {
+//     font-size: 10px;
+//     margin-top: 0.6rem;
+//   }
+
+//   .info-box-content {
+//     padding: 0.6rem 0.7rem;
+//   }
+
+//   // .info-box-content h3 {
+//   //   font-size: 13px;
+//   //   margin-bottom: 6px;
+//   // }
+
+//   // .info-box-content p {
+//   //   font-size: 11px;
+//   // }
+
+//   .info-box-content ol li {
+//     font-size: 9px;
+//   }
+
+//   .active-challenge-card-wrapper {
+//     grid-template-columns: 1fr;
+//     gap: 10px;
+//     padding: 10px;
+//   }
+
+//   .challenge-info-panel p {
+//     font-size: 0.8rem;
+//     margin: 0.5rem;
+//     line-height: 1.2rem;
+//   }
+
+//   .remaining-time {
+//     font-size: 1rem;
+//   }
+
+//   .time-display {
+//     font-size: 0.8rem;
+//   }
+
+//   .btn-challenge-action p {
+//     padding: 0.9rem;
+//     font-size: 0.9rem;
+//   }
+
+//   .collection-title,
+//   .section-subtitle {
+//     font-size: 1.1rem;
+//     margin: 0.5rem;
+//   }
+
+//   .btn-collection p {
+//     padding: 0.9rem;
+//     font-size: 1rem;
+//   }
+
+//   .btn-chest {
+//     flex-direction: column;
+//   }
+
+//   .btn-chest p {
+//     padding: 0.9rem 1.5rem;
+//     font-size: 1rem;
+//   }
+
+//   .btn-challenge-join p,
+//   .btn-challenge-save p {
+//     padding: 0.9rem 1.5rem;
+//     font-size: 1rem;
+//   }
+
+//   .btn-shuffle p {
+//     width: 90%;
+//     font-size: 0.9rem;
+//     padding: 0.9rem;
+//   }
+
+//   .cta-section.after-login {
+//     width: 100%;
+//   }
+
+//   .cta-subtitle {
+//     margin-top: -21%;
+//     font-size: 0.9rem;
+//   }
+
+//   .cta-button-wrapper {
+//     width: 90%;
+//     height: 5.5rem;
+//     margin-top: 0rem;
+//   }
+
+//   .cta-button-wrapper p {
+//     padding: 0.9rem;
+//     font-size: 1rem;
+//   }
+
+//   .completed-card-body h2 {
+//     font-size: 13px;
+//     margin-top: -10.2rem;
+//     height: 5.8rem;
+//     padding: 0 0.6rem;
+//   }
+
+//   .completed-card-subbody {
+//     height: 4.5rem;
+//     // display: flex;
+//     // flex-direction: column;
+//     // justify-content: center;
+//     // gap: 0.2rem;
+//   }
+
+//   .completed-card-subbody p {
+//     font-size: 0.75rem;
+//     padding: 0;
+//     margin: 0;
+//   }
+
+//   .carousel-control-prev,
+//   .carousel-control-next {
+//     display: none;
+//   }
+
+//   .btn-join-challenge {
+//     left: 30%;
+//     top: 40%;
+//   }
+
+//   .btn-join-ex-challenge {
+//     left: 41%;
+//     top: 56%;
+//   }
+
+//   .btn-join-challenge p,
+//   .btn-join-ex-challenge p {
+//     padding: 0.9rem;
+//     font-size: 0.7rem;
+//   }
+
+//   .signup-buttons {
+//     gap: 6px;
+//   }
+
+//   .btn-signup-cta img {
+//     height: 42px;
+//   }
+
+//   .btn-signup-cta span {
+//     font-size: 11px;
+//   }
+
+//   .treasure-chest-display {
+//     flex-direction: column-reverse;
+//     gap: 0.8rem;
+//   }
+
+//   .sign-img p {
+//     bottom: 10%;
+//   }
+
+//   .character-messages-section {
+//     margin-bottom: 30px;
+//   }
+
+//   .badges-section {
+//     margin-bottom: 40px;
+//   }
+
+//   .active-challenges-slider {
+//     margin-bottom: 40px;
+//   }
+
+//   .completed-challenges-section {
+//     margin-bottom: 40px;
+//   }
+
+//   .shuffle-cards-btn {
+//     margin: auto;
+//     text-align: center;
+//   }
+
+//   .btn-ripple-hero p {
+//     padding: 0.7rem 1.5rem;
+//     font-size: 0.8rem;
+//   }
+// }
+
+
+// @media (min-width: 652px) and (max-width: 810px) {
+//   .challenges-hero {
+//     margin: 22px 0 10px;
+//   }
+// }
+// @media (min-width: 252px) and (max-width: 610px) {
+// .character-messages-section {
+//     margin-bottom: 40px;
+//     padding: 0 20px;
+// }
+// .badges-section {
+//     margin-bottom: 30px;
+//     padding: 0 20px;
+// }
+// .active-challenge-img {
+//     -o-object-fit: contain;
+//     object-fit: contain;
+//     height: auto !important;
+// }
+
+//     .active-challenge-card-wrapper .challenge-info-panel p {
+//         margin: 0rem;
+//     }
+// }
+
+
+.active-challenge-card-wrapper .challenge-info-panel p {
+  margin: 1rem;
+  font-size: 1.37rem;
+  line-height: 2rem;
+          padding: 0px 0px;
+}
+
+
+// @media (max-width: 1179px) and (min-width: 1120px) {
+//   .completed-card-subbody p {
+//     font-size: 1.1rem;
+//     padding: 0;
+//     margin: 0;
+//   }
+
+//   .completed-card-body h2 {
+//     font-size: 17px;
+//         margin-top: -10.8rem;
+//         height: 5rem;
+//         padding: 0 1rem;
+//   }
+// }
+
+// @media (min-width: 1119px) and (max-width: 1240px) {
+//   .map-container {
+//     display: flex;
+//     align-items: stretch;
+//   }
+
+//   .map-img {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//   }
+
+//   .info-boxes-container {
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//   }
+
+//   .info-box-item {
+//     flex: 1;
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   .info-box-content {
+//     flex: 1;
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   .info-box-content h3 {
+//     font-size: 18px;
+//   }
+
+//   .info-box-content p {
+//     font-size: 15px;
+//   }
+
+//   .info-box-content ol li {
+//     font-size: 13px;
+//   }
+// }
+
+// @media (min-width: 1240px) and (max-width: 1300px) {
+//   .map-container {
+//     display: flex;
+//     align-items: stretch;
+//   }
+
+//   .map-img {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//   }
+
+//   .info-boxes-container {
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//   }
+
+//   .info-box-item {
+//     flex: 1;
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   .info-box-content {
+//     flex: 1;
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   .info-box-content h3 {
+//     font-size: 19px;
+//   }
+
+//   .info-box-content p {
+//     font-size: 15px;
+//   }
+
+//   .info-box-content ol li {
+//     font-size: 13px;
+//   }
+// }
+
+// @media (min-width: 1300px) and (max-width: 1438px) {
+//   .map-container {
+//     display: flex;
+//     align-items: stretch;
+//   }
+
+//   .map-img {
+//     width: 100% !important;
+//     height: 100%;
+//     object-fit: cover;
+//   }
+
+//   .info-boxes-container {
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//   }
+
+//   .info-box-item {
+//     flex: 1;
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   .info-box-content {
+//     flex: 1;
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   .info-box-content p {
+//     font-family: "ITC Eras Std", "Teachers", sans-serif;
+//     font-size: clamp(18px, 1vw, 16px);
+//   }
+
+//   .info-box-content h3 {
+//     font-size: 20px;
+//   }
+
+//   .info-box-content ol li {
+//     font-size: 14px;
+//   }
+// }
+
+.info-box-content ol li {
+  font-family: "ITC Eras Std", "Teachers", sans-serif;
+  font-size: 0.8rem;
+  color: #364153;
+  margin-bottom: 2px;
+  line-height: 1.2;
+}
+
+// @media (min-width: 1405px) and (max-width: 1440px) {
+//   .map-container {
+//     display: flex;
+//     align-items: stretch;
+//   }
+
+//   .map-img {
+//     width: 100% !important;
+//     height: 100%;
+//     object-fit: cover;
+//   }
+
+//   .info-boxes-container {
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//   }
+
+//   .info-box-item {
+//     flex: 1;
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   .info-box-content {
+//     flex: 1;
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   .info-box-content p {
+//     font-family: "ITC Eras Std", "Teachers", sans-serif;
+//     font-size: clamp(12px, 1.065vw, 18px);
+//   }
+
+//   .info-box-content h3 {
+//     font-size: 21px;
+//   }
+
+//   .info-box-content ol li {
+//     font-size: 15px;
+//   }
+  
+// }
+
+// @media (min-width: 1536px) and (max-width: 1900px) {
+// .active-challenge-img.challange-1 {
+//     height: 560px!important;
+//     object-fit: contain;
+// }
+//  .challenges-hero-subtitle {
+//     font-size: 21px;
+//   }
+// .btn-ripple-hero p.first {
+//     background-size: 66% 97%;
+// }
+// .btn-collection p {
+//     padding: clamp(1rem, 1.5vw, 2rem);
+//     font-size: clamp(1rem, 2.5vw, 0.8rem);
+//     margin-top: 1rem;
+// }
+// .active-challenge-card-wrapper {
+//     padding: 15px;
+//     gap: 15px;
+//   }
+// .active-challenge-card-wrapper .challenge-info-panel p {
+//     margin: 0rem;
+//     font-size: clamp(1.2rem, 2vw, 1.2rem);
+//     line-height: 1.4;
+//     padding: clamp(1rem, 0.5vw, 2rem) clamp(1rem, 5vw, 2rem);
+//    padding-top: 5px !important 
+// }
+
+// p.challenge-subtext {
+//     margin-bottom: 20px !important;
+// }
+// // .btn-challenge-join{
+// //   padding:0;
+// // }
+//     .btn-bg-img.btn-startt {
+//         background-size: 94% 70%;
+//         margin-top: -20px;
+//     }
+//     img.lazy-image.no-challenge-img.loaded {
+//     height: 600px;
+//     object-fit: contain;
+// }
+// .no-community-img {
+//     height: 600px!important;
+//     object-fit: contain;
+// }
+// .collection-img {
+//     height: 550px;
+//     object-fit: contain;
+// }
+
+// }
+// @media (min-width: 1600px) and (max-width: 1919px) {
+// .active-challenge-card-wrapper .challenge-info-panel p {
+//     margin: 1rem;
+//     font-size: clamp(1rem, 2vw, 1rem);
+//     line-height: 2rem;
+//     padding: clamp(1rem, 0.5vw, 2rem) clamp(1rem, 5vw, 2rem);
+//     padding-top: 0px !important
+// }
+
+// .btn-collection .btn-bg-img {
+//         background-size: 82% 72%;
+// }
+// }
+// @media (min-width: 1665px) and (max-width: 2210px) {
+//   .map-img {
+//     width: 100% !important;
+//   }
+
+//   .completed-card-body h2 {
+//     font-size: 23px;
+//     margin-top: -14rem;
+//     height: 6.2rem;
+//   }
+
+//   .completed-card-subbody p {
+//     font-size: 1.28rem;
+//   }
+
+//   .btn-ripple-hero p {
+//     padding: 1.15rem 2.2rem;
+//     font-size: 1.28rem;
+//             margin: 0rem;
+
+//   }.challenges-hero
+
+//   .sign-img p {
+//     bottom: 11%;
+//   }
+// }
+// @media (min-width: 1365px) and (max-width: 2210px) {
+   
+//   .badges-img {
+  
+//     width: 68%;
+//             max-width: 77%;
+//     height: auto;
+//     margin: 0 auto;
+//   }
+//   .card-idd {
+//         bottom: 50px;
+//     }
+//     .card-datee {
+//         bottom: 17px;
+//     }
+
+//   .slider-wrapper {
+//     width: 64%;
+//   }
+
+//     .completed-card-body h2 {
+//         font-size: clamp(20px, 1.8vw, 23px);
+//         line-height: 1.2;
+//     }
+
+//     .map-img{
+//       height: 632px;
+//     }
+
+//   .completed-card-subbody p {
+//     font-size: clamp(1.15rem, 1.2vw, 1.28rem);
+//   }
+// }
+// @media (min-width: 1400px) and (max-width: 1440px) {
+// .card-idd {
+//         bottom: 54px;
+//     }
+// }
+// @media (min-width: 1680px) and (max-width: 1900px) {
+// .card-idd {
+//         bottom: 38px;
+//     }
+//         .card-datee {
+//         bottom: 0.2585rem;
+//     }
+// }
+
+/* ========================================
+   4K / ULTRA-WIDE SCREENS (2560px and above)
+   ======================================== */
+// @media (min-width: 2560px) {
+//   .challenges-page-container {
+// /*     max-width: 2400px; */
+//     margin: 0 auto;
+//   }
+
+//   .section-title-center {
+//     font-size: 36px;
+//   }
+
+//   .challenges-hero-subtitle {
+//     font-size: 24px;
+//   }
+
+//   .challenges-hero-description {
+//     font-size: 22px;
+//   }
+
+//   .info-box-content h3 {
+//     font-size: 28px;
+//   }
+
+//   .info-box-content p {
+//     font-size: 21px;
+//   }
+
+//   .info-box-content ol li {
+//     font-size: 19px;
+//   }
+
+//   .completed-card-body h2 {
+//     font-size: 26px;
+//     margin-top: -15rem;
+//     height: 7rem;
+//     padding: 0 1.2rem;
+//   }
+
+//   .completed-card-subbody {
+//     height: 7.5rem;
+//     gap: 0.6rem;
+//   }
+
+//   .completed-card-subbody p {
+//     font-size: 1.4rem;
+//     line-height: 1.4;
+//   }
+
+//   .btn-ripple-hero p {
+//     padding: 1.3rem 6rem;
+//     font-size: 1.4rem;
+//   }
+
+//   .btn-chest p {
+//     font-size: 2.2rem;
+//     padding: 2rem 6rem;
+//   }
+
+//   .sign-img p {
+//     bottom: 11%;
+//   }
+// }
+
+/* ========================================
+   EXTRA BREAKPOINTS FOR SMOOTHER TRANSITIONS
+   ======================================== */
+
+/* Between 1180px - 1279px */
+// @media (min-width: 1180px) and (max-width: 1279px) {
+//   .completed-card-body h2 {
+//     font-size: 18px;
+//     margin-top: -11.2rem;
+//     height: 5.2rem;
+//     padding: 0 0.9rem;
+//   }
+// .badges-img {
+//     height: 44rem;
+// }
+// .card-idd {
+//         bottom: 55px;
+//     }
+//         .card-datee {
+//                bottom: 1.585rem;
+//     }
+//   .completed-card-subbody {
+//     height: 6.2rem;
+//     gap: 0.35rem;
+//   }
+
+//   .completed-card-subbody p {
+//     font-size: 1.15rem;
+//   }
+
+//   .btn-ripple-hero p {
+//     padding: 0.95rem 4.2rem;
+//     font-size: 1.12rem;
+//   }
+
+//   .sign-img p {
+//     bottom: 8%;
+//   }
+// }
+
+/* Between 810px - 1023px */
+  // @media (min-width: 810px) and (max-width: 1023px) {
+  //   .completed-card-body h2 {
+  //     font-size: 13px;
+  //         margin-top: -8.2rem;
+  //         height: 4.8rem;
+  //         padding: 0 0.6rem;
+  //     }
+
+  //   .completed-card-subbody {
+  //     height: 3.8rem;
+  //     gap: 0.25rem;
+  //   }
+
+  //   .completed-card-subbody p {
+  //     font-size: 0.75rem;
+  //     line-height: 1.15;
+  //   }
+
+  // .btn-ripple-hero p {
+  //         padding: 0.48rem 0.5rem;
+  //         font-size: 0.6rem;
+  //     }
+  //     .sign-img p {
+  //         font-size: 0.8rem;
+  //         margin-top: -40px;
+  //     }
+  //   .sign-img p {
+  //     bottom: 5%;
+  //   }
+  // }
+
+/* Between 652px - 767px */
+// @media (min-width: 652px) and (max-width: 767px) {
+//   .completed-card-body h2 {
+//             font-size: 1.5rem;
+//         margin-top: -21.5rem;
+//         height: 11.2rem;
+//         padding: 0 0.75rem;
+//   }
+
+//   .completed-card-subbody {
+//     height: 9.8rem;
+//         gap: 2.3rem;
+//   }
+
+//   .completed-card-subbody p {
+//     font-size: 1.4rem;
+//   }
+
+//   .btn-ripple-hero p {
+//     padding: 0.88rem 3rem;
+//     font-size: 0.93rem;
+//   }
+
+//   .sign-img p {
+//     bottom: 11%;
+//   }
+// }
+
+// /* Between 540px - 599px */
+// @media (min-width: 540px) and (max-width: 599px) {
+//   .completed-card-body h2 {
+//     font-size: 15.5px;
+//     margin-top: -10.2rem;
+//     height: 5.1rem;
+//     padding: 0 0.72rem;
+//   }
+
+//   .completed-card-subbody {
+//     height: 4.6rem;
+//     gap: 0.28rem;
+//   }
+
+//   .completed-card-subbody p {
+//     font-size: 0.92rem;
+//   }
+
+//   .btn-ripple-hero p {
+//     padding: 0.82rem 2.7rem;
+//     font-size: 0.92rem;
+//   }
+
+//   .sign-img p {
+//     bottom: 12%;
+//   }
+// }
+
+// /* Between 414px - 479px */
+// @media (min-width: 414px) and (max-width: 479px) {
+//   .completed-card-body h2 {
+//     font-size: 14.5px;
+//     margin-top: -11.5rem;
+//     height: 6.8rem;
+//     padding: 0 0.68rem;
+//   }
+// .card-idd {
+//     position: absolute;
+//     bottom: 54px!important;
+// }
+// .card-datee
+//  {
+//     position: absolute;
+//     bottom: 24px!important;
+// }
+//   .completed-card-subbody {
+//     height: 4.8rem;
+//     gap: 0.28rem;
+//   }
+
+//   .completed-card-subbody p {
+//     font-size: 0.88rem;
+//   }
+
+//   .btn-ripple-hero p {
+//     padding: 0.78rem 2.2rem;
+//     font-size: 0.88rem;
+//   }
+
+//   .sign-img p {
+//     bottom: 13%;
+//   }
+// }
+
+// /* Between 360px - 374px */
+// @media (min-width: 360px) and (max-width: 374px) {
+//   .completed-card-body h2 {
+//     font-size: 13.5px;
+//     margin-top: -10.5rem;
+//     height: 6rem;
+//     padding: 0 0.65rem;
+//   }
+//   .collection-img {
+//     height: auto;
+// }
+// .card-idd {
+//     position: absolute;
+//     bottom: 46px;
+// }
+// .card-datee
+//  {
+//     position: absolute;
+//     bottom: 21px;
+// }
+
+//   .completed-card-subbody {
+//     height: 4.6rem;
+//     gap: 0.25rem;
+//   }
+
+//   .completed-card-subbody p {
+//     font-size: 0.78rem;
+//   }
+
+//   .btn-ripple-hero p {
+//     padding: 0.72rem 1rem;
+//     font-size: 0.82rem;
+//   }
+
+//   .sign-img p {
+//     bottom: 28%;
+//         margin-top: 0;
+//         left:50%;
+//   }
+//   .btn-ripple-hero {
+//     padding: 0;
+// }
+// }
+
+// @media (min-width: 1280px) and (max-width: 1366px) {
+//   .active-challenge-img {
+//     object-fit: contain;
+//      height: 650px;
+//   }
+//       .btn-bg-img.btn-startt {
+//         padding: 0.5rem 2rem;
+//     }
+//     .card-idd{
+//       bottom:43px
+//     }
+//   .slider-wrapper {
+//         width: 70%;
+//     }
+//       .completed-card-subbody p {
+//         font-size: 1rem;
+//         line-height: normal;
+//     }
+//     .sign-wrapper.challenge-sign{
+//     padding: 1.3125rem 2.5rem 1.375rem 4.375rem;
+// }
+//     img.lazy-image.no-challenge-img.loaded {
+//         height: 500px;
+//     }
+// .cta-img .btn-ripple-hero p {
+//     background-size: 34% 77%;
+//     position: relative;
+//     margin-top: -5%;
+// }
+// .challenges-hero-subtitle {
+//     font-size: 21px;
+//   }
+// }
+
+  // @media  (max-width:767px){
+  //   .collection-wrapp {
+  //     display: block;
+  // }
+  // .collection-img {
+  //     height: auto;
+  // }
+  // .btn-shuffle p {
+  //     width: 80% !important;
+  // }
+  // .btn-ripple-hero {
+  //     padding: 0;
+  // }
+  //     .sign-img p {
+  //         font-size: 0.75rem;
+  //         left: 48%;
+  //     }
+  //     .card-idd {
+  //     position: absolute;
+  //     bottom: 46px;
+  // }
+  // .card-datee {
+  //     position: absolute;
+  //     bottom: 22px;
+  // }
+  // .active-challenge-img {
+  //   margin-left: 0;
+  // }
+
+  // .active-challenge-card-wrapper .challenge-info-panel p {
+  //     margin: 0.5rem;
+  // }
+  // .collection-wrapp .collection-item {
+  //     width: 100%;
+  // }
+  // img.lazy-image.no-challenge-img.loaded {
+  //     height: auto;
+  // }
+  // .no-community-img {
+  //     height: auto;
+  // }
+  // .btn-bg-img.btn-startt{
+  // padding: 0.1rem 1rem;
+  //         font-size: 0.8rem;
+  //         margin: 0;
+  // }
+  //     .btn-join-challenge p, .btn-join-ex-challenge p {
+  //         padding: 0.5rem 0.8rem;
+
+  //     }
+  //     .active-challenge-card-wrapper .challenge-info-panel p{
+  //       line-height: 1rem!important;
+  //     }
+  //         .btn-chest p {
+  //         padding: 0.6rem 2rem;
+  //         }
+  // }
+
+
+
+  // @media (min-width: 276px) and (max-width: 651px) {
+  //   .box-2wrap1-txt p, .box-2wrap1-txt ul li {
+  //       font-size: 0.75rem;
+  //       line-height: 1rem;
+  //       font-weight: 500;
+  //   }
+  //         .orange p {
+  //       top: 30%;
+  //   }
+
+  //       .red p {
+  //       top: 32%;
+  //   }
+  //   .box-2wrap1-txt ul {
+  //   padding-left: 15px;
+  // }
+  // .border-zig-mob h3 {
+  //   font-size: 1rem;
+  //   font-weight: 600;
+  // }
+
+  //   .border-zig-mob p, .border-zig1-mob p {
+  //       font-size: .8rem;
+  //       line-height: 1.2rem;
+  //       font-weight: 500;
+  //   }
+
+  //       img.foot-p5 {
+  //       top: 48%;
+  //       left: 3%;
+  //       max-width: clamp(3rem, 18vw, 12rem);
+  //   }
+
+  //       img.foot-p7 {
+  //       top: 30%;
+  //       left: 292px;
+  //   }
+
+  //       img.foot-p6 {
+  //       top: 58%;
+  //       left: 78%;
+  //       max-width: clamp(3rem, 18vw, 12rem);
+  //   }
+
+  // .carousel-caption, .carousel-caption1 {
+  //   max-width: 100%;
+  //   overflow: inherit !important;
+  // }
+
+  // .carousel-caption {
+  //       left: 28%;
+  //       right: 0.5rem;
+  //       bottom: 0.5rem;
+  //       top: 49%;
+  //       width: 69%;
+  //   }
+
+  //   .box-luma-mob .box-back-txt p {
+  //   font-size: .9rem;
+  //   line-height: 1.4rem;
+  // }
+  // .box--5wrap-txt p {
+  //       font-size: .8rem;
+  //       line-height: 1.1rem;
+  //   }
+  // .box--5wrap-txt h4 {
+  //   font-size: 0.9375rem;
+  //   color: #000;
+  //   font-weight: 600;
+  //   margin-bottom: 0px;
+  //   line-height: 1;
+  // }
+  //       img.foot-p8 {
+  //       display: none;
+  //   }
+
+  // img.foot-p9 {
+  //   position: absolute;
+  //   top: 72%;
+  //   left: 0;
+  //   transform-origin: bottom left;
+  //   z-index: -1;
+  //   max-width: clamp(3rem, 40vw, 29rem);
+  // }
+
+  // .box-6wrap-img1 p {
+  //   position: absolute;
+  //   bottom: 1.65rem;
+  //   left: 25%;
+  // }
+  // .box-6wrap-img2 p {
+  //   position: absolute;
+  //   top: 1.1rem;
+  //   left: 30%;
+  // }
+  // .box-6wrap-img3 p {
+  //   position: absolute;
+  //   top: 0.7rem;
+  //   left: 14%;
+  // }
+  //   .footer-logo-text {
+  //       text-align: center;
+  //       font-size: 0.85rem !important;
+  //   }
+
+  // /*         .box-6wrap-img3 p {
+  //       font-size: .9rem;
+  //       top: 0.7rem;
+  //       left: 9%;
+  //   } */
+
+  //       .box-6wrap-img2 p {
+  //     font-size: .9rem;
+  //   }
+  //       button.carousel-control-prev {
+  //       left: -14px !important;
+  //   }
+  //     button.carousel-control-next {
+  //       right: -14px !important;
+  //   }
+
+  //       button.carousel-control-next img, button.carousel-control-prev img {
+  //       height: 1.1625rem;
+  //   }
+
+  //   #carouselExampleCaptions {
+  //   width: 94%;
+  // }
+  // .mob-ban-img {
+  //   height: auto;
+  // }
+  //   .fot-logo {
+  //       max-height: 4rem;
+  //   }
+
+  // /*     .relative.w-full .overflow-hidden, .carousel-item {
+  //   overflow: inherit;
+  // } */
+  // }
+
+.container {
+//  width: 100%;
+//  padding-left: 15px;
+//  padding-right: 15px;
+//  margin-left: auto;
+//  margin-right: auto;
+}
+
+
+
+
+/* ≥1200px */
+@media (min-width: 1200px) {
+ .container {
+   max-width: 960px;
+   padding-left: 5px !important;
+   padding-right: 5px !important;
+ }
+
+
+}

@@ -1,0 +1,178 @@
+// ==========================================================================
+// Header Layout
+// ==========================================================================
+
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.custom-header {
+  background: #ebe2e3;
+  padding: $spacing-sm $spacing-md;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+
+  .nav-link {
+    font-weight: $font-weight-normal;
+    font-style: Regular;
+    color: $color-black;
+    font-size: 0.8rem;
+    padding: $spacing-sm $spacing-xs;
+    text-transform: uppercase;
+  }
+
+  @include respond-to-max('lg') {
+    padding: $spacing-xs;
+  }
+}
+
+// Header logo
+.head-logo {
+  img {
+    height: 4rem;
+  }
+
+  // @media (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  //   img {
+  //     height: 2.3rem;
+  //   }
+  // }
+
+  // @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  //   img {
+  //     height: 2rem;
+  //     padding-left: 2rem;
+  //   }
+  // }
+}
+
+// Header buttons
+.btn-signin,
+.btn-join {
+  position: relative;
+
+  p {
+    position: absolute;
+    top: 0.3rem;
+    color: $color-black;
+    font-weight: $font-weight-medium;
+    font-family: inherit;
+  }
+}
+
+.btn-signin p {
+  left: 35%;
+}
+
+.btn-join p {
+  left: 27%;
+
+  @media (max-width: 1366px) {
+    left: 32%;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    left: 30%;
+  }
+}
+
+.btn-join img {
+  @media (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+    width: 3rem;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    width: auto;
+  }
+}
+
+.btn-signin img {
+  @media (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+    width: 4rem;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    width: auto;
+  }
+}
+
+// Mobile menu
+.offcanvas-header {
+  background: linear-gradient(90deg, #3c81f6 0%, #eb489b 100%);
+  padding: $spacing-3xl $spacing-md;
+}
+
+.menu-head {
+  @include flex-center;
+
+  &-txt {
+    padding-left: $spacing-md;
+
+    h5 {
+      font-family: "Century Gothic", Arial, sans-serif;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-base;
+      line-height: 1;
+      color: $color-white;
+      margin-bottom: 0.375rem;
+    }
+
+    p {
+      font-weight: $font-weight-normal;
+      font-size: $font-size-base;
+      line-height: 1;
+      color: $color-white;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.logo-side-img {
+  text-align: center;
+  margin-top: $spacing-2xl;
+
+  img {
+    height: 6.25rem;
+  }
+}
+
+.menu-social {
+  text-align: center;
+  margin-top: $spacing-2xl;
+
+  img {
+    height: 3rem;
+    margin: 0 0.375rem;
+  }
+}
+
+// Button visibility is now handled by Tailwind classes in MagicalHeader.tsx
+
+.offcanvas-body {
+  .nav-link {
+    font-weight: $font-weight-normal;
+    font-size: $font-size-lg;
+    color: #6a6a6a;
+    line-height: 1.5625rem;
+
+    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+
+// @media (min-width: 600px) and (max-width: 1259px) {
+// .header-btn-action-mobile .header-btn-bg {
+//     padding: clamp(0.7rem, 1.5vw, 0.9rem) clamp(1.2rem, 2.5vw, 1.8rem);
+//     font-size: clamp(0.85rem, 1.2vw, 1rem);
+//     min-height: 40px;
+//     display: flex;
+// }
+// }
+
+
+
+// header.fixed .h-20 {
+//   height: 4.8rem;
+// }

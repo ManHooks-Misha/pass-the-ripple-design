@@ -1,0 +1,678 @@
+@font-face {
+  font-family: "ITC Eras Std";
+  src: url("./fonts/ITCErasStd-Light.woff2") format("woff2"),
+       url("./fonts/ITCErasStd-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ITC Eras Std";
+  src: url("./fonts/ITCErasStd-Medium.woff2") format("woff2"),
+       url("./fonts/ITCErasStd-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ITC Eras Std";
+  src: url("./fonts/ITCErasStd-Demi.woff2") format("woff2"),
+       url("./fonts/ITCErasStd-Demi.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ITC Eras Std";
+  src: url("./fonts/ITCErasStd-Bold.woff2") format("woff2"),
+       url("./fonts/ITCErasStd-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ITC Eras Std";
+  src: url("./fonts/ITCErasStd-Ultra.woff2") format("woff2"),
+       url("./fonts/ITCErasStd-Ultra.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('fonts/CenturyGothic-Regular.woff2') format('woff2'),
+       url('fonts/CenturyGothic-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('fonts/CenturyGothic-Bold.woff2') format('woff2'),
+       url('fonts/CenturyGothic-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+  --font-main: "ITC Eras Std", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+	background-image: url('img/bg-img.webp');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	font-family: var(--font-main);
+	 /* font-family: 'ITCEras', sans-serif; */
+}
+
+
+
+
+.custom-header {
+	background: #EBE2E3;
+	padding: 10px 15px
+}
+
+.custom-header .nav-link {
+font-weight: 400;
+font-style: Regular;
+	color: #000;
+	font-size: 15px;
+	padding: 14px 10px;
+	text-transform: uppercase;
+	/* font-family: Eras Medium ITC; */
+	/* font-family: 'ITC Eras', sans-serif; */
+}
+
+.btn-signin {
+	position: relative;
+}
+
+.btn-signin p {
+	position: absolute;
+
+	top: 13px;
+	left: 33%;
+	color: #000;
+	font-weight: 500;
+	font-family: INHERIT;
+
+
+}
+
+.btn-join {
+	position: relative;
+}
+
+.btn-join p {
+	position: absolute;
+	font-family: INHERIT;
+	top: 14px;
+	left: 30%;
+	color: #000;
+	font-weight: 500;
+
+}
+
+/* ---------------- FOOTER ---------------- */
+.custom-footer {
+	background: #EBE2E3;
+	padding: 50px 0 20px;
+}
+
+.footer-logo-text {
+	line-height: 1.6;
+	margin-top: 15px;
+	font-size: 16px !important;
+	font-weight: 500;
+    color: #000;
+}
+
+.footer-title {
+	font-family: 'Century Gothic', Arial, sans-serif;
+	font-weight: bold;
+	font-size: 22px;
+	margin-bottom: 15px;
+}
+
+.footer-social i {
+	font-size: 22px;
+	margin-right: 15px;
+	cursor: pointer;
+	color: #333;
+}
+
+.footer-bottom {
+	
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 100%;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.custom-footer p {
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+.footer-contact i {
+	width: 20px;
+}
+
+.head-logo img {
+	height: 80px;
+}
+
+.fot-logo {
+	height: 175px;
+}
+
+.ban-txt h2 {
+	font-family: 'Teachers';
+	letter-spacing: -5px;
+	font-weight: 800;
+	font-size: 40px;
+}
+
+.ban-txt-p p {
+	
+	font-size: 20px;
+	line-height: 42px;
+	text-align: center;
+	color: #364153;
+
+}
+
+.ban-txt {
+	padding-top: 125px;
+}
+
+.ban-txt-p {
+	padding-top: 33px;
+}
+.rabbit-new{
+	position: relative;
+}
+
+.border-zig h3
+ {
+    font-family: 'Century Gothic', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+    margin-bottom: 4px;
+    color: #000;
+}
+.border-zig p {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0;
+    line-height: 24px;
+}
+.border-zig1 p {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0;
+    line-height: 24px;
+}
+.border-zig {
+    right: 2%;
+    position: absolute;
+    top: 48%;
+    left: 18%;
+}
+.border-zig1 {
+    right: 16%;
+    position: absolute;
+    top: 48%;
+    left: 4%;
+}
+
+.slider-hme {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 85px;
+}
+
+#carouselExampleCaptions {
+	width: 87%;
+}
+
+button.carousel-control-prev {
+	left: -125px;
+	opacity: 1;
+}
+
+button.carousel-control-next {
+	right: -125px;
+	opacity: 1;
+}
+
+.rabit-wrap img {
+	height: 320px;
+}
+
+.ripple-heading {
+	
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 41px;
+    margin-bottom: 50px;
+    font-family: 'Century Gothic', Arial, sans-serif;
+    text-align: center;
+
+}
+
+img.foot1 {
+	    position: absolute;
+    top: 9.5%;
+    left: 12%;
+}
+
+.box-back {
+	text-align: center;
+}
+
+.box-back-txt {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.box-back-txt img {
+    width: 100%;
+}
+.box-back-txt p {
+    position: absolute;
+    width: 85%;
+    
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.box-back h4 {
+font-family: 'Century Gothic', Arial, sans-serif;
+font-weight: 700;
+font-style: Bold;
+font-size: 24px;
+line-height: 41px;
+letter-spacing: 0%;
+text-align: center;
+}
+
+img.foot2 {
+    position: absolute;
+        top: 28.8%;
+    right: 4%;
+
+}
+img.foot3 {
+       position: absolute;
+    top: 36.3%;
+    left: 16%;
+
+}
+img.foot4 {
+    position: absolute;
+  top: 43.2%;
+    left: 12%;
+
+}
+img.foot5 {
+    position: absolute;
+    top: 50.5%;
+    left: 12%;
+
+}
+img.foot6 {
+       position: absolute;
+      top: 72.2%;
+    left: 2%;
+
+
+}
+img.foot7 {
+       position: absolute;
+    top: 90.2%;
+    right: 5%;
+}
+
+
+
+.box-luma {
+	padding-bottom: 50px;
+}
+
+.third-ban{
+	position: relative;
+}
+.third-ban-wrap {
+    position: absolute;
+    top: 12%;
+    left: 7.5%;
+    right: 49%;
+}
+.third-ban-txt h4 {
+    font-family: 'Century Gothic', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 4px;
+}
+	
+.third-ban-txt p{
+	
+font-weight: 400;
+font-style: Regular;
+font-size: 16.5px;
+line-height: 20px;
+letter-spacing: 0%;
+text-align: center;
+color: #000;
+margin-bottom: 0;
+
+}
+.third-ban-txt {
+    margin-bottom: 26px;
+    padding: 0px 45px;
+}
+
+
+.btn-ripple1 img {
+	height: 55px;
+}
+
+.btn-ripple1 {
+	position: relative;
+}
+
+.btn-ripple1 p {
+	position: absolute;
+	top: 12px;
+	color: #000;
+	font-weight: 700;
+	font-size: 18px;
+	font-family: 'Century Gothic', Arial, sans-serif;
+}
+
+.btn-ripple1 {
+	display: flex;
+	justify-content: center;
+}
+
+.footer-social img {
+	height: 48px;
+	margin: 0 6px;
+}
+
+.ban-img img {
+	width: 100%;
+}
+
+
+.carousel-caption {
+	left: 40%;
+	right: 30px;
+	bottom: 30px;
+	top: 8%;
+}
+
+.carousel-indicators {
+	display: none;
+}
+
+.carousel-caption h5 {
+	
+	font-weight: 500;
+	font-style: Medium;
+	font-size: 27px;
+	line-height: 41px;
+	text-align: center;
+	color: #000;
+	margin-bottom: 20px;
+}
+
+.carousel-caption p {
+	
+	font-weight: 400;
+	/* font-style: Medium; */
+	font-size: 20px;
+	line-height: 100%;
+	text-align: center;
+	color: #000;
+}
+.slider-bn-p p {
+     line-height: 26px;
+}
+
+.slider-bn-p {
+    margin-bottom: 20px;
+}
+.second-ban img {
+    width: 100%;
+	height: 500px;
+	object-fit: cover;
+}
+.second-ban {
+    position: relative;
+}
+.second-ban-txt {
+    position: absolute;
+    top: 9%;
+    left: 37.2%;
+    padding: 12px 54px 12px 12px;
+}
+.second-ban-txt p{
+   
+font-weight: 400;
+font-style: Medium;
+font-size: 21px;
+line-height: 24px;
+letter-spacing: 0%;
+color: #090909;
+}
+.second-ban-txt ul li{
+	
+font-weight: 400;
+font-style: Medium;
+font-size: 21px;
+line-height: 27px;
+letter-spacing: 0%;
+color: #090909;
+}
+
+.sign-wrapper{
+		    padding: 85px 40px 70px 70px;
+	}
+	.mg-ripp{
+		    margin-bottom: 64px;
+    margin-top: 10px;
+}
+	.mg--45{
+		margin-top: -45px;
+	}
+	.rabbit-new.mg--45 {
+    margin-bottom: 55px;
+}
+
+.carousel-caption1 {
+    left: 30px;
+    bottom: 30px;
+    top: 8%;
+}
+.box-slidee{
+	    position: absolute;
+    top: 22%;
+    left: 14%;
+}
+.red img{
+    padding-left: 40px;
+}
+.orange img {
+    margin-bottom: 33px;
+    padding-left: 40px;
+}
+.box-slidee h4{
+	
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 27px;
+    color: #090909;
+    margin-bottom: 60px;
+}
+.orange {
+    position: relative;
+}
+
+.orange p {
+    position: absolute;
+    top: 10%;
+    font-family: 'Teachers';
+    font-weight: 500;
+    font-size: 22px;
+    left: 30%;
+}
+
+.red {
+    position: relative;
+}
+
+.red p {
+    font-family: 'Teachers';
+    position: absolute;
+    top: 18%;
+    left: 20%;
+    font-weight: 500;
+    font-size: 22px;
+}
+img.foot5 {
+    position: absolute;
+       top: 57.5%;
+    left: 93%;
+}
+@media (max-width:768px) {
+	.rabit-wrap {
+		display: block;
+		text-align: center;
+	}
+
+	
+
+	img.foot1 {
+		display: none;
+	}
+
+	img.foot2 {
+		display: none;
+	}
+
+	button.carousel-control-prev img {
+		height: 25px;
+	}
+
+	button.carousel-control-next img {
+		height: 25px;
+	}
+
+	#carouselExampleCaptions {
+		width: 100%;
+	}
+
+	button.carousel-control-prev {
+		left: 0px;
+	}
+
+	button.carousel-control-next {
+		right: 0px;
+	}
+
+	.box-back-txt img {
+		height: auto;
+	}
+
+	.btn-ripple1 p {
+		top: 8px;
+		font-size: 15px;
+	}
+
+	.btn-ripple1 img {
+		height: 42px;
+	}
+
+	
+
+	.box-back {
+		overflow: hidden;
+	}
+
+	.ban-txt h2 {
+		font-size: 35px;
+	}
+
+	.ban-txt {
+		padding-top: 40px;
+	}
+
+	.ban-txt-p p {
+		
+		font-weight: 500;
+		padding: 0px 15px;
+		font-size: 17px;
+		line-height: 30px;
+		text-align: center;
+	}
+
+	.ban-txt-p {
+		padding-top: 5px;
+	}
+
+	.rabit-wrap {
+		margin-top: 0;
+	}
+
+	.border-zig {
+		margin-bottom: 20px;
+	}
+
+	.ripple-heading {
+		font-size: 25px;
+		margin-bottom: 35px;
+	}
+
+	.box-back-txt p {
+		width: 70%;
+	}
+
+	.slider-hme {
+		padding-bottom: 30px;
+	}
+
+	.box-back h4 {
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
+
+	.box-luma {
+		padding-bottom: 5px;
+	}
+
+	.mg-0-mob {
+		margin: 0;
+	}
+}

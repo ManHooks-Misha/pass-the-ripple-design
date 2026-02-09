@@ -1,0 +1,192 @@
+// ==========================================================================
+// Header Button Styles
+// ==========================================================================
+
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+// Navigation Spacing
+.header-nav {
+  margin-left: 0;
+}
+
+// Desktop Header Action Buttons
+.header-btn-action {
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  .header-btn-bg {
+    padding: 0rem 1.5rem;
+    font-size: clamp(1rem, 1.4vw, 1.3rem);
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    font-family: 'Teachers', sans-serif;
+    color: #000000;
+    font-weight: 500;
+    white-space: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+// Mobile Header Action Buttons
+.header-btn-action-mobile {
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+ 
+.header-btn-action .header-btn-bg {
+    padding: 0rem 1.5rem;
+    font-size: clamp(1rem, 1.4vw, 1.3rem);
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    font-family: "Teachers", sans-serif;
+    color: #000000;
+    font-weight: 500;
+    white-space: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: .8rem;
+}
+}
+
+
+
+// @media (max-width: 1168px) {
+//   header.fixed .h-20 {
+//     height: 2.8rem;
+//   }
+//   .head-logo img {
+//     height: 2.5rem;
+// }
+
+.header-btn-action-mobile .header-btn-bg {
+  padding: 0.7rem 1.3rem;
+  font-size: 0.9rem;
+  min-height: 38px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  width: 50%;
+}
+
+a.text-base.transition-colors.font-medium.font-teachers.uppercase {
+  font-size: 10px;
+  padding: 4px;
+  margin: 0px !important;
+}
+
+// #zoomRoot header {
+//   height: 2.5rem;
+ 
+// }
+
+// .header-btn-action .header-btn-bg {
+//   padding: 0rem 1.5rem;
+//   font-size: clamp(1rem, 1.4vw, 1.3rem);
+//   min-height: 24px;
+// }
+
+// .head-logo img {
+//   height: 2.5rem;
+//   margin-right: 0.5rem;
+// }
+// }
+
+
+// Responsive adjustments for header buttons
+
+// Tablet Landscape (768px - 1023px)
+@media (max-width: 1023px) and (min-width: 768px) {
+  .header-btn-action-mobile .header-btn-bg {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+    min-height: 42px;
+  }
+}
+.header-nav {
+    margin-left: 24px;
+}
+// Tablet Portrait (600px - 767px)
+// @media (max-width: 767px) and (min-width: 600px) {
+//   .header-btn-action-mobile .header-btn-bg {
+//     padding: 0.7rem 1.3rem;
+//     font-size: 0.9rem;
+//     min-height: 38px;
+//   }
+// }
+
+// // Mobile Large (480px - 599px)
+// @media (max-width: 599px) and (min-width: 480px) {
+//   .header-btn-action-mobile .header-btn-bg {
+//     padding: 0.6rem 1.1rem;
+//     font-size: 0.85rem;
+//     min-height: 36px;
+//   }
+// }
+
+// // Mobile Medium (375px - 479px)
+// @media (max-width: 479px) and (min-width: 375px) {
+//   .header-btn-action-mobile .header-btn-bg {
+//     padding: 0.5rem 0.9rem;
+//     font-size: 0.8rem;
+//     min-height: 34px;
+//   }
+// }
+
+// Mobile Medium (375px - 479px)
+
+
+
+
+// Mobile Small (320px - 374px)
+// @media (max-width: 374px) {
+//   .header-btn-action-mobile .header-btn-bg {
+//     padding: 0.5rem 0.8rem;
+//     font-size: 0.75rem;
+//     min-height: 32px;
+//   }
+// }
+
+
+.header-btn-action .header-btn-bg {
+    padding: 0rem 1.5rem;
+    font-size: clamp(1rem, 1.4vw, 1.3rem);
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    font-family: "Teachers", sans-serif;
+    color: #000000;
+    font-weight: 500;
+    white-space: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: .8rem;
+}

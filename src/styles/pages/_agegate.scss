@@ -1,0 +1,19 @@
+// ==========================================================================
+// Login Page Styles
+// ==========================================================================
+
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+    .rounded-lg.border.text-card-foreground.bg-white.shadow-none.relative {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+@media (min-width: 276px) and (max-width: 1024px) {
+    .rounded-lg.border.text-card-foreground.bg-white.shadow-none.relative {
+        width: 100%;
+        margin: 0 auto;
+    } 
+
+}

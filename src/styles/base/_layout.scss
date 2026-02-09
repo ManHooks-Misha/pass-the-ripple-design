@@ -1,0 +1,97 @@
+// ==========================================================================
+// Layout & Container Styles
+// ==========================================================================
+
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+// Bootstrap-compatible containers
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  --bs-gutter-x: #{$spacing-lg};
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Main container
+.container {
+  // max-width: 100rem;
+  // margin: 0 auto;
+  // padding-left: $spacing-2xl;
+  // padding-right: $spacing-2xl;
+
+  @include respond-to('2xl') {
+    // max-width: 106.25rem;
+    // padding-left: 6rem;
+    // padding-right: 6rem;
+  }
+}
+
+// Grid system
+.row {
+  --bs-gutter-x: #{$spacing-lg};
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+
+  >* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    margin-top: var(--bs-gutter-y);
+  }
+}
+
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+// Utility display classes
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-md-block {
+  display: block;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.desktop-none {
+  display: none;
+
+  @include respond-to-max('lg') {
+    display: block;
+  }
+}
+
+.mobile-none {
+  display: block;
+
+  @include respond-to-max('lg') {
+    display: none;
+  }
+}
+
+// Improved zoom behavior for absolutely positioned elements
+[style*="position: relative"] {
+  transform: translateZ(0);
+  will-change: auto;
+}

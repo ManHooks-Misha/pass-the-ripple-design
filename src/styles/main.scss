@@ -1,0 +1,49 @@
+// ==========================================================================
+// Main SCSS Entry Point - Pass The Ripple
+// ==========================================================================
+
+// ==========================================================================
+// 1. UTILITIES (Variables and Mixins first)
+// ==========================================================================
+@use 'utils/variables' as *;
+@use 'utils/mixins' as *;
+
+// ==========================================================================
+// 2. BASE STYLES (Foundation)
+// ==========================================================================
+@import 'base/fonts';
+@import 'base/tailwind';
+@import 'base/reset';
+@import 'base/layout';
+@import 'base/utilities';
+// ==========================================================================
+// 3. LAYOUTS (Page structure)
+// ==========================================================================
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/responsive';
+
+// ==========================================================================
+// 4. COMPONENTS (Reusable UI elements)
+// ==========================================================================
+@import 'components/buttons';
+@import 'components/carousel';
+@import 'components/banners';
+
+// ==========================================================================
+// 5. PAGES (Page-specific styles)
+// ==========================================================================
+// @import 'pages/home';
+// @import 'pages/about-us';
+// @import 'pages/badges';
+// @import 'pages/cms-content';
+// @import 'pages/login';
+// @import 'pages/challenges';
+// @import 'pages/hero-wall-public';
+@import 'animations/ripple';
+
+// ==========================================================================
+// 6. COMPONENT OVERRIDES (Component-specific styles)
+// ==========================================================================
+@import 'components/flip-card';
+@import 'components/skeletons';

@@ -1,0 +1,20 @@
+// ==========================================================================
+// Ripple Animation
+// ==========================================================================
+
+@use '../utils/variables' as *;
+
+.ripple-animate {
+  animation: ripple 3s infinite ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}

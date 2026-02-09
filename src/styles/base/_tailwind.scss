@@ -1,0 +1,263 @@
+// ==========================================================================
+// Tailwind CSS Base
+// ==========================================================================
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// ==========================================================================
+// Design System CSS Variables
+// ==========================================================================
+
+@layer base {
+  :root {
+    /* Light theme - Vibrant colorful palette */
+    --background: 280 65% 96%;
+    --foreground: 280 30% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 280 30% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 280 30% 15%;
+
+    /* Brand palette */
+    --primary: 280 85% 60%;
+    --primary-glow: 280 100% 75%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 180 75% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 280 30% 94%;
+    --muted-foreground: 280 20% 25%;
+    --accent: 340 85% 65%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 58%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 280 30% 88%;
+    --input: 280 20% 95%;
+    --ring: 280 85% 60%;
+    --radius: 1rem;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 217 33% 17%;
+    --sidebar-primary: 165 60% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 30% 96%;
+    --sidebar-accent-foreground: 217 33% 17%;
+    --sidebar-border: 210 25% 88%;
+    --sidebar-ring: 165 60% 55%;
+
+    /* Gradients & shadows */
+    --gradient-hero: linear-gradient(135deg, hsl(280 70% 70%) 0%, hsl(340 75% 65%) 50%, hsl(180 70% 60%) 100%);
+    --gradient-surface: linear-gradient(180deg, hsl(280 65% 96%) 0%, hsl(280 55% 93%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(280 50% 98%) 0%, hsl(280 40% 96%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(280 85% 60%) 0%, hsl(340 85% 65%) 100%);
+    --gradient-magical: linear-gradient(135deg, hsl(280 85% 60%) 0%, hsl(180 75% 50%) 100%);
+    --shadow-elevated: 0 0.625rem 1.875rem -0.625rem hsl(217 33% 17% / 0.15);
+    --shadow-glow: 0 0 2.5rem hsl(43 89% 55% / 0.25);
+    --shadow-soft: 0 0.25rem 1.25rem hsl(217 33% 17% / 0.08);
+
+    /* Font family */
+    --font-main: "ITC Eras Std", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+    /* Headings */
+    --fs-h1: clamp(2rem, 4vw, 3rem);
+    --fs-h2: clamp(1.75rem, 3.2vw, 2.5rem);
+    --fs-h3: clamp(1.5rem, 2.6vw, 2rem);
+    --fs-h4: clamp(1.25rem, 2vw, 1.75rem);
+    --fs-h5: clamp(1.1rem, 1.6vw, 1.4rem);
+    --fs-h6: clamp(1rem, 1.3vw, 1.2rem);
+
+    /* Body text */
+    --fs-body: clamp(0.95rem, 1.2vw, 1.1rem);
+    --fs-small: clamp(0.85rem, 1vw, 0.95rem);
+  }
+
+  .dark {
+    --background: 233 21% 9%;
+    --foreground: 210 40% 98%;
+    --card: 233 21% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 233 21% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 258 85% 70%;
+    --primary-glow: 271 85% 80%;
+    --primary-foreground: 233 21% 11%;
+    --secondary: 230 24% 16%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 230 24% 16%;
+    --muted-foreground: 218 11% 65%;
+    --accent: 46 96% 62%;
+    --accent-foreground: 233 21% 11%;
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 230 24% 16%;
+    --input: 230 24% 16%;
+    --ring: 258 85% 70%;
+    --sidebar-background: 233 21% 9%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 258 85% 70%;
+    --sidebar-primary-foreground: 233 21% 11%;
+    --sidebar-accent: 230 24% 16%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 230 24% 16%;
+    --sidebar-ring: 199 92% 55%;
+    --gradient-hero: linear-gradient(120deg, hsl(258 85% 62%) 0%, hsl(271 85% 64%) 40%, hsl(199 92% 60%) 100%);
+    --gradient-surface: linear-gradient(180deg, hsl(233 21% 11%) 0%, hsl(233 21% 9%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(230 24% 14%) 0%, hsl(233 21% 11%) 100%);
+    --shadow-elevated: 0 0.625rem 1.875rem -0.625rem hsl(258 85% 70% / 0.25);
+    --shadow-glow: 0 0 2.5rem hsl(258 85% 70% / 0.45);
+  }
+}
+
+// ==========================================================================
+// Tailwind Component Layer
+// ==========================================================================
+
+@layer components {
+  .text-gradient-primary {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .bg-gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+
+  .btn-hero {
+    background-image: var(--gradient-hero);
+    color: hsl(var(--primary-foreground));
+    border: 0.0625rem solid hsl(var(--border));
+    transition: var(--transition-smooth, all 0.3s cubic-bezier(0.4, 0, 0.2, 1));
+
+    &:hover {
+      filter: brightness(1.05);
+    }
+  }
+
+  .btn-glow {
+    background: linear-gradient(0deg, hsl(var(--background)), hsl(var(--background))) padding-box,
+      var(--gradient-hero) border-box;
+    border: 0.125rem solid transparent;
+  }
+
+  .ripple-layer {
+    position: absolute;
+    inset: -20%;
+    display: grid;
+    place-items: center;
+  }
+
+  .ripple-ring {
+    position: absolute;
+    width: 40vmax;
+    height: 40vmax;
+    border-radius: 9999px;
+    border: 0.125rem solid hsl(var(--primary) / 0.25);
+    animation: ripple-pulse 6s ease-out infinite;
+
+    &.delay-300 {
+      animation-delay: 0.3s;
+    }
+
+    &.delay-700 {
+      animation-delay: 0.7s;
+    }
+  }
+
+  .ripple-static {
+    animation: none !important;
+    opacity: 0.2;
+  }
+
+  .text-red {
+    color: red;
+  }
+
+  .btn-bg-img {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 15px;
+    margin: 12px;
+    text-align: center;
+  }
+}
+
+// ==========================================================================
+// Tailwind Utilities & Animations
+// ==========================================================================
+
+@layer utilities {
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+
+  @keyframes ripple-pulse {
+    0% {
+      transform: scale(0.6);
+      opacity: 0.35;
+    }
+
+    70% {
+      opacity: 0.05;
+    }
+
+    100% {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+  }
+
+  @keyframes scale-in {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.3s ease-out;
+  }
+
+  @keyframes bounce-slow {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-0.625rem);
+    }
+  }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 2s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+
+    100% {
+      background-position: 200% 0;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+// ==========================================================================
+// InfoCard Component Styles
+// ==========================================================================
+
+// Base Styles - Desktop/Laptop First
+.info-card-main {
+  box-shadow: rgba(144, 144, 144, 0.88) -15px 15px 1px, rgba(118, 118, 118, 0.93) -11px 9px 9px;
+  max-width: 380px;
+  max-height: 380px;
+  padding: 47px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width:240px;
+}
+
+// Tablet Landscape (992px - 1199px)
+@media (max-width: 1199px) {
+  .info-card-main {
+    max-width: 360px;
+    max-height: 360px;
+    padding: 6px 13px;
+  }
+}
+
+// Tablet Portrait (768px - 991px)
+@media (max-width: 991px) {
+  .info-card-main {
+    max-width: 340px;
+    max-height: 340px;
+    padding: 20px 16px;
+    box-shadow: rgba(144, 144, 144, 0.88) -12px 12px 1px, rgba(118, 118, 118, 0.93) -9px 7px 7px;
+  }
+}
+
+// Mobile Landscape / Small Tablet (576px - 767px)
+@media (max-width: 767px) {
+  .info-card-main {
+    max-width: 320px;
+    max-height: 320px;
+    padding: 18px 15px;
+    box-shadow: rgba(144, 144, 144, 0.88) -10px 10px 1px, rgba(118, 118, 118, 0.93) -7px 5px 5px;
+  }
+}
+
+// Mobile Portrait (max-width: 575px)
+@media (max-width: 575px) {
+  .info-card-main {
+    max-width: 300px;
+    max-height: 300px;
+    padding: 15px 12px;
+    box-shadow: rgba(144, 144, 144, 0.88) -8px 8px 1px, rgba(118, 118, 118, 0.93) -5px 4px 4px;
+  }
+}
+
+// Extra Small Mobile (max-width: 375px)
+@media (max-width: 375px) {
+  .info-card-main {
+    max-width: 280px;
+    max-height: 280px;
+    padding: 12px 10px;
+    box-shadow: rgba(144, 144, 144, 0.88) -6px 6px 1px, rgba(118, 118, 118, 0.93) -4px 3px 3px;
+  }
+}
+
+// Small Desktop / Laptop (1200px - 1365px)
+@media (min-width: 1200px) and (max-width: 1365px) {
+  .info-card-main {
+    max-width: 390px;
+    max-height: 390px;
+    padding: 15px 28px;
+  }
+}
+
+// Medium Desktop (1366px - 1439px)
+@media (min-width: 1366px) and (max-width: 1439px) {
+  .info-card-main {
+    max-width: 410px;
+    max-height: 410px;
+    padding: 9px 34px;
+  }
+}
+
+// Large Desktop (1440px and above)
+@media (min-width: 1440px) {
+  .info-card-main {
+    max-width: 420px;
+    max-height: 420px;
+    padding: 20px 22px;
+  }
+}
+
+// Ultra Wide Screens (1920px and above)
+@media (min-width: 1920px) {
+  .info-card-main {
+    max-width: 450px;
+    max-height: 450px;
+    padding: 10px 14px;
+    box-shadow: rgba(144, 144, 144, 0.88) -18px 18px 1px, rgba(118, 118, 118, 0.93) -13px 11px 11px;
+  }
+}

@@ -1,0 +1,353 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+/* Flip Card Container */
+.flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+    cursor: pointer;
+    height: 100%;
+    min-height: 485px;
+    position: relative;
+
+    &.flipped .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    // Hover Effect
+    &:hover .flip-card-front,
+    &:hover .flip-card-back {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    min-height: 485px;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: none;
+    top: 0;
+    left: 0;
+}
+
+/* Front Side Styling - Inherits from existing ripple-card class */
+.flip-card-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    /* All other styles inherited from ripple-card class in hero-wall-public.css */
+    padding: 1.5rem; // Default padding from media query max-width 991px
+
+    .ripple-card-image-wrapper {
+        height: 210px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: $shadow-lg;
+        }
+    }
+
+    .ripple-card-flip-btn {
+        display: block;
+        width: auto;
+        margin: 1rem auto 0.5rem;
+        padding: 0.5rem 1.5rem;
+        border: 2px solid #cacaca;
+        border-radius: 0.375rem;
+        font-family: $font-teachers;
+        font-size: 0.875rem;
+        font-weight: 600;
+        cursor: pointer;
+        text-align: center;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+
+        &:hover {
+            // background-color: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Back Side Styling */
+.flip-card-back {
+    transform: rotateY(180deg);
+    z-index: 1;
+    background: $color-white;
+    border: 0.1rem solid #bdbdbd;
+    padding: 1rem; // Match front card default padding
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    cursor: pointer;
+
+    &:hover .flip-card-back-description,
+    &:hover .flip-card-back-footer {
+        opacity: 0.9;
+    }
+}
+
+.flip-card-back-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.flip-card-back-date {
+    font-family: $font-teachers;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: $color-black;
+}
+
+.flip-card-back-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.flip-card-back-title {
+    font-family: $font-teachers;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    color: $color-black;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.flip-card-back-description {
+    font-weight: 400;
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+    color: $color-gray-600;
+    text-align: left;
+    flex-grow: 1;
+    transition: opacity 0.2s ease;
+}
+
+.flip-card-back-footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0rem;
+    transition: opacity 0.2s ease;
+}
+
+.flip-card-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.flip-card-category-icon {
+       width: 6rem;
+    height: 6rem;
+    object-fit: contain;
+    position: absolute;
+    bottom: 0px;
+}
+
+.flip-card-category-text {
+    font-family: $font-teachers;
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: $color-black;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@include respond-to-max('lg') {
+
+    // max-width 991px approx < 1024
+    .flip-card-front,
+    .flip-card-back {
+        padding: 1.5rem;
+    }
+
+    .flip-card-front .ripple-card-title {
+        font-size: 1.25rem;
+        line-height: 1.625rem;
+    }
+
+    .flip-card-front .ripple-card-stat {
+        font-size: 1rem;
+        line-height: 1.375rem;
+    }
+
+    .flip-card-front .ripple-card-flip-btn {
+        font-size: 0.8125rem;
+        padding: 0.45rem 1.25rem;
+    }
+
+    .flip-card-back-title {
+        font-size: 1.25rem;
+        line-height: 1.625rem;
+        margin-bottom: 0.875rem;
+    }
+
+    .flip-card-back-description {
+        font-size: 1.05rem;
+        line-height: 1.5rem;
+    }
+
+    .flip-card-back-date {
+        font-size: 0.8125rem;
+    }
+
+    .flip-card-category-icon {
+        width: 7rem;
+        height: 8rem;
+    }
+
+    .flip-card-category-text {
+        font-size: 1rem;
+    }
+}
+
+@include respond-to-max('md') {
+
+    // max-width 767px
+    .flip-card-front,
+    .flip-card-back {
+        padding: 1rem;
+    }
+
+    .flip-card-front .ripple-card-image-wrapper {
+        height: 250px;
+    }
+
+    .flip-card-front .ripple-card-title {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+    }
+
+    .flip-card-front .ripple-card-stat {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+
+    .flip-card-front .ripple-card-flip-btn {
+        font-size: 0.75rem;
+        padding: 0.4rem 1rem;
+        margin: 0.75rem auto 0.5rem;
+    }
+
+    .flip-card-back-title {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .flip-card-back-description {
+        font-size: 0.9375rem;
+        line-height: 1.4rem;
+    }
+
+    .flip-card-back-date {
+        font-size: 0.75rem;
+    }
+
+    .flip-card-category {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .flip-card-category-icon {
+        width: 6rem;
+        height: 7rem;
+    }
+
+    .flip-card-category-text {
+        font-size: 0.875rem;
+    }
+}
+
+@include respond-to-max('sm') {
+
+    // max-width 575px approx < 640
+    .flip-card-front,
+    .flip-card-back {
+        padding: 0.875rem;
+    }
+
+    .flip-card-front .ripple-card-image-wrapper {
+        height: 200px;
+    }
+
+    .flip-card-front .ripple-card-title {
+        font-size: 1rem;
+        line-height: 1.375rem;
+    }
+
+    .flip-card-front .ripple-card-stat {
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+    }
+
+    .flip-card-front .ripple-card-flip-btn {
+        font-size: 0.6875rem;
+        padding: 0.35rem 0.875rem;
+        margin: 0.5rem auto 0.5rem;
+    }
+
+    .flip-card-back-title {
+        font-size: 1rem;
+        line-height: 1.375rem;
+        margin-bottom: 0.625rem;
+    }
+
+    .flip-card-back-description {
+        font-size: 0.875rem;
+        line-height: 1.3rem;
+    }
+
+    .flip-card-back-date {
+        font-size: 0.6875rem;
+    }
+
+    .flip-card-category {
+        padding: 0.5rem;
+    }
+
+    .flip-card-category-icon {
+        width: 5rem;
+        height: 6rem;
+    }
+
+    .flip-card-category-text {
+        font-size: 0.8125rem;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .flip-card-inner {
+        transition: none;
+    }
+
+    .flip-card:hover .flip-card-front,
+    .flip-card:hover .flip-card-back {
+        transform: none;
+    }
+}

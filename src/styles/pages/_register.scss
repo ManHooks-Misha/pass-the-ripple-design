@@ -1,0 +1,47 @@
+// ==========================================================================
+// Login Page Styles
+// ==========================================================================
+
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+
+.width-80 {
+    width: 80%;
+}  
+
+
+@media (min-width: 1280px) {
+    .xl\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1076px) and (max-width: 2091px) {
+.space-y-6.height-auto .rounded-lg.border.text-card-foreground.bg-white.shadow-none.relative {
+    width: 100%;
+    margin: 0px auto;
+    height: 660px;
+}
+}
+
+/* .height-16 {
+    height: 4rem; // 16 * 0.25rem
+} */
+
+@media (min-width: 1024px) {
+    .rounded-lg.border.text-card-foreground.bg-white.shadow-none.relative {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .p-6.pt-0.space-y-6 {
+    height: auto;
+}
+}
+
+@media (min-width: 276px) and (max-width: 1024px) {
+    .width-80 {
+    width: 100%;
+}  
+
+}

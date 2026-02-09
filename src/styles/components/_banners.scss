@@ -1,0 +1,514 @@
+// // ==========================================================================
+// // Banner Components
+// // ==========================================================================
+
+// @use '../utils/variables' as *;
+// @use '../utils/mixins' as *;
+
+// // Main banner
+// .ban-txt {
+//   padding-top: 7.8125rem;
+
+//   h2 {
+//     font-family: "Teachers";
+//     letter-spacing: -0.3125rem;
+//     font-weight: $font-weight-extrabold;
+//     font-size: 2.5rem;
+//   }
+
+//   img.welcom1,
+//   img.welcom2 {
+//     @media (max-width: 1280px) {
+//       &.welcom1 {
+//         width: 18rem;
+//       }
+//       &.welcom2 {
+//         width: 24rem;
+//         padding-left: $spacing-sm;
+//       }
+//     }
+
+//     @media (min-width: 769px) and (max-width: 1200px) {
+//       &.welcom1 {
+//         width: 16rem;
+//       }
+//       &.welcom2 {
+//         width: 21rem;
+//         padding-left: $spacing-md;
+//       }
+//     }
+
+//     @include respond-to-max('md') {
+//       &.welcom1 {
+//         width: 12rem;
+//         display: block;
+//         margin: 0 auto;
+//       }
+//       &.welcom2 {
+//         width: 16rem;
+//         padding-left: 0;
+//         display: block;
+//         margin: 0 auto;
+//       }
+//     }
+
+//     @media (max-width: 480px) {
+//       &.welcom1 {
+//         width: 10rem;
+//       }
+//       &.welcom2 {
+//         width: 14rem;
+//       }
+//     }
+//   }
+
+//   @media (max-width: 1280px) {
+//     padding-top: 6.875rem;
+//   }
+
+//   @media (min-width: 769px) and (max-width: 1200px) {
+//     padding-top: 5rem;
+//   }
+
+//   @include respond-to-max('md') {
+//     padding-top: 2.5rem;
+//     text-align: center;
+//   }
+// }
+
+// .ban-txt-p {
+//   padding-top: 2.0625rem;
+
+//   p {
+//     margin-top: 4rem;
+//     padding-left: 1.625rem;
+//     margin-right: -5.3125rem;
+//     font-size: $font-size-lg;
+//     line-height: 2.625rem;
+//     text-align: center;
+//     color: #364153;
+
+//     @media (max-width: 1440px) {
+//       font-size: $font-size-lg;
+//       margin-right: -5rem;
+//     }
+
+//     @media (max-width: 1280px) {
+//       font-size: $font-size-lg;
+//       margin-right: -3.75rem;
+//     }
+
+//     @media (min-width: 769px) and (max-width: 1200px) {
+//       font-size: $font-size-lg;
+//       line-height: 2.25rem;
+//     }
+
+//     @include respond-to-max('md') {
+//       font-family: Teachers, sans-serif;
+//       font-weight: $font-weight-medium;
+//       padding: 0 $spacing-md;
+//       font-size: $font-size-base;
+//       line-height: 1.75rem;
+//       text-align: center;
+//     }
+
+//     @media (max-width: 480px) {
+//       font-size: $font-size-sm;
+//       line-height: 1.5rem;
+//     }
+//   }
+
+//   @include respond-to-max('md') {
+//     padding-top: 0.3125rem;
+//   }
+// }
+
+// // Second banner
+// .second-ban,
+// .third-ban,
+// .rabbit-new,
+// .box-luma,
+// .sign-wrapper {
+//   position: relative;
+//   width: 100%;
+
+//   img {
+//     width: 100%;
+//     height: auto;
+//     display: block;
+//   }
+// }
+
+// .second-ban {
+//   @media (max-width: 480px) {
+//     margin-top: 6.875rem;
+//   }
+
+//   @include respond-to-max('md') {
+//     margin-top: 0;
+//   }
+// }
+
+// .second-ban-txt,
+// .third-ban-wrap,
+// .carousel-caption,
+// .carousel-caption1 {
+//   max-width: 100%;
+//   overflow: hidden;
+// }
+
+// .second-ban-txt {
+//   top: 7%;
+
+//   p {
+//     margin: 0.375rem 0.75rem;
+//     font-size: $font-size-lg;
+//     line-height: 1.625rem;
+
+//     @media (max-width: 1440px) {
+//       font-size: $font-size-lg;
+//     }
+
+//     @media (min-width: 769px) and (max-width: 1200px) {
+//       font-size: 1.1875rem;
+//       line-height: 1.5rem;
+//     }
+
+//     @include respond-to-max('md') {
+//       font-size: $font-size-base;
+//       line-height: 1.375rem;
+//       margin: $spacing-md;
+//     }
+
+//     @media (max-width: 480px) {
+//       font-size: $font-size-sm;
+//       line-height: 1.25rem;
+//       margin: $spacing-xs;
+//     }
+//   }
+
+//   ul li {
+//     font-weight: $font-weight-normal;
+//     font-size: $font-size-lg;
+//     line-height: 1.5625rem;
+
+//     @media (min-width: 769px) and (max-width: 1200px) {
+//       font-size: 1.1875rem;
+//       line-height: 1.5rem;
+//     }
+
+//     @include respond-to-max('md') {
+//       font-size: 0.9375rem;
+//       line-height: 1.25rem;
+//       margin-bottom: $spacing-sm;
+//     }
+
+//     @media (max-width: 480px) {
+//       font-size: 0.8125rem;
+//       line-height: 1.125rem;
+//     }
+//   }
+
+//   h4 {
+//     font-size: clamp(1rem, 2vw, 1.5rem);
+//     line-height: 1.3;
+//   }
+
+//   @media (max-width: 1440px) {
+//     top: 7%;
+//   }
+
+//   @media (max-width: 1280px) {
+//     top: 9%;
+//     left: 37%;
+//     padding: 0.75rem 3.125rem 0.75rem 0.75rem;
+//   }
+
+//   @media (min-width: 769px) and (max-width: 1200px) {
+//     top: 10%;
+//     left: 38%;
+//     padding: 0.75rem 2.5rem 0.75rem 0.75rem;
+//   }
+
+//   @include respond-to-max('md') {
+//     position: relative;
+//     top: auto;
+//     left: auto;
+//     padding: $spacing-lg $spacing-md;
+//     width: 100%;
+//   }
+// }
+
+// // Third banner
+// .third-ban-txt {
+//   padding: 0 $spacing-lg;
+//   margin-bottom: $spacing-lg;
+
+//   h4 {
+//     font-size: clamp(1rem, 2vw, 1.5rem);
+//     line-height: 1.3;
+
+//     @media (max-width: 480px) {
+//       font-size: $font-size-lg;
+//       line-height: 1.5rem;
+//     }
+//   }
+
+//   p {
+//     font-size: clamp(0.875rem, 1.5vw, 1.375rem);
+//     line-height: 1.4;
+
+//     @media (max-width: 480px) {
+//       font-size: $font-size-sm;
+//       line-height: 1.25rem;
+//     }
+//   }
+// }
+
+// // Rabbit & Owl sections
+// .rabbit-new {
+//   margin-bottom: 3.4375rem;
+
+//   &.mg--45 {
+//     margin-bottom: 3.4375rem;
+//   }
+
+//   @include respond-to-max('md') {
+//     margin-bottom: $spacing-xl;
+//   }
+// }
+
+// .rabbit-img-container,
+// .owl-img-container {
+//   @media (min-width: 1201px) and (max-width: 1400px) {
+//     flex: 0 0 16%;
+//   }
+
+//   @media (max-width: 1280px) {
+//     flex: 0 0 16%;
+//     max-width: 11.5625rem;
+//   }
+
+//   @media (min-width: 769px) and (max-width: 1200px) {
+//     flex: 0 0 18%;
+//     max-width: 11.25rem;
+//   }
+
+//   @include respond-to-max('md') {
+//     flex: 0 0 100%;
+//     width: 100%;
+//     max-width: 12.5rem;
+//     margin: 0 auto $spacing-md;
+//   }
+
+//   @media (max-width: 480px) {
+//     max-width: 9.375rem;
+//   }
+// }
+
+// .rabbit-img,
+// .owl-img {
+//   @include respond-to-max('md') {
+//     max-width: 100%;
+//     width: 100%;
+//   }
+// }
+
+// .wavy-banner-container {
+//   @include respond-to-max('md') {
+//     flex: 0 0 100%;
+//     width: 100%;
+//     padding: 0 $spacing-xs;
+
+//     h3 {
+//       font-size: $font-size-lg !important;
+//       line-height: 1.5rem !important;
+//     }
+
+//     p {
+//       font-size: 0.9375rem !important;
+//       line-height: 1.25rem !important;
+//     }
+//   }
+// }
+
+// .border-zig,
+// .border-zig1 {
+//   @include respond-to-max('md') {
+//     margin-bottom: $spacing-lg;
+//     position: relative;
+//     top: auto;
+//     left: auto;
+//     right: auto;
+//   }
+// }
+
+// // Sign section
+// .sign-wrapper {
+//   padding: 5.3125rem 2.5rem 4.375rem 4.375rem;
+
+//   @include respond-to-max('md') {
+//     padding: 2.5rem $spacing-lg;
+//   }
+// }
+
+// .sign-img {
+//   position: relative;
+
+//   p {
+//     position: absolute;
+//     bottom: 8%;
+//     left: 28%;
+//     font-weight: $font-weight-normal;
+//     font-size: 1.35rem;
+//     line-height: 1.5625rem;
+//     margin-top: 0;
+//     margin-bottom: $spacing-md;
+
+//     @media (min-width: 1201px) and (max-width: 1400px) {
+//       left: 26%;
+//       font-size: $font-size-lg;
+//     }
+
+//     @media (max-width: 1280px) {
+//       left: 27%;
+//       font-size: $font-size-lg;
+//       line-height: 1.5rem;
+//     }
+
+//     @media (min-width: 769px) and (max-width: 1200px) {
+//       font-size: 1.1875rem;
+//       left: 26%;
+//     }
+
+//     @include respond-to-max('md') {
+//       bottom: 15%;
+//       left: 50%;
+//       transform: translateX(-50%);
+//       font-size: $font-size-base;
+//       line-height: 1.25rem;
+//       text-align: center;
+//       width: 80%;
+//       margin-bottom: 0;
+//     }
+
+//     @media (max-width: 480px) {
+//       font-size: $font-size-sm;
+//       bottom: 12%;
+//     }
+//   }
+// }
+
+// // Box sections
+// .box-back {
+//   h4 {
+//     font-size: $font-size-xl;
+//     line-height: 2.5rem;
+
+//     @media (max-width: 1280px) {
+//       font-size: $font-size-xl;
+//       line-height: 2.5rem;
+//     }
+
+//     @include respond-to-max('md') {
+//       font-size: 1.3125rem;
+//       margin-bottom: 0.75rem;
+//       line-height: 1.75rem;
+//     }
+
+//     @media (max-width: 480px) {
+//       font-size: 1.1875rem;
+//       line-height: 1.625rem;
+//     }
+//   }
+// }
+
+// .box-back-txt {
+//   p {
+//     width: 85%;
+//     font-size: $font-size-lg;
+//     line-height: 1.5rem;
+
+//     @media (max-width: 1280px) {
+//       font-size: $font-size-lg;
+//       line-height: 1.5625rem;
+//     }
+
+//     @include respond-to-max('md') {
+//       width: 90%;
+//       font-size: 1.0625rem;
+//       line-height: 1.4375rem;
+//       padding: $spacing-xs;
+//     }
+
+//     @media (max-width: 480px) {
+//       font-size: 0.9375rem;
+//       line-height: 1.3125rem;
+//       width: 92%;
+//     }
+//   }
+
+//   @include respond-to-max('md') {
+//     min-height: 12.5rem;
+//     @include flex-center;
+//   }
+// }
+
+// .box-luma {
+//   padding-bottom: 3.125rem;
+
+//   @media (max-width: 1280px) {
+//     padding-bottom: 2.8125rem;
+//   }
+
+//   @include respond-to-max('md') {
+//     padding-bottom: 0.3125rem;
+//   }
+// }
+
+// // Slider section
+// .slider-hme {
+//   padding-bottom: 5rem;
+
+//   @media (max-width: 1280px) {
+//     padding-bottom: 5rem;
+//   }
+
+//   @include respond-to-max('md') {
+//     padding-bottom: $spacing-xl;
+//     overflow-x: hidden;
+//   }
+// }
+
+// .ripple-heading {
+//   font-size: 1.875rem;
+//   line-height: 2.5rem;
+//   margin-bottom: 2.8125rem;
+
+//   @media (max-width: 1280px) {
+//     margin-bottom: 2.625rem;
+//   }
+
+//   @media (min-width: 769px) and (max-width: 1200px) {
+//     font-size: 1.625rem;
+//     line-height: 2.375rem;
+//   }
+
+//   @include respond-to-max('md') {
+//     font-size: $font-size-xl;
+//     line-height: 2rem;
+//     margin-bottom: $spacing-xl;
+//     padding: 0 $spacing-xs;
+//   }
+
+//   @media (max-width: 480px) {
+//     font-size: $font-size-lg;
+//     line-height: 1.75rem;
+//   }
+// }
+
+// .safety_security {
+//   @include respond-to-max('md') {
+//     margin-top: 5.0625rem;
+//   }
+// }

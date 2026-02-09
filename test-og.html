@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Open Graph Tags</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .meta-tag {
+            background: #f5f5f5;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #007bff;
+        }
+        .meta-tag strong {
+            color: #007bff;
+        }
+        .image-preview {
+            margin-top: 20px;
+            border: 2px dashed #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+        .image-preview img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Open Graph Meta Tags Checker</h1>
+    <p>Open your app at <a href="http://localhost:8080" target="_blank">http://localhost:8080</a> and check the meta tags below:</p>
+    
+    <h2>How to Check:</h2>
+    <ol>
+        <li>Open your app in the browser</li>
+        <li>Open DevTools (F12)</li>
+        <li>Go to Console tab</li>
+        <li>Paste and run this code:</li>
+    </ol>
+    
+    <textarea readonly style="width: 100%; height: 200px; font-family: monospace;">
+// Check Open Graph tags
+const ogTags = {
+    title: document.querySelector('meta[property="og:title"]')?.getAttribute('content'),
+    description: document.querySelector('meta[property="og:description"]')?.getAttribute('content'),
+    image: document.querySelector('meta[property="og:image"]')?.getAttribute('content'),
+    url: document.querySelector('meta[property="og:url"]')?.getAttribute('content'),
+    type: document.querySelector('meta[property="og:type"]')?.getAttribute('content'),
+};
+
+console.log('Open Graph Tags:', ogTags);
+
+// Check if image is accessible
+if (ogTags.image) {
+    const img = new Image();
+    img.onload = () => console.log('✅ Image is accessible:', ogTags.image);
+    img.onerror = () => console.error('❌ Image failed to load:', ogTags.image);
+    img.src = ogTags.image;
+}
+    </textarea>
+    
+    <h2>Quick Checklist:</h2>
+    <ul>
+        <li>✅ og:title is present</li>
+        <li>✅ og:description is present</li>
+        <li>✅ og:image is present and is an absolute URL (starts with http:// or https://)</li>
+        <li>✅ og:url is present</li>
+        <li>✅ Image URL is accessible (you can open it directly in browser)</li>
+        <li>✅ Image dimensions are at least 1200x630px (recommended)</li>
+    </ul>
+    
+    <h2>Important Notes:</h2>
+    <ul>
+        <li><strong>Image must be in the public folder:</strong> Place <code>social-media-preview.png</code> in the <code>public</code> folder at the root of your project</li>
+        <li><strong>Image must be accessible:</strong> The URL should work when you open it directly in a browser</li>
+        <li><strong>Use absolute URLs:</strong> Social media crawlers need full URLs, not relative paths</li>
+        <li><strong>Test with tunnel:</strong> For full testing, use ngrok or similar to expose your localhost to social media validators</li>
+    </ul>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,103 @@
+// ==========================================================================
+// Utility Classes
+// ==========================================================================
+
+@use '../utils/variables' as *;
+
+// Spacing utilities
+.mg-ripp {
+  margin-bottom: $spacing-3xl;
+  margin-top: $spacing-xs;
+}
+
+.mg--45 {
+  margin-top: -2.8125rem;
+}
+
+.rabbit-new.mg--45 {
+  margin-bottom: 3.4375rem;
+}
+
+.mg-0-mob {
+  margin: 0;
+}
+
+.pdr-0 {
+  padding-right: 0;
+}
+
+// Border utilities
+.border-input {
+  border: 0.125rem solid hsl(275, 48%, 90.2%);
+}
+
+// Responsive utilities
+@media (max-width: 768px) {
+  .mg-ripp {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .mg-fot-mob2 {
+    margin-top: $spacing-lg;
+    margin-bottom: $spacing-lg;
+  }
+
+  .mg-fot-mob3 {
+    margin-bottom: $spacing-md;
+  }
+
+  .mgt-50-mob {
+    margin-top: 3.75rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .mgt-50-mob {
+    margin-top: 3.75rem;
+  }
+
+  .mg-fot-mob2 {
+    margin-top: $spacing-lg;
+    margin-bottom: $spacing-lg;
+  }
+
+  .mg-fot-mob3 {
+    margin-bottom: $spacing-md;
+  }
+
+  .btn-pd-0 {
+    padding: 0;
+  }
+}
+
+// 3D Transform Utilities
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.premium-card-container {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  transform: rotateX(2deg);
+
+  &:hover {
+    transform: rotateY(12deg) scale(1.05) translateY(-5px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+}
+
+// Card Effects
+@keyframes shine {
+  0% {
+    transform: translateX(-200%) skewX(-20deg);
+  }
+
+  100% {
+    transform: translateX(200%) skewX(-20deg);
+  }
+}
+
+.animate-shine {
+  animation: shine 4s infinite linear;
+}

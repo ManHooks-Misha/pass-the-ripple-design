@@ -1,0 +1,1110 @@
+// ==========================================================================
+// Skeleton Loading Styles
+// ==========================================================================
+
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+// Skeleton Animation
+@keyframes skeleton-shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+
+    100% {
+        background-position: calc(200px + 100%) 0;
+    }
+}
+
+// Base Skeleton Mixin
+@mixin skeleton-base {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200px 100%;
+    animation: skeleton-shimmer 1.2s ease-in-out infinite;
+    border-radius: $radius-sm;
+}
+
+// ==========================================================================
+// Carousel Skeleton
+// ==========================================================================
+
+.carousel-skeleton {
+    display: flex;
+    gap: $spacing-md;
+    width: 100%;
+    overflow: hidden;
+    padding: $spacing-md 0;
+}
+
+.carousel-item-skeleton {
+    flex: 0 0 calc(33.333% - 0.67rem);
+    min-width: 0;
+
+    @include respond-to-max('lg') {
+        flex: 0 0 calc(50% - 0.5rem);
+    }
+
+    @include respond-to-max('md') {
+        flex: 0 0 100%;
+    }
+}
+
+.carousel-skeleton-image {
+    @include skeleton-base;
+    width: 100%;
+    height: 400px;
+    border-radius: $radius-md;
+
+    @include respond-to-max('lg') {
+        height: 350px;
+    }
+
+    @include respond-to-max('md') {
+        height: 300px;
+    }
+
+    @include respond-to-max('sm') {
+        height: 250px;
+    }
+}
+
+// ==========================================================================
+// FlipCard Skeleton
+// ==========================================================================
+
+.flip-card-skeleton {
+    background: $color-white;
+    border: 0.1rem solid $color-gray-300;
+    padding: 2.5rem 3rem;
+    @include flex-column;
+    box-shadow: $shadow-sm;
+    min-height: 510px;
+    height: 100%;
+
+    .ripple-card-header {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: $spacing-lg;
+    }
+
+    .ripple-card-footer {
+        text-align: center;
+        padding-top: $spacing-sm;
+        border-top: 1px solid $color-gray-200;
+        margin-top: auto;
+    }
+
+    @include respond-to-max('lg') {
+        padding: $spacing-lg;
+    }
+
+    @include respond-to-max('md') {
+        padding: $spacing-md;
+    }
+}
+
+.skeleton-date {
+    @include skeleton-base;
+    width: 5rem;
+    height: 0.875rem;
+}
+
+.skeleton-image-wrapper {
+    height: 350px;
+    margin-bottom: $spacing-lg;
+    border-radius: $radius-md;
+    overflow: hidden;
+
+    @include respond-to-max('lg') {
+        height: 280px;
+    }
+
+    @include respond-to-max('md') {
+        height: 250px;
+    }
+
+    @include respond-to-max('sm') {
+        height: 200px;
+    }
+}
+
+.skeleton-image {
+    @include skeleton-base;
+    width: 100%;
+    height: 100%;
+    border-radius: $radius-md;
+}
+
+.skeleton-title {
+    @include skeleton-base;
+    width: 100%;
+    height: 1.5rem;
+    margin-bottom: $spacing-sm;
+
+    @include respond-to-max('lg') {
+        height: 1.25rem;
+    }
+
+    @include respond-to-max('md') {
+        height: 1.125rem;
+    }
+
+    @include respond-to-max('sm') {
+        height: 1rem;
+    }
+}
+
+.skeleton-title-line2 {
+    @include skeleton-base;
+    width: 75%;
+    height: 1.5rem;
+    margin-bottom: $spacing-sm;
+
+    @include respond-to-max('lg') {
+        height: 1.25rem;
+    }
+
+    @include respond-to-max('md') {
+        height: 1.125rem;
+    }
+
+    @include respond-to-max('sm') {
+        height: 1rem;
+    }
+}
+
+.skeleton-stat {
+    @include skeleton-base;
+    width: 85%;
+    height: 1.2rem;
+    margin-bottom: $spacing-md;
+
+    @include respond-to-max('lg') {
+        height: 1rem;
+    }
+
+    @include respond-to-max('md') {
+        height: 0.875rem;
+    }
+
+    @include respond-to-max('sm') {
+        height: 0.8125rem;
+    }
+}
+
+.skeleton-ripple-id {
+    @include skeleton-base;
+    width: 8rem;
+    height: 0.875rem;
+    margin: 0 auto;
+}
+
+// ==========================================================================
+// InfoCard Skeleton
+// ==========================================================================
+
+.info-card-skeleton {
+    background: $color-white;
+    border: 20px solid $color-gray-200;
+    box-shadow: rgba(144, 144, 144, 0.88) -15px 15px 1px, rgba(118, 118, 118, 0.93) -11px 9px 9px;
+    max-width: 380px;
+    max-height: 380px;
+    padding: $spacing-2xl $spacing-lg;
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    gap: $spacing-md;
+}
+
+.info-card-skeleton-icon {
+    @include skeleton-base;
+    width: 80px;
+    height: 80px;
+    border-radius: $radius-full;
+}
+
+.info-card-skeleton-title {
+    @include skeleton-base;
+    width: 200px;
+    height: 2rem;
+}
+
+.info-card-skeleton-text {
+    @include skeleton-base;
+    width: 100%;
+    height: 1.2rem;
+}
+
+.info-card-skeleton-text-line2 {
+    @include skeleton-base;
+    width: 80%;
+    height: 1.2rem;
+}
+
+// ==========================================================================
+// Challenges Page Skeleton
+// ==========================================================================
+
+.challenges-page-skeleton {
+    min-height: 100vh;
+    padding: $spacing-xl 0;
+}
+
+.challenges-hero-skeleton {
+    text-align: center;
+    margin-bottom: $spacing-3xl;
+    padding: $spacing-xl $spacing-md;
+}
+
+.hero-title-skeleton {
+    width: 60%;
+    max-width: 37.5rem; // 600px
+    height: 7.5rem; // 120px
+    margin: 0 auto $spacing-lg;
+    @include skeleton-base;
+
+    @include respond-to-max('md') {
+        width: 70%;
+        height: 6.25rem; // 100px
+    }
+
+    @include respond-to-max('sm') {
+        width: 80%;
+        height: 5rem; // 80px
+    }
+
+    @include respond-to-max('xs') {
+        width: 90%;
+        height: 3.75rem; // 60px
+    }
+}
+
+.hero-subtitle-skeleton {
+    width: 50%;
+    max-width: 25rem; // 400px
+    height: 2rem;
+    margin: 0 auto $spacing-md;
+    @include skeleton-base;
+
+    @include respond-to-max('sm') {
+        width: 70%;
+        height: 1.5rem;
+    }
+}
+
+.hero-description-skeleton {
+    width: 70%;
+    max-width: 37.5rem; // 600px
+    height: 1.5rem;
+    margin: 0 auto 0.5rem;
+    @include skeleton-base;
+}
+
+.hero-description-line2-skeleton {
+    width: 65%;
+    max-width: 34.375rem; // 550px
+    height: 1.5rem;
+    margin: 0 auto;
+    @include skeleton-base;
+}
+
+.main-content-skeleton {
+    margin-bottom: $spacing-3xl;
+}
+
+.map-skeleton-wrapper {
+    @include flex-center;
+}
+
+.map-image-skeleton {
+    width: 100%;
+    height: 31.25rem; // 500px
+    border-radius: $radius-xl;
+    @include skeleton-base;
+
+    @include respond-to-max('md') {
+        height: 25rem; // 400px
+    }
+
+    @include respond-to-max('sm') {
+        height: 18.75rem; // 300px
+    }
+
+    @include respond-to-max('xs') {
+        height: 15.625rem; // 250px
+    }
+}
+
+.info-boxes-skeleton-wrapper {
+    @include flex-column;
+    gap: $spacing-xl;
+}
+
+.info-box-skeleton {
+    width: 100%;
+    height: 12.5rem; // 200px
+    border-radius: $radius-xl;
+    @include skeleton-base;
+
+    &.orange {
+        background: linear-gradient(90deg, #FFE5CC 0%, #FFD4A3 100%);
+    }
+
+    &.blue {
+        background: linear-gradient(90deg, #CCE5FF 0%, #A3D4FF 100%);
+    }
+
+    &.purple {
+        background: linear-gradient(90deg, #E5CCFF 0%, #D4A3FF 100%);
+    }
+
+    @include respond-to-max('md') {
+        height: 11.25rem; // 180px
+    }
+
+    @include respond-to-max('sm') {
+        height: 9.375rem; // 150px
+    }
+
+    @include respond-to-max('xs') {
+        height: 8.125rem; // 130px
+    }
+}
+
+.step-message-skeleton {
+    text-align: center;
+    margin-bottom: $spacing-3xl;
+}
+
+.step-msg-skeleton {
+    width: 80%;
+    max-width: 50rem; // 800px
+    height: 15.625rem; // 250px
+    margin: 0 auto;
+    border-radius: $radius-xl;
+    @include skeleton-base;
+
+    @include respond-to-max('md') {
+        height: 12.5rem; // 200px
+    }
+
+    @include respond-to-max('sm') {
+        height: 11.25rem; // 180px
+    }
+
+    @include respond-to-max('xs') {
+        height: 9.375rem; // 150px
+    }
+}
+
+.badges-skeleton,
+.carousel-skeleton,
+.challenge-cards-skeleton {
+    text-align: center;
+    margin-bottom: $spacing-3xl;
+}
+
+.badges-title-skeleton,
+.carousel-title-skeleton,
+.cards-title-skeleton {
+    width: 50%;
+    max-width: 25rem; // 400px
+    height: 2.5rem;
+    margin: 0 auto $spacing-xl;
+    @include skeleton-base;
+}
+
+.cards-title-skeleton {
+    width: 60%;
+    max-width: 31.25rem; // 500px
+}
+
+.badges-image-skeleton {
+    width: 100%;
+    max-width: 56.25rem; // 900px
+    height: 25rem; // 400px
+    margin: 0 auto;
+    border-radius: $radius-xl;
+    @include skeleton-base;
+
+    @include respond-to-max('md') {
+        height: 21.875rem; // 350px
+    }
+
+    @include respond-to-max('sm') {
+        height: 18.75rem; // 300px
+    }
+
+    @include respond-to-max('xs') {
+        height: 15.625rem; // 250px
+    }
+}
+
+.carousel-items-skeleton {
+    display: flex;
+    gap: $spacing-xl;
+    overflow: hidden;
+    padding: $spacing-md 0;
+}
+
+.carousel-card-skeleton {
+    flex: 0 0 calc(33.333% - 1.33rem);
+    min-width: 18.75rem; // 300px
+    height: 28.125rem; // 450px
+    border-radius: $radius-xl;
+    @include skeleton-base;
+
+    @include respond-to-max('xl') {
+        flex: 0 0 calc(50% - 1rem);
+    }
+
+    @include respond-to-max('md') {
+        flex: 0 0 100%;
+        height: 25rem; // 400px
+    }
+
+    @include respond-to-max('xs') {
+        height: 21.875rem; // 350px
+    }
+}
+
+.challenge-card-skeleton {
+    width: 100%;
+    height: 25rem; // 400px
+    border-radius: $radius-xl;
+    @include skeleton-base;
+
+    @include respond-to-max('sm') {
+        height: 21.875rem; // 350px
+    }
+
+    @include respond-to-max('xs') {
+        height: 18.75rem; // 300px
+    }
+}
+
+.cta-buttons-skeleton {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-xl;
+    margin-bottom: $spacing-3xl;
+    flex-wrap: wrap;
+}
+
+.cta-button-skeleton {
+    width: 25rem; // 400px
+    height: 9.375rem; // 150px
+    border-radius: $radius-xl;
+    @include skeleton-base;
+
+    &.blue-btn {
+        background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+    }
+
+    &.green-btn {
+        background: linear-gradient(135deg, #4CAF50 0%, #45A049 100%);
+    }
+
+    @include respond-to-max('md') {
+        width: 21.875rem; // 350px
+        height: 8.125rem; // 130px
+    }
+
+    @include respond-to-max('sm') {
+        width: 18.75rem; // 300px
+        height: 6.875rem; // 110px
+    }
+
+    @include respond-to-max('xs') {
+        width: 15.625rem; // 250px
+        height: 5.625rem; // 90px
+    }
+}
+
+.footer-skeleton {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+}
+
+.footer-image-skeleton {
+    width: 100%;
+    max-width: 62.5rem; // 1000px
+    height: 18.75rem; // 300px
+    margin: 0 auto;
+    border-radius: $radius-xl;
+    @include skeleton-base;
+
+    @include respond-to-max('sm') {
+        height: 15.625rem; // 250px
+    }
+
+    @include respond-to-max('xs') {
+        height: 12.5rem; // 200px
+    }
+}
+
+// ==========================================================================
+// Hero Section Skeleton
+// ==========================================================================
+
+.hero-section-skeleton {
+    padding: $spacing-xl;
+    max-width: 87.5rem;
+    margin: 0 auto;
+
+    @include respond-to-max('sm') {
+        padding: $spacing-lg;
+    }
+
+    @include respond-to-max('xs') {
+        padding: $spacing-md;
+    }
+}
+
+.hero-content-wrapper-skeleton {
+    display: flex;
+    align-items: center;
+    gap: $spacing-3xl;
+    flex-direction: row;
+
+    @include respond-to-max('xl') {
+        gap: $spacing-xl;
+    }
+
+    @include respond-to-max('lg') {
+        flex-direction: column;
+        gap: $spacing-xl;
+    }
+}
+
+.hero-characters-left-skeleton {
+    width: 100%;
+    max-width: 35rem;
+    margin-left: -5rem;
+
+    @include respond-to-max('xl') {
+        max-width: 28rem;
+        margin-left: -3rem;
+    }
+
+    @include respond-to-max('lg') {
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
+
+.hero-character-skeleton {
+    width: 100%;
+    height: 31.25rem; // 500px
+    border-radius: $radius-xl;
+    @include skeleton-base;
+
+    @include respond-to-max('xl') {
+        height: 25rem; // 400px
+    }
+
+    @include respond-to-max('lg') {
+        height: 21.875rem; // 350px
+    }
+
+    @include respond-to-max('sm') {
+        height: 18.75rem; // 300px
+    }
+
+    @include respond-to-max('xs') {
+        height: 15.625rem; // 250px
+    }
+}
+
+.hero-content-right-skeleton {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+
+    @include respond-to-max('lg') {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.hero-title-skeleton {
+    width: 100%;
+    max-width: 31.25rem;
+    height: 7.5rem; // 120px
+    border-radius: $radius-md;
+    @include skeleton-base;
+
+    @include respond-to-max('xl') {
+        height: 6.25rem; // 100px
+    }
+
+    @include respond-to-max('lg') {
+        height: 5rem; // 80px
+    }
+
+    @include respond-to-max('sm') {
+        height: 3.75rem; // 60px
+    }
+
+    @include respond-to-max('xs') {
+        height: 3.125rem; // 50px
+        max-width: 100%;
+    }
+}
+
+.hero-subtitle-skeleton {
+    width: 100%;
+    height: 1.5rem;
+    @include skeleton-base;
+
+    @include respond-to-max('lg') {
+        max-width: 37.5rem; // 600px
+    }
+
+    @include respond-to-max('sm') {
+        height: 1.2rem;
+    }
+
+    @include respond-to-max('xs') {
+        height: 1rem;
+    }
+}
+
+.hero-subtitle-line2-skeleton {
+    width: 85%;
+    height: 1.5rem;
+    @include skeleton-base;
+
+    @include respond-to-max('lg') {
+        max-width: 37.5rem; // 600px
+    }
+
+    @include respond-to-max('sm') {
+        height: 1.2rem;
+    }
+
+    @include respond-to-max('xs') {
+        height: 1rem;
+        width: 90%;
+    }
+}
+
+// ==========================================================================
+// Index Page Skeleton
+// ==========================================================================
+
+.index-page-skeleton {
+    min-height: 100vh;
+    width: 100%;
+    background: $color-white;
+}
+
+// Mobile Skeleton Styles
+.mobile-skeleton-wrapper {
+    padding: $spacing-xl $spacing-md;
+}
+
+.welcome-skeleton-mobile {
+    text-align: center;
+    margin-bottom: $spacing-2xl;
+}
+
+.welcome-title-skeleton {
+    width: 80%;
+    height: 7.5rem; // 120px
+    margin: 0 auto $spacing-lg;
+    @include skeleton-base;
+
+    @include respond-to-max('sm') {
+        height: 6.25rem; // 100px
+    }
+
+    @include respond-to-max('xs') {
+        height: 5rem; // 80px
+    }
+}
+
+.welcome-text-skeleton {
+    width: 90%;
+    height: 1.5rem;
+    margin: 0 auto 0.5rem;
+    @include skeleton-base;
+}
+
+.welcome-text-skeleton-line2 {
+    width: 85%;
+    height: 1.5rem;
+    margin: 0 auto $spacing-xl;
+    @include skeleton-base;
+}
+
+.banner-img-skeleton-mobile {
+    width: 100%;
+    height: 25rem; // 400px
+    margin: 0 auto;
+    @include skeleton-base;
+
+    @include respond-to-max('sm') {
+        height: 18.75rem; // 300px
+    }
+
+    @include respond-to-max('xs') {
+        height: 15.625rem; // 250px
+    }
+}
+
+.about-skeleton-mobile {
+    margin-bottom: $spacing-2xl;
+}
+
+.about-img-skeleton {
+    width: 100%;
+    height: 18.75rem; // 300px
+    margin-bottom: $spacing-lg;
+    @include skeleton-base;
+
+    @include respond-to-max('sm') {
+        height: 15.625rem; // 250px
+    }
+
+    @include respond-to-max('xs') {
+        height: 12.5rem; // 200px
+    }
+}
+
+.about-text-skeleton-wrapper {
+    padding: 0 $spacing-md;
+}
+
+.about-text-line {
+    width: 100%;
+    height: 1.2rem;
+    margin-bottom: 0.75rem;
+    @include skeleton-base;
+}
+
+.ripple-info-skeleton-mobile {
+    margin-bottom: $spacing-2xl;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+}
+
+.ripple-character-img-skeleton {
+    width: 100%;
+    height: 15.625rem; // 250px
+    @include skeleton-base;
+
+    @include respond-to-max('sm') {
+        height: 12.5rem; // 200px
+    }
+}
+
+.ripple-text-box-skeleton {
+    padding: $spacing-lg;
+    border: 2px solid $color-gray-200;
+    border-radius: $radius-xl;
+}
+
+.ripple-heading-skeleton {
+    width: 60%;
+    height: 2rem;
+    margin-bottom: $spacing-md;
+    @include skeleton-base;
+}
+
+.ripple-text-line {
+    width: 100%;
+    height: 1.2rem;
+    margin-bottom: 0.5rem;
+    @include skeleton-base;
+}
+
+.how-to-skeleton-mobile {
+    margin-bottom: $spacing-2xl;
+}
+
+.how-to-heading-skeleton {
+    width: 80%;
+    height: 2.5rem;
+    margin: 0 auto $spacing-xl;
+    @include skeleton-base;
+}
+
+.carousel-skeleton-mobile {
+    width: 100%;
+    height: 28.125rem; // 450px
+    border-radius: $radius-xl;
+    @include skeleton-base;
+
+    @include respond-to-max('sm') {
+        height: 25rem; // 400px
+    }
+
+    @include respond-to-max('xs') {
+        height: 21.875rem; // 350px
+    }
+}
+
+.why-luma-skeleton-mobile {
+    margin-bottom: $spacing-2xl;
+}
+
+.why-luma-carousel-skeleton {
+    width: 100%;
+    height: 25rem; // 400px
+    border-radius: $radius-xl;
+    @include skeleton-base;
+
+    @include respond-to-max('sm') {
+        height: 21.875rem; // 350px
+    }
+}
+
+.cta-skeleton-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+    align-items: center;
+    padding: $spacing-xl $spacing-md;
+}
+
+.cta-button-skeleton {
+    // Reused class, but ensure mobile specificity if needed
+}
+
+// Desktop Skeleton Styles
+.desktop-skeleton-wrapper {
+    padding: $spacing-2xl $spacing-xl;
+    max-width: 87.5rem; // 1400px
+    margin: 0 auto;
+}
+
+.welcome-skeleton-desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-3xl;
+    margin-bottom: $spacing-3xl;
+    padding-top: $spacing-xl;
+
+    @include respond-to-max('xl') {
+        gap: $spacing-xl;
+    }
+
+    @include respond-to-max('lg') {
+        grid-template-columns: 1fr;
+        gap: $spacing-xl;
+    }
+}
+
+.welcome-left-skeleton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: $spacing-lg;
+}
+
+.welcome-title-skeleton-desktop {
+    width: 100%;
+    height: 9.375rem; // 150px
+    @include skeleton-base;
+}
+
+.welcome-text-skeleton-desktop {
+    width: 100%;
+    height: 1.5rem;
+    @include skeleton-base;
+}
+
+.welcome-text-skeleton-desktop-line2 {
+    width: 90%;
+    height: 1.5rem;
+    @include skeleton-base;
+}
+
+.welcome-right-skeleton {
+    display: flex;
+    align-items: center;
+}
+
+.banner-img-skeleton-desktop {
+    width: 100%;
+    height: 31.25rem; // 500px
+    border-radius: $radius-xl;
+    @include skeleton-base;
+
+    @include respond-to-max('lg') {
+        height: 25rem; // 400px
+    }
+}
+
+.about-skeleton-desktop {
+    position: relative;
+    margin-bottom: $spacing-3xl;
+}
+
+.about-banner-img-skeleton {
+    width: 100%;
+    height: 25rem; // 400px
+    border-radius: $radius-xl;
+    @include skeleton-base;
+}
+
+.about-text-overlay-skeleton {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 40%;
+    padding: $spacing-xl;
+    background: rgba($color-white, 0.95);
+    border-radius: $radius-xl;
+
+    @include respond-to-max('lg') {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: $spacing-lg;
+    }
+}
+
+.about-text-line-desktop {
+    width: 100%;
+    height: 1.2rem;
+    margin-bottom: $spacing-md;
+    @include skeleton-base;
+}
+
+.info-boxes-skeleton-desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-2xl;
+    margin-bottom: $spacing-3xl;
+
+    @include respond-to-max('xl') {
+        gap: $spacing-xl;
+    }
+
+    @include respond-to-max('lg') {
+        grid-template-columns: 1fr;
+    }
+}
+
+.info-box-skeleton {
+    // Reused class, verify layout
+    display: flex;
+    gap: $spacing-xl;
+    align-items: center;
+}
+
+.info-box-img-skeleton {
+    width: 12.5rem; // 200px
+    height: 12.5rem; // 200px
+    flex-shrink: 0;
+    border-radius: $radius-xl;
+    @include skeleton-base;
+}
+
+.info-box-content-skeleton {
+    flex: 1;
+}
+
+.info-box-heading-skeleton {
+    width: 70%;
+    height: 2rem;
+    margin-bottom: $spacing-md;
+    @include skeleton-base;
+}
+
+.info-box-text-skeleton {
+    width: 100%;
+    height: 1.2rem;
+    margin-bottom: 0.75rem;
+    @include skeleton-base;
+}
+
+.how-to-skeleton-desktop {
+    margin-bottom: $spacing-3xl;
+}
+
+.how-to-heading-skeleton-desktop {
+    width: 60%;
+    height: 3rem;
+    margin: 0 auto $spacing-xl;
+    @include skeleton-base;
+}
+
+.carousel-skeleton-desktop {
+    width: 100%;
+    height: 37.5rem; // 600px
+    border-radius: $radius-xl;
+    @include skeleton-base;
+}
+
+.why-luma-skeleton-desktop {
+    margin-bottom: $spacing-3xl;
+}
+
+.why-luma-grid-skeleton {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-xl;
+
+    @include respond-to-max('xl') {
+        gap: $spacing-lg;
+    }
+
+    @include respond-to-max('lg') {
+        grid-template-columns: 1fr;
+    }
+}
+
+.why-luma-card-skeleton {
+    width: 100%;
+    height: 21.875rem; // 350px
+    border-radius: $radius-xl;
+    @include skeleton-base;
+}
+
+.banner-section-skeleton-desktop {
+    margin-bottom: $spacing-3xl;
+}
+
+.banner-img-large-skeleton {
+    width: 100%;
+    height: 28.125rem; // 450px
+    border-radius: $radius-xl;
+    @include skeleton-base;
+}
+
+.cta-skeleton-desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-xl;
+    padding: $spacing-2xl 0;
+}
+
+.cta-box-skeleton {
+    width: 25rem; // 400px
+    height: 12.5rem; // 200px
+    border-radius: $radius-xl;
+    @include skeleton-base;
+}
+
+.cta-button-large-skeleton {
+    width: 31.25rem; // 500px
+    height: 9.375rem; // 150px
+    border-radius: $radius-xl;
+    @include skeleton-base;
+
+    @include respond-to-max('lg') {
+        width: 25rem; // 400px
+        height: 7.5rem; // 120px
+    }
+}

@@ -1,0 +1,411 @@
+// ==========================================================================
+// Badges Page Styles
+// ==========================================================================
+
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+
+.slider-wrapper.text-center{
+  text-align:center;
+  position:relative;
+}
+
+.slider-wrapper2{
+  width:44rem;
+  margin:0 auto;
+  position:relative;
+}
+
+.slider-img{
+  width:100%;
+}
+
+.badge-text{
+  position:absolute;
+  top:42%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  font-size:2.4rem;
+  color:#6b7449;
+  font-weight:600;
+  font-family:"Century Gothic", Arial, sans-serif;
+}
+
+
+@media (min-width: 882px) and (max-width: 1281px) {
+.badges-container .slider-wrapper {
+    width: 100%;
+}
+
+}
+
+@media (min-width: 276px) and (max-width: 881px) {
+.badges-container .slider-wrapper {
+    width: 100%;
+}
+
+.slider-wrapper2{
+  width:100%;
+}
+}
+
+@media (min-width: 276px) and (max-width: 851px) {
+.slider-wrapper2{
+  width:100%;
+}
+
+.badges-container .slider-wrapper {
+    width: 100%;
+}
+}
+/* 
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+  .third-ban {
+    padding: 10px;
+}
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+  .third-ban {
+    padding: 10px;
+}
+}
+
+@media (min-width: 1441px) and (max-width: 1919px) {
+    .container, header > div, footer > div, section .container {
+        padding-left: .5rem !important;
+        padding-right: .5rem !important;
+    }
+} */
+
+.badges-container .slider-wrapper {
+    width: 1300px;
+    margin: auto;
+    position: relative;
+}
+
+.mb-5{
+  margin-bottom:60px;
+}
+
+
+.bannerSlider {
+    padding: 0px 60px;
+}
+
+.bannerSlider1 {
+    padding: 0px 60px;
+}
+
+.swiper-wrapper{
+  align-items:center;
+}
+
+.swiper-slide{
+  display:flex;
+  justify-content:center;
+  position:relative;
+}
+
+.swiper-slide img{
+  width:220px;
+  height:auto;
+/*   filter:drop-shadow(0 10px 10px rgba(0,0,0,.2)); */
+}
+
+
+.ticker{
+  position:absolute;
+  top:55%;
+}
+
+.led{
+  font-size:14px;
+  font-weight:bold;
+  color:#6b7449;
+}
+
+
+.swiper-button-prev,
+.swiper-button-next{
+  display:none;
+}
+
+
+.custom-prev,
+.custom-next{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:10;
+  cursor:pointer;
+}
+
+.custom-prev{
+  left:0px;  
+}
+
+.custom-next{
+  right:0px;  
+}
+
+.custom-prev img,
+.custom-next img{
+  width:60px;
+  transition:transform .2s ease;
+}
+
+.custom-prev:hover img,
+.custom-next:hover img{
+  transform:scale(1.1);
+}
+
+@media(max-width:992px){
+  .bannerSlider{
+    padding:0 60px;
+  }
+
+  .custom-prev img,
+  .custom-next img{
+    width:45px;
+  }
+}
+
+@media(max-width:576px){
+  .bannerSlider{
+    padding:0 30px;
+  }
+
+  .custom-prev{
+    left:0;
+  }
+
+  .custom-next{
+    right:0;
+  }
+}
+
+screen{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+/*   background: radial-gradient(circle at 30% 20%, #6d74d8 0%, #3e459f 40%, #2a2f7a 100%); */
+  padding: 24px;
+}
+
+.badges-container {
+    background-image: url(/src/assets/badges/badges%20background.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-top: 20px;
+}
+
+.paper h2 {
+    margin: 0 0 18px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    color: #1f1f1f;
+    font-family: "Century Gothic", Arial, sans-serif;
+    font-size: 2.3rem;
+}
+
+.cta{
+  appearance: none;
+  color: #4b2a12;
+  font-weight: 700;
+  padding: 14px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  width: fit-content;
+  min-width: 340px;
+  
+}
+
+.cta:active{
+  transform: translateY(2px);
+/*   box-shadow: inset 0 0 0 2px rgba(255,255,255,0.35), 0 8px 0 rgba(0,0,0,0.12); */
+}
+
+
+.art{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.art img{
+  width: min(520px, 100%);
+  height: auto;
+  filter: drop-shadow(0 18px 20px rgba(0,0,0,0.35));
+}
+
+@media (max-width: 900px){
+  .content{
+    grid-template-columns: 1fr;
+  }
+  .art{
+    justify-content: center;
+  }
+  .cta{
+    min-width: 100%;
+  }
+}
+
+.mt-5{
+  margin-top: 80px;
+}
+.paper {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-48%, -50%);
+    z-index: 9;
+    text-align: center;
+}
+
+.paper img {
+    margin: 0 auto;
+    width: 55%;
+}
+    
+.position-relative {
+    position: relative;
+    display: ruby;
+    /* left: 0px; */
+    /* top: 10px; */
+}
+span.btntext {
+    position: absolute;
+    top: -16px;
+    font-family: "Century Gothic", Arial, sans-serif;
+    font-size: 1.8rem;
+    left: 57px;
+}
+@media (min-width: 276px) and (max-width: 1381px) {
+.badges-container .slider-wrapper {
+    width: 100%;
+}
+}
+
+@media (min-width: 276px) and (max-width: 651px) {
+    .paper h2 {
+        margin: 0 0 8px;
+        font-size: .6rem;
+    }
+
+    .paper {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-48%, -50%);
+    z-index: 9;
+    text-align: center;
+}
+
+.paper img {
+    margin: 0 auto;
+    width: 55%;
+}
+    
+.position-relative {
+    position: relative;
+    display: ruby;
+    /* left: 0px; */
+    /* top: 10px; */
+}
+span.btntext {
+    position: absolute;
+    top: -16px;
+    font-family: "Century Gothic", Arial, sans-serif;
+    font-size: 1rem;
+    left: 57px;
+}
+.paper img {
+    margin: 0 auto;
+    width: 55%;
+}
+
+.badge-text {
+    font-size: 1.4rem;
+}
+.badges-container {
+    padding-top: 97px;
+}
+}
+.bannerSlider, .bannerSlider1 {
+    padding: 0px 60px;
+    margin-bottom: 60px;
+}
+
+@media (min-width: 576px) and (max-width: 851px) {
+.slider-wrapper2{
+  width:90%;
+}
+
+.badges-container {
+    padding-top: 97px;
+}
+
+span.btntext {
+    position: absolute;
+    top: -3px;
+    font-family: "Century Gothic", Arial, sans-serif;
+    font-size: 1rem;
+    left: 57px;
+}
+  .paper h2 {
+    margin: 0 0 18px;
+    font-size: 1.3rem;
+}
+
+.badge-text {
+    font-size: 1.8rem;
+}
+.paper img {
+    margin: 0 auto;
+    width: 55%;
+}
+.art1 img {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.badges-container .slider-wrapper {
+    width: 100%;
+}
+}

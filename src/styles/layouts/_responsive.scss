@@ -1,0 +1,259 @@
+// ==========================================================================
+// Responsive Breakpoints & Layout Adjustments
+// ==========================================================================
+
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+// ==========================================================================
+// Equal horizontal spacing for all content containers
+// ==========================================================================
+
+// .container,
+// header>div,
+// footer>div,
+// section .container {
+//   padding-left: $spacing-lg !important;
+//   padding-right: $spacing-lg !important;
+
+//   @include respond-to('sm') {
+//     padding-left: $spacing-xl !important;
+//     padding-right: $spacing-xl !important;
+//   }
+
+//   @include respond-to('lg') {
+//     padding-left: $spacing-2xl !important;
+//     padding-right: $spacing-2xl !important;
+//   }
+
+//   @include respond-to('xl') {
+//     padding-left: $spacing-3xl !important;
+//     padding-right: $spacing-3xl !important;
+//   }
+
+//   @include respond-to('2xl') {
+//     padding-left: 6rem !important;
+//     padding-right: 6rem !important;
+//   }
+// }
+
+// ==========================================================================
+// Specific Device Breakpoints
+// ==========================================================================
+
+// iPhone SE, iPhone 5/5s (320px)
+// @media (max-width: 374px) {
+
+//   .container,
+//   header>div,
+//   footer>div,
+//   section .container {
+//     padding-left: $spacing-md !important;
+//     padding-right: $spacing-md !important;
+//   }
+// }
+
+// // iPhone 6/7/8, iPhone X/11/12/13 (375px - 428px)
+// @media (min-width: 375px) and (max-width: 428px) {
+
+//   .container,
+//   header>div,
+//   footer>div,
+//   section .container {
+//     padding-left: 1.125rem !important;
+//     padding-right: 1.125rem !important;
+//   }
+// }
+
+// // Large phones / Small tablets (429px - 639px)
+// @media (min-width: 429px) and (max-width: 639px) {
+
+//   .container,
+//   header>div,
+//   footer>div,
+//   section .container {
+//     padding-left: $spacing-lg !important;
+//     padding-right: $spacing-lg !important;
+//   }
+// }
+
+// // iPad Mini (768px portrait)
+// @media (min-width: 768px) and (max-width: 834px) {
+
+//   .container,
+//   header>div,
+//   footer>div,
+//   section .container {
+//     padding-left: 2.5rem !important;
+//     padding-right: 2.5rem !important;
+//   }
+// }
+
+// // iPad Air, iPad Pro 11" (820px - 1024px)
+// @media (min-width: 820px) and (max-width: 1023px) {
+
+//   .container,
+//   header>div,
+//   footer>div,
+//   section .container {
+//     padding-left: 2.75rem !important;
+//     padding-right: 2.75rem !important;
+//   }
+// }
+
+// // iPad Pro 12.9" (1024px - 1366px portrait)
+// @media (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+//   .container {
+//     max-width: 90%;
+//   }
+
+//   .authmobile-cta {
+//     p {
+//       top: 42%;
+//       left: 37%;
+//       font-size: $font-size-lg;
+//     }
+
+//     img {
+//       height: 70px;
+//     }
+//   }
+
+//   .custom-header .nav-link {
+//     font-size: $font-size-sm;
+//     padding: $spacing-sm $spacing-xs;
+//   }
+// }
+
+// Surface Pro, Medium Tablets (1366px - 1440px)
+// @media (min-width: 1366px) and (max-width: 1440px) {
+
+//   .container,
+//   header>div,
+//   footer>div,
+//   section .container {
+//     padding-left: 3.5rem !important;
+//     padding-right: 3.5rem !important;
+//   }
+// }
+
+// Laptop / Desktop (1441px - 1919px)
+// @media (min-width: 1441px) and (max-width: 1919px) {
+
+//   .container,
+//   header>div,
+//   footer>div,
+//   section .container {
+//     padding-left: 5rem !important;
+//     padding-right: 5rem !important;
+//   }
+
+//   .container {
+//     max-width: 90rem;
+//   }
+// }
+
+// // 1920px and above
+// @media (min-width: 1920px) {
+//   .container {
+//     max-width: 106.25rem;
+//   }
+// }
+
+// ==========================================================================
+// Landscape Orientation Adjustments
+// ==========================================================================
+
+
+// ==========================================================================
+// React Joyride Mobile Fixes
+// ==========================================================================
+
+// @media (max-width: 767px) {
+
+//   [class*="__tooltip"] button,
+//   [data-joyride="tooltip"] button,
+//   .react-joyride__tooltip button,
+//   button[class*="buttonNext"],
+//   button[class*="buttonBack"] {
+//     min-height: 2.75rem !important;
+//     touch-action: manipulation !important;
+//     width: 100% !important;
+//     flex: 1 1 0% !important;
+//     min-width: 0 !important;
+//     font-size: $font-size-base !important;
+//     padding: 0.75rem $spacing-md !important;
+//     white-space: nowrap !important;
+//     @include flex-center;
+//     gap: 0.25rem !important;
+//   }
+
+//   [class*="__tooltip"]>div:last-child,
+//   [data-joyride="tooltip"]>div:last-child,
+//   .react-joyride__tooltip>div:last-child,
+//   [class*="__tooltip"] [class*="button"],
+//   [data-joyride="tooltip"] [class*="button"] {
+//     display: flex !important;
+//     flex-direction: row !important;
+//     gap: 0.75rem !important;
+//     width: 100% !important;
+//     margin-top: 0.75rem !important;
+//   }
+// }
+
+  @media (max-width: 400px) {
+
+    [class*="__tooltip"]>div:last-child,
+    [data-joyride="tooltip"]>div:last-child {
+      flex-direction: column !important;
+    }
+
+    [class*="__tooltip"] button,
+    [data-joyride="tooltip"] button {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+  }
+
+[class*="__tooltip"],
+[data-joyride="tooltip"],
+.react-joyride__tooltip {
+  @include respond-to-max('md') {
+    max-width: calc(100vw - $spacing-lg) !important;
+    box-sizing: border-box !important;
+    width: auto !important;
+  }
+
+  button span {
+    @include respond-to-max('md') {
+      @include text-truncate;
+    }
+  }
+}
+
+.rounded-lg.border.text-card-foreground.bg-white.shadow-none.relative {
+  width: 80%;
+  margin: 0 auto;
+}
+
+// @media (min-width: 367px) and (max-width: 640px) {
+//   .login-container {
+//     align-items: start;
+//   }
+
+//   .rounded-lg.border.text-card-foreground.bg-white.shadow-none.relative {
+//     width: 100%;
+//     margin: 0 auto;
+//   }
+// }
+
+// @media (min-width: 667px) and (max-width: 940px) {
+//   .login-container {
+//     align-items: start;
+//   }
+
+//   .rounded-lg.border.text-card-foreground.bg-white.shadow-none.relative {
+//     width: 100%;
+//     margin: 0 auto;
+//   }
+// }

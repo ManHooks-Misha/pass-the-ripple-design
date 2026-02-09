@@ -1,0 +1,588 @@
+// ==========================================================================
+// Login Page Styles
+// ==========================================================================
+
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.login-main {
+  width: 100%;
+  position: relative;
+  overflow: auto;
+  background-size: cover !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #d4c4b0;
+  min-height: 100vh;
+  height: auto;
+  padding-top: $spacing-md;
+  padding-bottom: $spacing-xl;
+
+  // Extra small mobile devices (< 375px)
+  @media (max-width: 374px) {
+    padding-top: $spacing-sm;
+    padding-bottom: $spacing-lg;
+    overflow-y: auto;
+  }
+
+  @include respond-to('xs') {
+    padding-top: $spacing-lg;
+    padding-bottom: $spacing-2xl;
+    overflow-y: auto;
+  }
+
+  @include respond-to('sm') {
+    padding-top: $spacing-xl;
+    padding-bottom: $spacing-3xl;
+    background-position: top center;
+    overflow-y: auto;
+  }
+
+  // @include respond-to('md') {
+  //   padding-top: $spacing-2xl;
+  //   padding-bottom: $spacing-3xl;
+  //   overflow-y: auto;
+  // }
+
+  // @include respond-to('lg') {
+  //   @include flex-center;
+  //   justify-content: flex-end;
+  //   padding: 0;
+  //   overflow: hidden;
+  //   height: 100vh;
+  //   background-attachment: scroll;
+  // }
+
+  // @include respond-to('xl') {
+  //   background-position: top center;
+  //   padding: 0;
+  //   overflow: hidden;
+  //   height: 100vh;
+  //   background-attachment: scroll;
+  // }
+
+  // // Large desktop screens
+  // @include respond-to('2xl') {
+  //   background-size: cover !important;
+  //   overflow: hidden;
+  //   height: 100vh;
+  //   padding: 0;
+  //   background-attachment: scroll;
+  // }
+}
+
+.login-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: $spacing-sm;
+  min-height: 100vh;
+  @include flex-center;
+
+  // Extra small mobile devices (< 375px)
+  @media (max-width: 374px) {
+    padding: $spacing-sm $spacing-xs;
+  }
+
+  @include respond-to('xs') {
+    max-width: 20rem;
+    padding: $spacing-lg $spacing-md;
+  }
+
+  @include respond-to('sm') {
+    max-width: 24rem;
+    padding: $spacing-xl $spacing-md;
+  }
+
+  @include respond-to('md') {
+    max-width: 28rem;
+    padding: $spacing-2xl $spacing-xl;
+  }
+
+  @include respond-to('lg') {
+    max-width: 44rem;
+    margin-right: 8%;
+    margin-left: auto;
+    padding: $spacing-xl $spacing-2xl;
+    min-height: auto;
+    height: auto;
+    overflow: visible;
+  }
+
+  @include respond-to('xl') {
+    max-width: 50rem;
+    margin-right: 6%;
+    padding: $spacing-xl $spacing-2xl;
+  }
+
+  @include respond-to('2xl') {
+    margin-right: 5%;
+    max-width: 56rem;
+    padding: $spacing-2xl $spacing-3xl;
+  }
+}
+
+.login-content {
+  @include flex-column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 0%;
+}
+
+.login-title-image {
+  margin-bottom: $spacing-md;
+  width: 85%;
+  max-width: 16rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  // Extra small mobile devices (< 375px)
+  @media (max-width: 374px) {
+    width: 90%;
+    max-width: 14rem;
+    margin-bottom: $spacing-sm;
+  }
+
+  @include respond-to('xs') {
+    width: 80%;
+    max-width: 18rem;
+    margin-bottom: $spacing-md;
+  }
+
+  @include respond-to('sm') {
+    width: 95%;
+    max-width: 22rem;
+    margin-bottom: $spacing-lg;
+  }
+
+  @include respond-to('md') {
+    width: 90%;
+    max-width: 26rem;
+    margin-bottom: $spacing-lg;
+  }
+
+  @include respond-to('lg') {
+    width: 70%;
+    max-width: 25rem;
+    margin-bottom: $spacing-lg;
+  }
+
+  @include respond-to('xl') {
+    width: 68%;
+    max-width: 28rem;
+    margin-bottom: $spacing-lg;
+  }
+
+  @include respond-to('2xl') {
+    max-width: 35rem;
+    margin-bottom: $spacing-xl;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+}
+
+.btn-bg-img {
+  font-size: 1rem;
+}
+.login-form {
+  width: 100%;
+  @include flex-column;
+        gap: 1rem;
+
+  // Extra small mobile devices (< 375px)
+  // @media (max-width: 374px) {
+  //   gap: 0.625rem;
+  // }
+
+  // @include respond-to('xs') {
+  //   gap: $spacing-sm;
+  // }
+
+  // @include respond-to('sm') {
+  //   gap: $spacing-md;
+  // }
+
+  // @include respond-to('md') {
+  //   gap: $spacing-lg;
+  // }
+
+  // @include respond-to('lg') {
+  //   gap: $spacing-md;
+  // }
+
+  // @include respond-to('xl') {
+  //   gap: $spacing-md;
+  // }
+
+  // @include respond-to('2xl') {
+  //   gap: $spacing-lg;
+  // }
+}
+
+.login-field {
+  @include flex-column;
+  gap: 0.375rem;
+
+  @include respond-to('xs') {
+    gap: $spacing-sm;
+  }
+
+  @include respond-to('sm') {
+    gap: $spacing-sm;
+  }
+
+  @include respond-to('md') {
+    gap: 0.625rem;
+  }
+
+  @include respond-to('lg') {
+    gap: $spacing-sm;
+  }
+
+  @include respond-to('xl') {
+    gap: $spacing-sm;
+  }
+
+  @include respond-to('2xl') {
+    gap: $spacing-sm;
+  }
+}
+
+.login-label {
+  color: $color-black;
+  font-weight: $font-weight-semibold;
+  font-size: 0.9375rem;
+  line-height: $line-height-relaxed;
+  font-family: inherit;
+
+  @include respond-to('sm') {
+    font-size: 1rem;
+  }
+
+  @include respond-to('md') {
+    font-size: 1.0625rem;
+  }
+
+  @include respond-to('lg') {
+    font-size: 1.125rem;
+  }
+
+  @include respond-to('xl') {
+    font-size: 1.25rem;
+  }
+
+  @include respond-to('2xl') {
+    font-size: 1.375rem;
+  }
+}
+
+a.signup-link.btn-bg-img.mr_20 {
+  margin-right: -50px;
+}
+
+.login-input {
+  @include input-base;
+  background-color: transparent;
+  border: 1px solid $color-black;
+  border-radius: 0;
+  height: 2.25rem;
+  padding: 0 0.5rem;
+  font-size: 0.8125rem;
+  line-height: $line-height-normal;
+  width: 100%;
+  box-sizing: border-box;
+
+  // Extra small mobile devices (< 375px)
+  @media (max-width: 374px) {
+    height: 2.125rem;
+    padding: 0 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  @include respond-to('xs') {
+    height: 2.375rem;
+    padding: 0 0.625rem;
+    font-size: 0.875rem;
+  }
+
+  @include respond-to('sm') {
+    height: 2.5rem;
+    padding: 0 0.75rem;
+    font-size: 0.9375rem;
+    line-height: $line-height-relaxed;
+  }
+
+  @include respond-to('md') {
+    height: 2.625rem;
+    padding: 0 0.875rem;
+    font-size: 1rem;
+  }
+
+  @include respond-to('lg') {
+    height: 3rem;
+    padding: 0 1rem;
+    font-size: 1.0625rem;
+  }
+
+  @include respond-to('xl') {
+    height: 3.25rem;
+    padding: 0 1.25rem;
+    font-size: 1.125rem;
+  }
+
+  @include respond-to('2xl') {
+    height: 3.5rem;
+    padding: 0 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  &:focus {
+    border-color: $color-black;
+    outline: none;
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    font-size: 0.75rem;
+
+    @include respond-to('xs') {
+      font-size: 0.8125rem;
+    }
+
+    @include respond-to('sm') {
+      font-size: 0.875rem;
+    }
+
+    @include respond-to('md') {
+      font-size: 0.9375rem;
+    }
+
+    @include respond-to('lg') {
+      font-size: 1rem;
+    }
+
+    @include respond-to('xl') {
+      font-size: 1.0625rem;
+    }
+
+    @include respond-to('2xl') {
+      font-size: 1.125rem;
+    }
+  }
+
+  // Override browser autofill styles
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    background-color: transparent !important;
+    border: 1px solid $color-black !important;
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  }
+
+  &:-moz-autofill,
+  &:-moz-autofill:hover,
+  &:-moz-autofill:focus {
+    background-color: transparent !important;
+    border: 1px solid $color-black !important;
+  }
+
+  &:autofill {
+    background-color: transparent !important;
+    border: 1px solid $color-black !important;
+  }
+}
+
+.forgot-password-link {
+  text-align: right;
+  color: $color-black;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.875rem;
+
+  @include respond-to('sm') {
+    font-size: 0.9375rem;
+  }
+
+  @include respond-to('md') {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.login-button-wrapper {
+  display: flex;
+  justify-content: right;
+}
+
+.login-button {
+  color: $color-black;
+  font-weight: 500;
+  padding: $spacing-xs 1.5rem;
+  font-size: 0.875rem;
+  line-height: $line-height-relaxed;
+  border: none;
+  cursor: pointer;
+  transition: background-color $transition-base;
+  font-family: inherit;
+  background-size: 100% 100%;
+  background-position: center;
+
+  @include respond-to('xs') {
+    padding: $spacing-xs 1.75rem;
+    font-size: 0.9375rem;
+  }
+
+  @include respond-to('sm') {
+    padding: $spacing-xs 2rem;
+    font-size: 0.9375rem;
+  }
+
+  @include respond-to('md') {
+    padding: $spacing-xs 2.5rem;
+    font-size: $font-size-base;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+    transition: transform $transition-fast;
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+.signup-link-wrapper {
+  text-align: right;
+  width: 100%;
+}
+
+.signup-link {
+  display: inline-block;
+  color: $color-black;
+  font-weight: 500;
+  padding: $spacing-xs 1rem;
+  border-radius: $radius-xl;
+  text-decoration: none;
+  transition: background-color $transition-base;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  line-height: $line-height-normal;
+  background-size: 100% 100%;
+  background-position: center;
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+  max-width: 100%;
+
+  // Extra small mobile devices (< 375px)
+  @media (max-width: 374px) {
+    padding: $spacing-xs 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  @include respond-to('xs') {
+    padding: $spacing-xs 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  @include respond-to('sm') {
+    padding: $spacing-xs 1.5rem;
+    font-size: 0.9375rem;
+    line-height: $line-height-relaxed;
+  }
+
+  @include respond-to('md') {
+    padding: $spacing-xs 1.75rem;
+    font-size: $font-size-base;
+  }
+
+  &:hover {
+    transform: translateY(-1px);
+    transition: transform $transition-fast;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Global autofill override
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: inherit !important;
+  background-color: transparent !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.md\:pt-20:has(.login-main) {
+  padding-top: 0;
+}
+
+
+.rounded-lg.border.text-card-foreground.bg-white.shadow-none.relative {
+    width: 80%;
+    margin: 0 auto;
+}
+
+// @media (min-width: 367px) and (max-width: 640px) {
+// .login-container {
+//     align-items: start;
+// }
+
+// .rounded-lg.border.text-card-foreground.bg-white.shadow-none.relative {
+//     width: 100%;
+//     margin: 0 auto;
+// }
+// }
+
+
+
+// @media (min-width: 1024px) {
+//     .login-main {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         justify-content: flex-end;
+//         padding: 0;
+//         overflow: hidden;
+//         height: auto;
+//         background-attachment: scroll;
+//     }
+
+
+// }
+
+.login-input {
+  height: 3rem;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+}
+
+.login-container {
+  margin-right: 0%;
+  max-width: 24rem;
+  padding: 0rem 2rem;
+  margin: 0 auto;
+  margin-right: 20%;
+}
