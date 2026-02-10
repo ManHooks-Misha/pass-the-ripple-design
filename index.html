@@ -64,7 +64,7 @@
       transform-origin: top center;
     }
 
-    /* Viewport-sized scroll area */
+    /* Viewport-sized scroll area – iski scrollbar hamesha viewport ke niche dikhegi (vertical scroll kiye bina) */
     #scrollViewport {
       position: fixed;
       left: 0;
@@ -75,20 +75,11 @@
       -webkit-overflow-scrolling: touch;
     }
 
-    /* Inner wrapper: full viewport width so 960px stays centered (equal left/right) when scrollbar appears */
-    #scrollViewportInner {
-      display: flex;
-      justify-content: center;
-      min-height: 100%;
-      box-sizing: border-box;
-    }
-
-    /* Zoom content: 960px layout */
+    /* Zoom content: 960px layout, only this area scales with browser zoom */
     #zoomContent {
       width: 960px;
       max-width: 960px;
-      min-width: 960px;
-      flex-shrink: 0;
+      margin: 0 auto;
       min-height: 100%;
       position: relative;
       transform-origin: top center;
@@ -157,10 +148,8 @@
 <body>
   <header id="fixedHeader"></header>
   <div id="scrollViewport">
-    <div id="scrollViewportInner">
-      <div id="zoomContent">
-        <div id="root"></div>
-      </div>
+    <div id="zoomContent">
+      <div id="root"></div>
     </div>
   </div>
 
@@ -227,13 +216,9 @@
           scrollViewport.style.bottom = '';
         }
 
-        var innerWidth = window.innerWidth;
-        var scrollViewportInner = document.getElementById('scrollViewportInner');
-        if (scrollViewportInner) {
-          scrollViewportInner.style.width = innerWidth + 'px';
-        }
+        var needsHorizontalScroll = zoomFactor > 1;
         if (scrollViewport) {
-          scrollViewport.style.overflowX = innerWidth < CONTENT_WIDTH ? 'auto' : 'hidden';
+          scrollViewport.style.overflowX = needsHorizontalScroll ? 'auto' : 'hidden';
         }
       }
 

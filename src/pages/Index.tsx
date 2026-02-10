@@ -147,6 +147,7 @@ const Index = () => {
                 className="w-full object-contain"
               />
               <div className="second-ban-txt">
+               
                 <p>
                     Pass The Ripple is a playful, heartfelt platform where every
                     act of kindness creates<br /> ripples that spread across the
