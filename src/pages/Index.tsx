@@ -7,7 +7,7 @@ import LazyImage from "@/components/ui/LazyImage";
 import { useState } from "react"; // useEffect removed if not used elsewhere
 import bgImg from "@/assets/home-img/desktop/bg-img.png";
 import welcomeImgFull from "@/assets/home-img/desktop/welcome-img.webp";
-import banImg from "@/assets/home-img/desktop/Book-img.webp";
+import banImg from "@/assets/home-img/desktop/book-img.webp";
 import footprint1 from "@/assets/home-img/desktop/fot1.webp";
 import footprint2 from "@/assets/home-img/desktop/fot2.webp";
 import footprint3 from "@/assets/home-img/desktop/fot3.webp";

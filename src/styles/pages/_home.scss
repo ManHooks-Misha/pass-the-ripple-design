@@ -184,7 +184,7 @@ img.foot6 {
 .greenbg {
   background-size: 100%;
   background-repeat: no-repeat;
-  margin-top: 64px;
+  margin-top: 58px;
   margin-left: -18px;
   padding: 10px 20px;
   height: 105px;
@@ -199,7 +199,7 @@ img.foot2 {
 }
 img.foot3 {
   position: absolute;
-  bottom: -25px;
+  bottom: -27px;
   right: -50%;
   transform-origin: bottom left;
   width: 82px;
@@ -213,23 +213,23 @@ img.lazy-image.owl-img.loaded {
 
 img.foot4 {
   position: absolute;
-  top: -12%;
+  top: -13.3%;
   left: 10.8%;
   transform-origin: top left;
-  width: 138px;
+  width: 136px;
 }
 #carouselExampleCaptions {
     width: 87%;
     max-width: 87.5rem;
     margin: 0 auto;
     position: relative;
-    margin-top: 7px;
+    margin-top: 2px;
 }
 
 img.foot5 {
   position: absolute;
   top: 64%;
-  right: -9%;
+  right: -8.5%;
   transform-origin: top right;
   width: 81px;
 }
@@ -265,7 +265,11 @@ img.foot7 {
     top: -1.4%;
     right: 2.4%;
     transform-origin: bottom right;
-    width: 75px;
+    width: 72px;
+}
+
+button.carousel-control-next {
+  right: -3.67rem;
 }
 
 button.carousel-control-prev img, button.carousel-control-next img {
@@ -316,7 +320,7 @@ button.carousel-control-prev, button.carousel-control-next {
   position: absolute;
   top: 48%;
   transform: translateY(-50%);
-  left: 7.5%;
+  left: 6.5%;
   right: 49%;
 }
 
@@ -332,7 +336,7 @@ button.carousel-control-prev, button.carousel-control-next {
 .third-ban-txt p {
   font-weight: 400;
   font-style: Regular;
-  font-size: 0.8rem !important;
+  font-size: 0.81rem !important;
   line-height: 1.15rem;
   letter-spacing: 0%;
   text-align: center;
@@ -342,7 +346,7 @@ button.carousel-control-prev, button.carousel-control-next {
 
 .third-ban-txt {
   margin-bottom: 1.3rem;
-  padding: 0 1.25rem;
+  padding: 0 0.5rem;
 }
 
 .btn-ripple1 img {
@@ -432,7 +436,7 @@ button.carousel-control-prev, button.carousel-control-next {
   position: relative;
 }
 .sign-wrapper.home {
-    padding: 3.125rem 2.5rem 3.375rem 2.375rem;
+    padding: 3.7rem 2.5rem 3.375rem 2.375rem;
 }
 .second-ban-txt {
   text-align: left;
@@ -455,9 +459,12 @@ button.carousel-control-prev, button.carousel-control-next {
   background-repeat: no-repeat;
   background-position: center;
   padding: 10px 5px;
-  margin: 15px;
+  margin: 18px;
   text-align: center;
   font-size: 1.2rem;
+}
+p.btn-bg-img.btn-1 {
+  margin-top: 8px !important;
 }
 
 .home .btn-ripple-wrap {
@@ -607,7 +614,7 @@ button.carousel-control-prev, button.carousel-control-next {
   // position: absolute;
   width: 540px;
   max-width: none;
-  margin-left: -17px;
+  margin-left: -12px;
   margin-top: -4px;
 }
 
@@ -615,15 +622,10 @@ img.foot1 {
   position: absolute;
   top: 64%;
   height: clamp(9.4rem, 4vw, 4rem);
-  left: 21%;
+  left: 23%;
   transform-origin: top left;
 }
 
-.second-ban {
-  position: relative;
-  margin-top: 11px;
-  padding-left: 8px;
-}
 
 .mobile-none {
   padding-top: 2rem !important;
@@ -632,12 +634,13 @@ img.foot1 {
 .rabbit-new .rabbit-img.loaded {
   width: 158px !important;
   margin-left: -4px;
+  margin-top: 8px;
 }
 
 .wavy-banner-container.flex-1.w-full.bg-img {
   background-size: 100%;
   background-repeat: no-repeat;
-  margin-top: 94px;
+  margin-top: 103px;
   padding: 9px 20px;
   height: 98px;
   margin-left: -23px;
@@ -2179,7 +2182,7 @@ img.foot-p9 {
 
 
 .col-md-6 .ban-txt-p p {
-  margin-top: 1.2rem;
+  margin-top: 1.5rem;
   padding-left: 1.825rem;
   margin-right: -2.8rem;
   line-height: 2.3rem;
@@ -2325,13 +2328,14 @@ button.carousel-control-prev {
 
 .second-ban {
   position: relative;
-  margin-top: 11px;
+  margin-top: 2px;
+  padding-left: 12px;
 }
 
 
 .ban-img img {
   width: 100%;
-  height: 364px;
+  // height: 364px;
 }
 
 section#zoom-wrapper {
@@ -2352,13 +2356,13 @@ section#zoom-wrapper {
 
 
 
-.container {
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
+// .container {
+//   width: 100%;
+//   padding-left: 15px;
+//   padding-right: 15px;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
 
 /* ≥576px */
 @media (min-width: 576px) {
@@ -2368,21 +2372,14 @@ section#zoom-wrapper {
 }
 
 /* ≥768px */
-@media (min-width: 768px) {
-  .container {
-    max-width: 100%;
-  }
-}
-
-/* ≥992px */
-@media (min-width: 992px) {
-  .container {
-    max-width: 100%;
-  }
-}
+  // @media (min-width: 768px) {
+  //   .container {
+  //     max-width: 100%;
+  //   }
+  // }
 
 /* ≥1200px */
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   .container {
     max-width: 960px;
   }

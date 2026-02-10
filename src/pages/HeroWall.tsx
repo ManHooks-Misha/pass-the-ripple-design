@@ -313,8 +313,12 @@ const HeroWallPublic: React.FC = () => {
         paddingTop: "0px",
         zIndex: "0", backgroundImage: `url(${publichero})`
       }}> */}
-      <section className="hero-wall-container container scroll-h" id="zoom-wrapper"
-      >
+
+{/* style={{
+        paddingTop: "0px",
+        zIndex: "0", backgroundImage: `url(${publichero})`
+      }} */}
+      <section className="hero-wall-container container scroll-h" id="zoom-wrapper" >
         {/* Fireflies Decorations */}
         {!user && (
           <div className="firefly-decoration firefly-top-left">

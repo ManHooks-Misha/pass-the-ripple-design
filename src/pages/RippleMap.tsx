@@ -144,7 +144,21 @@ const RippleMap = () => {
               <img src={steps} alt="How the ripple map works" />
             </div>
 
-            <div className="img-frame">
+      
+
+
+            
+          </div>
+        </div>
+        </div>
+      </section> 
+
+
+      <section className="section pt-0">
+        <div className="container">
+        <div className="how-grid2">
+
+      <div className="img-frame">
               <img src={chainexample} alt="Kindness chain example" />
             </div>
 
@@ -167,12 +181,10 @@ const RippleMap = () => {
               </div>
             </div>
 
-
-            
-          </div>
-        </div>
+            </div>
         </div>
       </section> 
+
 
       <section className="section pt-0">
         <div className="container">
@@ -193,7 +205,7 @@ const RippleMap = () => {
 
             <div className="soft-block sand" style={{ backgroundImage: `url(${purpleDLiGO25m4})` }}>
              <div>
-                <h3>3. Exploring Impact</h3>
+                <h3>4. Why is Matters</h3>
                 <p className="para-font">The Kindness Map helps children see that:</p>
                 <ul className="mb-20">
                   <li>- Small actions can create meaningful change</li>
@@ -279,7 +291,7 @@ const RippleMap = () => {
           </div>
 
           <div className="filter-row">
-            <span style={{ fontWeight: 600, fontSize: "0.9rem", color: "rgba(0,0,0,.7)" }}>
+            <span style={{ fontWeight: 600, fontSize: "1.1rem", color: "rgba(0,0,0,.7)" }}>
               Filter by:
             </span>
 

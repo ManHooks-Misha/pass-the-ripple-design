@@ -187,9 +187,7 @@
   }
 }
 
-.btn-bg-img {
-  font-size: 1rem;
-}
+
 .login-form {
   width: 100%;
   @include flex-column;
@@ -257,29 +255,29 @@
 .login-label {
   color: $color-black;
   font-weight: $font-weight-semibold;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   line-height: $line-height-relaxed;
   font-family: inherit;
 
-  @include respond-to('sm') {
-    font-size: 1rem;
-  }
+  // @include respond-to('sm') {
+  //   font-size: 1rem;
+  // }
 
-  @include respond-to('md') {
-    font-size: 1.0625rem;
-  }
+  // @include respond-to('md') {
+  //   font-size: 1.0625rem;
+  // }
 
-  @include respond-to('lg') {
-    font-size: 1.125rem;
-  }
+  // @include respond-to('lg') {
+  //   font-size: 1.125rem;
+  // }
 
-  @include respond-to('xl') {
-    font-size: 1.25rem;
-  }
+  // @include respond-to('xl') {
+  //   font-size: 1.25rem;
+  // }
 
-  @include respond-to('2xl') {
-    font-size: 1.375rem;
-  }
+  // @include respond-to('2xl') {
+  //   font-size: 1.375rem;
+  // }
 }
 
 a.signup-link.btn-bg-img.mr_20 {
@@ -585,4 +583,8 @@ select:-webkit-autofill {
   padding: 0rem 2rem;
   margin: 0 auto;
   margin-right: 20%;
+}
+
+.btn-bg-img {
+  font-size: 1rem !important;
 }

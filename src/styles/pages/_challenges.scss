@@ -388,16 +388,14 @@ p.challenges-hero-description {
 }
 
 .active-challenge-card-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0px;
-    align-items: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 30px;
-    // height: 600px;
-    // margin-left: 9px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px;
+  align-items: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px 24px 25px;
 }
 
 .challenges-carousel button.carousel-control-next {
@@ -406,7 +404,7 @@ p.challenges-hero-description {
 }
 
 .challenges-carousel button.carousel-control-prev {
-    left: -3.1em;
+    left: -4.1em;
     top: 46%;
 }
 
@@ -507,8 +505,8 @@ section.cta-section.challenges p.first {
 }
 
 section.cta-section.challenges {
-  margin-top: 4rem;
-  margin-bottom: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 0rem;
   padding: 0 0rem;
   position: relative;
 }
@@ -521,7 +519,7 @@ section.cta-section.challenges {
 }
 
 .badges-content img.lazy-image.badges-img.loaded {
-  width: 92% !important;
+  width: 90% !important;
   margin: 0 auto;
 }
 
@@ -591,7 +589,7 @@ section.cta-section.challenges {
 
 .active-challenge-display {
   width: 100%;
-  width: 350px;
+  // width: 350px;
 }
 
 .completed-card-body h2 {
