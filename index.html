@@ -164,6 +164,7 @@
       var ZOOM_CONTENT_ID = 'zoomContent';
       var CONTENT_WIDTH = 960;
       var initialInnerWidth = window.innerWidth;
+      var hadHorizontalScroll = false;
 
       function getZoomFactor() {
         var current = window.innerWidth;
@@ -219,6 +220,14 @@
         var needsHorizontalScroll = zoomFactor > 1;
         if (scrollViewport) {
           scrollViewport.style.overflowX = needsHorizontalScroll ? 'auto' : 'hidden';
+          // When horizontal scroll just appears (zoom in), center the view every time
+          if (needsHorizontalScroll && !hadHorizontalScroll) {
+            var maxScrollLeft = scrollViewport.scrollWidth - scrollViewport.clientWidth;
+            if (maxScrollLeft > 0) {
+              scrollViewport.scrollLeft = maxScrollLeft / 2;
+            }
+          }
+         // hadHorizontalScroll = needsHorizontalScroll;
         }
       }
 
