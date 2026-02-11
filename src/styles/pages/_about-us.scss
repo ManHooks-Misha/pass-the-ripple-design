@@ -25,7 +25,7 @@
   }
 
   .title-img {
-    height: 4rem;
+    // height: 4rem;
     width: auto;
     max-width: 100%;
     margin-bottom: $spacing-lg;
@@ -42,7 +42,7 @@
   }
 
   section {
-    margin-bottom: 50px;
+    margin-bottom: 28px;
 
     @include respond-to-max('md') {
       margin-bottom: $spacing-xl;
@@ -54,7 +54,7 @@
   }
 
   p, li {
-    line-height: 2rem;
+    line-height: 1.3rem;
 
     @media (max-width: 480px) {
       line-height: 1.7rem;
@@ -99,9 +99,9 @@
 .rope-line {
   width: auto;
   max-width: 100%;
-  height: 100%;
-  min-height: 100%;
-  object-fit: fill;
+  // height: 100%;
+  // min-height: 100%;
+  // object-fit: fill;
   position: relative;
   z-index: 1;
 }
@@ -131,13 +131,14 @@
 // About Us Title Section
 .about-us-title {
   text-align: left;
-  padding: $spacing-lg 0 40px;
-  margin-bottom: $spacing-lg;
+  padding: $spacing-lg 0 30px;
+  margin-bottom: 0px;
 
   img {
-    max-width: 440px;
+    max-width: 340px;
     width: 100%;
-    margin-bottom: $spacing-lg;
+    margin-bottom: 0.5rem;
+
 
     @include respond-to-max('md') {
       max-width: 100%;
@@ -159,7 +160,7 @@
 }
 
 .about-us-subtitle {
-  font-size: $font-size-lg;
+  font-size: 1rem;
   color: #333;
   line-height: 1.7;
   margin-top: 0;
@@ -216,8 +217,8 @@
 .values-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: $spacing-lg;
-  margin-top: $spacing-lg;
+  gap: 1rem;
+  // margin-top: $spacing-lg;
 
   @include respond-to-max('md') {
     gap: $spacing-md;
@@ -235,9 +236,9 @@
 }
 
 .value-title {
-  font-size: $font-size-lg;
+  font-size: 1rem;
   font-weight: $font-weight-bold;
-  margin-bottom: $spacing-sm;
+  margin-bottom: 0rem;
   color: #222;
 
   @include respond-to-max('md') {
@@ -251,7 +252,7 @@
 }
 
 .value-description {
-  font-size: $font-size-lg;
+  font-size: 1rem;
   line-height: 1.6;
   color: #444;
 
@@ -271,9 +272,21 @@
 @media (min-width: 276px) and (max-width: 691px) { 
   
   .about-us-container .title-img {
-        height: 2.5rem;
+          // height: 2.5rem;
         margin: 0;
         display: block;
     }
 
   }
+
+.about-us-container .h_80 {
+    height: 39px;
+    max-width: auto;
+    width: auto;
+    margin-bottom: 6px;
+}
+
+.section-text p {
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+}

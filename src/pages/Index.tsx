@@ -226,7 +226,7 @@ const Index = () => {
           <div className="row mr_45" style={{ position: "relative" }}>
             <LazyImage src={footprint4} alt="Footprint decoration" className="foot4" showSkeleton={false} />
             <h1 className="ripple-heading font-teachers font-bold text-[28px] leading-[41px] mb-[50px] text-center">
-              HOW TO PASS THE RIPPLE?
+              HOW TO PASS THE RIPPLE? 
             </h1>
             <div
               id="carouselExampleCaptions"
@@ -247,14 +247,14 @@ const Index = () => {
                       />
                       <div className="carousel-caption d-none d-md-block absolute left-[40%] right-[30px] bottom-[30px] top-[8%]">
                         <h5 className="font-teachers font-medium text-[20px] leading-[41px] text-center text-black mb-5">
-                          Get your Ripple Cards!
+                          Be a Part of the Ripple!
                         </h5>
                         <div className="slider-bn-p">
                           <p className="font-normal text-[18px] leading-[26px] text-center text-black mb-0">
-                            Have you read the book: You Matter, Luma?
+                            Have you read the story of You Matter, Luma, yet?
                           </p>
-                          <p className="font-normal text-[18px] leading-[26px] text-center text-black mb-0">
-                            You can check it out here:{" "}
+                          {/* <p className="font-normal text-[18px] leading-[26px] text-center text-black mb-0">
+                            You can find the book here:{" "}
                             <a
                               href="https://youmatterluma.com/"
                               className="text-[#9F00C7]"
@@ -265,24 +265,43 @@ const Index = () => {
                             </a>
                           </p>
                           <p className="font-normal text-[18px] leading-[26px] text-center text-black mb-0">
-                            This will help you see how kindness can help the
-                            world.
+                            It’s the first step in discovering that no matter how quiet or small we feel, we all have a "ripple" of kindness to share.
+                          </p> */}
+
+                          <p className="font-normal text-[18px] leading-[26px] text-center text-black">You can find the book here: You Matter, <a
+                              href="https://youmatterluma.com/"
+                              className="text-[#9F00C7]"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >Luma</a>. It's the first step in discovering that we all have a "ripple" of kindness to share.</p> 
+                        </div>
+                        <div className="slider-bn-p">
+                          <p className="font-normal text-[18px] leading-[26px] text-center text-black">
+                           Ready to make your own splash?<br />
+{/* Pass The Ripple is our global mission to show every person that they matter. We created Ripple Cards to help kids and grown-ups alike start a wave of kindness! */}
                           </p>
                         </div>
                         <div className="slider-bn-p">
                           <p className="font-normal text-[18px] leading-[26px] text-center text-black">
-                            Pass The Ripple is an idea to help people see how
-                            much they matter. <br />and because we want to spread the
-                            word we created Ripple Cards<br /> to help the movement
-                            grow!
+                            For the Little Ripples: Use your card to be a kindness superhero! Give it to a friend, a teacher, or a neighbor to brighten their day.
                           </p>
                         </div>
-                        <div className="slider-bn-p">
+
+                         <div className="slider-bn-p">
                           <p className="font-normal text-[18px] leading-[26px] text-center text-black">
-                            You can get your free Ripple Card by creating or
-                            loggin into an account!
-                          </p>
+                       For the Grown-Ups: These cards are a tangible way to teach children about their intrinsic worth and track their positive impact on our global kindness map.  </p>
+                        </div>  
+                        
+                           <div className="slider-bn-p">
+                          <p className="font-normal text-[18px] leading-[26px] text-center text-black">
+                       Log in or create an account to get your free Ripple Card and start your journey today!   </p>
                         </div>
+
+                         {/* <div className="slider-bn-p">
+                          <p className="font-normal text-[18px] leading-[26px] text-center text-black">
+                            For the Little Ripples: Use your card to be a kindness superhero! Give it to a friend, a teacher, or a neighbor to brighten their day.
+                          </p>
+                        </div> */}
                       </div>
                     </div>
                   </CarouselItem>

@@ -94,8 +94,8 @@ const RippleMapNew = () => {
                     <li>
                       - Turn abstract “impact” into a concrete, emotional experience
                     </li>
-                    <li>- Small actions matter</li>
-                    <li>- Connect individual stories to a global movement</li>
+                    <li>- ReinForce Small actions matter</li>
+                    <li>- Connect individual stories to a <br /> global movement</li>
                   </ul>
                 </div>
               </div>

@@ -49,36 +49,41 @@ const MagicalFooter = () => {
           {/* COLUMN 3: CONTACT & SOCIAL (Center Aligned) */}
           <div className="text-center">
             <div className="flex flex-col items-center gap-3">
-              <h5 className="footer-title m-0">Connect with Us</h5>
-              <p className="footer-contact m-0 ">
+              <h5 className="footer-title m-0">Connect Us</h5>
+              {/* <p className="footer-contact m-0 ">
                 <i className="fa-regular fa-envelope"></i>
                 <a href={`mailto:${supportEmail}`} className="text-dark hover:text-purple-600 transition-colors">{supportEmail}</a>
-              </p> 
+              </p>  */}
 
               <div className="footer-social mt-5 flex justify-center gap-3 flex-wrap">
-                {socialSettings?.instagram_url && (
-                  <a href={socialSettings.instagram_url} target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-                    <img src={instaImg} alt="Instagram" />
-                  </a>
-                )}
+                {/* {socialSettings?.instagram_url && ( */}
+                  <a
+  href="https://www.instagram.com/youmatterluma/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hover:scale-110 transition-transform"
+>
+  <img src={instaImg} alt="Instagram" />
+</a>
+                {/* )} */}
 
-                {socialSettings?.facebook_url && (
-                  <a href={socialSettings.facebook_url} target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+                {/* {socialSettings?.facebook_url && ( */}
+                  <a href="https://www.facebook.com/profile.php?id=61587921420989" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
                     <img src={fbImg} alt="Facebook" />
                   </a>
-                )}
+                  {/* )} */}
 
-                {socialSettings?.youtube_url && (
-                  <a href={socialSettings.youtube_url} target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+                {/* {socialSettings?.youtube_url && ( */}
+                  <a href="https://www.youtube.com/playlist?list=PLnqmKrds9y0DI7TEGvcQVw7LTe4PyoklN" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
                     <img src={ytImg} alt="YouTube" />
                   </a>
-                )}
+                {/* )} */}
 
-                {socialSettings?.twitter_url && (
+                {/* {socialSettings?.twitter_url && ( */}
                   <a href={socialSettings.twitter_url} target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
                     <img src={tiktokImg} alt="TikTok" />
                   </a>
-                )}
+                {/* )} */}
               </div>
             </div>
           </div>

@@ -391,7 +391,7 @@ button.carousel-control-prev, button.carousel-control-next {
   flex-flow: column;
   justify-content: center;
   position: absolute;
-  left: 69%;
+  left: 68%;
   transform: translateX(-50%);
   width: 80%;
   max-width: 500px;
@@ -405,7 +405,7 @@ button.carousel-control-prev, button.carousel-control-next {
   font-weight: 500;
   font-style: Medium;
   font-size: 1.2rem;
-  line-height: 2.2625rem;
+  line-height: 1.625rem;
   text-align: center;
   color: #000;
   margin-bottom: 0.375rem;
@@ -414,18 +414,18 @@ button.carousel-control-prev, button.carousel-control-next {
 .carousel-caption p {
   font-weight: 400;
   /* font-style: Medium; */
-  font-size: 1rem;
+  font-size: 0.85rem !important;
   line-height: 1;
   text-align: center;
   color: #000;
 }
 
 .slider-bn-p p {
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 .slider-bn-p {
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 
 .second-ban img {
@@ -439,9 +439,8 @@ button.carousel-control-prev, button.carousel-control-next {
     padding: 3.7rem 2.5rem 3.375rem 2.375rem;
 }
 .second-ban-txt {
-  text-align: left;
+/*   text-align: left;
   top: 34px;
-  /* bottom: 9%; */
   height: auto;
   display: flex;
   flex-flow: column;
@@ -450,8 +449,16 @@ button.carousel-control-prev, button.carousel-control-next {
   position: absolute;
   left: 86%;
   transform: translateX(-50%);
-  width: 100%;
-  /* max-width: 500px; */
+  width: 100%; */
+
+  top: 34px;
+  height: auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: 1rem;
+  position: absolute;
+  right: 30px;
 }
 
 .col-md-6.home .btn-bg-img {
@@ -2183,7 +2190,7 @@ img.foot-p9 {
 
 .col-md-6 .ban-txt-p p {
   margin-top: 1.5rem;
-  padding-left: 1.825rem;
+  padding-left: 2rem;
   margin-right: -2.8rem;
   line-height: 2.3rem;
   text-align: center;
@@ -2365,11 +2372,11 @@ section#zoom-wrapper {
 // }
 
 /* ≥576px */
-@media (min-width: 576px) {
-  .container {
-    max-width: 100%;
-  }
-}
+// @media (min-width: 576px) {
+//   .container {
+//     max-width: 100%;
+//   }
+// }
 
 /* ≥768px */
   // @media (min-width: 768px) {
@@ -2379,13 +2386,6 @@ section#zoom-wrapper {
   // }
 
 /* ≥1200px */
-@media (min-width: 900px) {
-  .container {
-    max-width: 960px;
-  }
-
-
-}
 
 @media (min-width: 1400px) {
 /*   .container {

@@ -72,7 +72,7 @@ const RippleMap = () => {
           <div className="hero-subtitle new-font">Watch Your Ripples Travel the World</div>
 
           <div className="hero-desc mt-20">
-            A World connected by heart where every act of kindness travels far.
+            A World connected by heart where every act of kindness travels far
           </div>
 
           <div className="hero-grid w">
@@ -87,11 +87,11 @@ const RippleMap = () => {
               <div className="note yellow"  style={{ backgroundImage: `url(${yellowbg})` }}>
                 <div>
                   <p className="para-font mb-4">
-                    Watch your acts of kindness travel across the world, creating magical connections from classroom to classroom,
-                     school to school, and heart to heart.
+                    Watch your acts of kindness travel across <br /> the world, creating magical connections<br /> from classroom to classroom,
+                     school to<br /> school, and heart to heart.
                   </p>
                   <p className="para-font">
-                    Every ripple you pass lights up the map showing how small acts create big belonging, just like Luma’s journey
+                    Every ripple you pass lights up the map<br /> showing how small acts create big<br /> belonging, just like Luma’s journey
                   </p>
                 </div>
               </div>
@@ -104,8 +104,8 @@ const RippleMap = () => {
                     <li>
                       - Turn abstract “impact” into a concrete, emotional experience
                     </li>
-                    <li>- Small actions matter</li>
-                    <li>- Connect individual stories to a global movement</li>
+                    <li>- Reinforce Small actions matter</li>
+                    <li>- Connect individual stories to a <br /> global movement</li>
                   </ul>
                 </div>
               </div>
@@ -125,17 +125,17 @@ const RippleMap = () => {
             <div className="soft-block pink" style={{ backgroundImage: `url(${redCIlutEUc2})` }}>
               <div>
                 <p className="para-font mb-20">
-                  Every time a child starts a ripple by doing something kind, that action
-                  can travel farther than expected.
+                  Every time a child starts a ripple by doing <br /> something kind, that action
+                  can travel farther<br /> than expected.
                 </p>
                 <p className="para-font mb-20">
-                  The Kindness Map shows how kindness connects people and communities,
-                  and how one small act can grow into something bigger.
+                  The Kindness Map shows how kindness<br /> connects people and communities,
+                  and how<br /> one small act can grow into something bigger.
                 </p>
 
                 <p className="para-font">
-                  This map is personal and private. It focuses on impact and connection,
-                  not identities or exact locations. It shows the journey of kindness.
+                  This map is personal and private. It focuses on<br /> impact and connection,
+                  not identities or exact<br /> locations. It shows the journey of kindness.
                 </p>
               </div>
             </div>
@@ -170,13 +170,13 @@ const RippleMap = () => {
                   begin a Ripple Chain.
                 </p>
 
-                <div style={{ height: 10 }} />
+                <div style={{ height: 20 }} />
 
                 <h3>2. Kindness Grows</h3>
                 <p className="para-font">
                 When someone, inspired by the kind act, logs their own ripple, kindness is passed forward and that is reflected 
-                on the first child’s personal Kindness Map.
-                 This helps children understand that their actions matter and can influence others in meaningful ways.
+                on the first child’s <br /> personal Kindness Map.
+                 This helps children<br /> understand that their actions matter and can <br />influence others in meaningful ways.
                 </p>
               </div>
             </div>
@@ -265,7 +265,7 @@ const RippleMap = () => {
           <div className="bg-gray mb-40">
             <p className="para-font">
               We are committed to creating a space where children can explore kindness
-              safely, thoughtfully, and responsibly. If you have questions about privacy
+              safely, thoughtfully, and responsibly.<br /> If you have questions about privacy
               or safety, we encourage families and educators to review our <a href="/" className="link">policies</a> or
              <a href="/" className="link"> <br /> contact us</a>  directly.
             </p>
@@ -296,7 +296,7 @@ const RippleMap = () => {
             </span>
 
             <select className="select icon" aria-label="Filter Mode" defaultValue="All my Ripples" style={{ backgroundImage: `url(${icon})` }}>
-              <option>All my Ripples</option>
+              <option>Type of Ripples</option>
               <option>Individual Ripples</option>
             </select>
 

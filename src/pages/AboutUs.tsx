@@ -43,7 +43,7 @@ const AboutUs = () => {
 
           {/* Our Story Section */}
           <section>
-            <img src={ourStoryTitle} alt="Our Story" className='title-img' />
+            <img src={ourStoryTitle} alt="Our Story" className='title-img h_80' />
             <div className="section-text">
               <p>
                 Pass the Ripple began with a simple but powerful question
@@ -74,7 +74,7 @@ they begin to lead.
 
           {/* Who We Are and What We Do Section */}
           <section>
-            <img src={whoWeAreTitle} alt="Who We Are and What We Do" className='title-img' />
+            <img src={whoWeAreTitle} alt="Who We Are and What We Do" className='title-img h_80' />
             <div className="section-text">
               <p>
                 Pass the Ripple is a children's kindness and social emotional learning platform designed
@@ -101,7 +101,7 @@ We are a movement grounded in kindness, mattering, and meaningful growth.
 
           {/* Why Mattering Matters Section */}
           <section>
-            <img src={whyMatteringTitle} alt="Why Mattering Matters" className='title-img' />
+            <img src={whyMatteringTitle} alt="Why Mattering Matters" className='title-img h_80' />
             <div className="section-text">
               <p>
                 When children do not feel seen, they withdraw.<br />
@@ -128,7 +128,7 @@ We are a movement grounded in kindness, mattering, and meaningful growth.
 
           {/* Our Values Section */}
           <section>
-            <img src={ourValuesTitle} alt="Our Values" className='title-img' />
+            <img src={ourValuesTitle} alt="Our Values" className='title-img h_80' />
             <div className="values-grid">
               <div className="value-item">
                 <h3 className="value-title">Mattering First</h3>
@@ -169,7 +169,7 @@ We are a movement grounded in kindness, mattering, and meaningful growth.
 
           {/* Mission Section */}
           <section>
-            <img src={missionTitle} alt="Mission" className='title-img' />
+            <img src={missionTitle} alt="Mission" className='title-img h_80' />
             <div className="section-text">
               <p>
                 To help children feel that they matter and to empower them to create positive impact
@@ -180,7 +180,7 @@ We are a movement grounded in kindness, mattering, and meaningful growth.
 
           {/* Vision Section */}
           <section>
-            <img src={visionTitle} alt="Vision" className='title-img' />
+            <img src={visionTitle} alt="Vision" className='title-img h_80' />
             <div className="section-text">
               <p>
                 A world where children grow up believing in their worth, recognizing the value of others,
