@@ -3,8 +3,8 @@
 
 <head>
   <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="pragma" content="no-cache">
-<meta http-equiv="expires" content="0">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="expires" content="0">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pass The Ripple - Kindness Ripple Tracker</title>
@@ -45,13 +45,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Lilita+One&display=swap"
     rel="stylesheet">
   <style>
-    html, body {
+    html,
+    body {
       margin: 0;
       padding: 0;
       overflow: hidden;
       width: 100%;
       height: 100%;
     }
+
+
 
     /* Fixed header: never scales with browser zoom; stays at top */
     #fixedHeader {
@@ -104,30 +107,34 @@
       overflow: visible;
       background: transparent;
     }
-    #zoomContent footer.custom-footer::before, #zoomContent .custom-footer::before
- {
-    content: '';
-    position: absolute;
-    left: 50%;
-    width: 100vw;
-    /* min-width: 960px; */
-    margin-left: 0vw;
-    max-width: none;
-    box-sizing: content-box;
-    top: 0;
-    bottom: 0;
-    background-color: #ebe2e3;
-    z-index: -1;
-    right: 0px;
-}
+
+    #zoomContent footer.custom-footer::before,
+    #zoomContent .custom-footer::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 100vw;
+      /* min-width: 960px; */
+      margin-left: 0vw;
+      max-width: none;
+      box-sizing: content-box;
+      top: 0;
+      bottom: 0;
+      background-color: #ebe2e3;
+      z-index: -1;
+      right: 0px;
+    }
+
     /* viewport < 960px par bhi background full 960 cover ho */
     @media (max-width: 959px) {
+
       #zoomContent footer.custom-footer::before,
       #zoomContent .custom-footer::before {
         width: 100%;
         margin-left: 0px;
       }
     }
+
     #zoomContent footer .container,
     #zoomContent .custom-footer .container {
       max-width: 960px;
@@ -136,28 +143,27 @@
     }
 
     .container {
-    padding-left: 5px !important;
-    padding-right: 5px !important;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media (min-width: 900px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1400px) {
-    .container {
-        max-width: 960px !important;
+      padding-left: 5px !important;
+      padding-right: 5px !important;
+      margin-left: auto;
+      margin-right: auto;
     }
-}
-img.image_resized.privacy {
-    width: 600px;
-}
 
+    @media (min-width: 900px) {
+      .container {
+        max-width: 960px;
+      }
+    }
 
+    @media (min-width: 1400px) {
+      .container {
+        max-width: 960px !important;
+      }
+    }
+
+    img.image_resized.privacy {
+      width: 600px;
+    }
   </style>
 
   <!-- @media (min-width: 1000px) {
@@ -206,10 +212,20 @@ img.image_resized.privacy {
         if (!fixedHeader || !zoomContent) return;
 
         var zoomFactor = getZoomFactor();
-        zoomFactor = Math.max(0.25, Math.min(4, zoomFactor));
 
-        fixedHeader.style.width = (zoomFactor * 100) + '%';
-        fixedHeader.style.transform = 'scale(' + (1 / zoomFactor) + ')';
+        // Cap the effective zoom impacting the header to 1.5x (150%)
+        // The header will scale with the page until 150%, then stop growing.
+        var effectiveZoom = Math.min(zoomFactor, 1.5);
+
+        // Calculate the counter-scale needed.
+        // If zoomFactor is 1, effectiveZoom is 1, scale is 1.
+        // If zoomFactor is 1.5, effectiveZoom is 1.5, scale is 1.
+        // If zoomFactor is 2 (200%), effectiveZoom is 1.5, scale is 1.5 / 2 = 0.75.
+        // This keeps visual size at max 1.5x relative to viewport.
+        var scale = effectiveZoom / zoomFactor;
+
+        fixedHeader.style.width = (100 / scale) + '%';
+        fixedHeader.style.transform = 'scale(' + scale + ')';
 
         var headerHeight = 0;
         var firstHeader = fixedHeader.querySelector('header');
