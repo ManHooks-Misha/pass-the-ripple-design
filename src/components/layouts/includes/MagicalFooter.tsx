@@ -49,7 +49,7 @@ const MagicalFooter = () => {
           {/* COLUMN 3: CONTACT & SOCIAL (Center Aligned) */}
           <div className="text-center">
             <div className="flex flex-col items-center gap-3">
-              <h5 className="footer-title m-0">Connect Us</h5>
+              <h5 className="footer-title m-0">Connect with Us</h5>
               {/* <p className="footer-contact m-0 ">
                 <i className="fa-regular fa-envelope"></i>
                 <a href={`mailto:${supportEmail}`} className="text-dark hover:text-purple-600 transition-colors">{supportEmail}</a>
